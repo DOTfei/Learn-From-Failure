@@ -2,163 +2,128 @@
 
 English | [简体中文](README.zh-CN.md)
 
-A knowledge base of real, sourced corporate failure case studies — usable from **any AI tool**,
-not just one vendor — so you can ask "does my company have any of the failure patterns that
-killed [company X]?" and get an analysis grounded in what actually happened, not generic
-business-book platitudes.
+**A library of real, sourced corporate failure case studies — usable with any AI tool, or with no AI tool at all.**
 
-The knowledge base is just Markdown files. There's no lock-in: [Claude Code](https://claude.com/claude-code)
-gets a native Skill, most other agentic coding tools (Cursor, Windsurf, OpenAI Codex CLI, Amp,
-Continue, ...) read the same instructions via the universal `AGENTS.md` convention, and
-plain chat tools with no file access (ChatGPT, Gemini, a raw API call) can use a single bundled
-file. See **Platform support** below. Don't use any AI tool at all? **Browse every case
-directly at [dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/)**
-— searchable, filterable by failure mechanism, no install required.
+Ask "does my company have any of the failure patterns that killed [Company X]?" and get an
+answer grounded in what actually happened — not generic business-book advice.
 
-Each case is broken into the same structure: what happened, root causes, the warning signs that
-were visible *before* the collapse, and a set of questions phrased generically enough to ask
-about any company. A tagged index (`cases/_index.md`) organizes cases by **failure mechanism**
-(fraud, governance, cash burn, disruption denial, product-market fit, scaling too fast, culture)
-rather than just industry, because most of these patterns aren't industry-specific.
+---
 
-## Why
+## TL;DR
 
-Most "lessons from failed startups" content is a listicle. This is meant to be used
-conversationally: describe your situation, and get pointed at the 3-6 cases that actually match
-the *mechanism* of your risk, with the same questions that, in hindsight, would have flagged the
-problem at the real company.
+- **Have an AI tool?** Point it at this repo and ask about your company. See [Platform support](#platform-support).
+- **Don't want to use AI?** Just browse the cases yourself at **[dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/)**.
+- **Want a quick self-check?** Use [CHECKLIST.md](CHECKLIST.md) — no AI needed.
+- **Know a case that should be added?** [Suggest it here](https://github.com/DOTfei/Learn-From-Failure/issues/new/choose) — no writing required.
+
+---
+
+## What's in here
+
+Every case follows the same four-part structure:
+
+1. **What happened** — the facts, briefly.
+2. **Root causes** — the real reason, not just "they went bankrupt."
+3. **Warning signs** — what was visible *before* the collapse.
+4. **Questions this raises** — the same questions, rewritten so you can ask them about *your* company.
+
+Cases are tagged by **failure mechanism**, not industry — fraud, governance, cash burn,
+disruption denial, product-market fit, scaling too fast, culture — because most of these
+patterns aren't specific to one industry. See the full tagged list in [`cases/_index.md`](cases/_index.md).
+
+## Why this exists
+
+Most "startup failure lessons" content is a listicle you skim once and forget. This is built to
+be used *conversationally*: describe your situation, and get pointed at the 3-6 cases that match
+the actual mechanism of your risk — plus the exact questions that, in hindsight, would have
+caught the problem at the real company.
+
+## See it in action
+
+> **You:** We're a 12-person SaaS startup. We just closed a seed round and plan to grow from 12
+> to 35 people in the next two months — before our renewal numbers next quarter come in. Our
+> investors want to see "aggressive growth" in the deck. Is this a mistake?
+>
+> **Claude:** This looks like `scaling_too_fast` — closer to [Webvan](cases/webvan.md) and
+> [Kenny Rogers Roasters](cases/kenny-rogers-roasters.md) than WeWork. Smaller scale, same core
+> error: **committing to fixed cost (headcount) before validating the metric that justifies it
+> (renewal rate).** Webvan built $1B of warehouses before proving the model worked in one city.
+>
+> A few questions from those cases, applied to you:
+> 1. If next quarter's renewals come in soft, can you still afford the 35-person team?
+> 2. Is the hiring pace set by your own customer data, or by what looks good in a board deck?
+> 3. Of the 23 new hires, how many are reversible (contractors) vs. locked-in fixed cost?
+>
+> This isn't "don't hire" — it's about sequencing: validate the signal first, then hire.
+
+Try it with your own situation, or read the full write-up in [`dist/learn-from-failure-bundle.md`](dist/learn-from-failure-bundle.md).
 
 ## Platform support
 
-| Your tool | How to use this repo |
+The content is plain Markdown, so there's no lock-in to one AI vendor:
+
+| If you use... | Do this |
 |---|---|
-| **Claude Code** | Add as a plugin via `.claude-plugin/plugin.json` (point the marketplace flow at `https://github.com/DOTfei/Learn-From-Failure`), or copy/symlink `.claude/skills/learn-from-failure/` into your own project's `.claude/skills/`. |
-| **Cursor, Windsurf, OpenAI Codex CLI, Amp, Continue, or any tool that reads [AGENTS.md](https://agents.md)** | Clone this repo (or add it as a reference/submodule) and point your tool at it — `AGENTS.md` at the repo root has the full instructions. Cursor users also get `.cursor/rules/learn-from-failure.mdc`, which just points to the same `AGENTS.md`. |
-| **ChatGPT Custom GPT, Gemini Gem, or any tool with a "knowledge/files" upload but no repo access** | Upload `dist/learn-from-failure-bundle.md` — one file containing the instructions, index, checklist, and every case with sources, generated by `scripts/build_bundle.py`. |
-| **A raw API call (OpenAI, Anthropic, etc.) with no tools at all** | Paste the contents of `dist/learn-from-failure-bundle.md` as (or into) your system prompt / context. It's plain Markdown, no special parsing required. |
-| **Any other chatbot with no file upload** | Copy-paste relevant sections of `dist/learn-from-failure-bundle.md` (e.g. the index + 3-4 case files) directly into the chat. |
-| **No AI tool — just want to read the cases** | Browse [dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/) — a searchable, filterable static site (`docs/`, built by `scripts/build_site.py`), no install or AI required. |
+| **Claude Code** | Install as a plugin (`.claude-plugin/plugin.json`), or copy `.claude/skills/learn-from-failure/` into your own project. |
+| **Cursor, Windsurf, OpenAI Codex CLI, Amp, Continue, or anything that reads [AGENTS.md](https://agents.md)** | Clone the repo and point your tool at it — `AGENTS.md` has the full instructions. |
+| **ChatGPT Custom GPT, Gemini Gem, or any tool with a "knowledge upload"** | Upload [`dist/learn-from-failure-bundle.md`](dist/learn-from-failure-bundle.md) — one file with everything, sources included. |
+| **A raw API call, or any chatbot with no file upload** | Paste the contents of the same bundle file into your prompt or system message. |
+| **No AI tool at all** | Browse **[dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/)** — searchable, filterable, nothing to install. |
 
-All of the above read from the same source files in `cases/` — nothing is duplicated by hand, so
-the knowledge base can't drift between platforms. `dist/learn-from-failure-bundle.md` and
-`docs/data.json` are both regenerated by CI-checked scripts (see Contributing).
+Everything above reads from the same files in `cases/`. Nothing is copy-pasted by hand, so the
+different versions can't drift out of sync — the bundle and the website are both regenerated by
+scripts that CI checks on every change.
 
-## Usage
+## How to read these cases
 
-Ask things like:
+- **This is a reflection tool, not a prediction engine.** Many companies show one or two of
+  these same warning signs and turn out fine (survivorship bias is real). A match means "worth
+  investigating" — not "you will fail."
+- **Check the sources.** Every case has a `## Sources` section. Verify a number before repeating
+  it publicly. Found a mistake? [Report it](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml).
+- **Don't paste in confidential company info.** If you're analyzing your own company with an AI
+  tool, keep that in your own private chat — don't commit it here. New cases should only cover
+  companies with real public reporting (news, court filings, Wikipedia, etc.).
 
-- "We're about to raise a big round and hire aggressively before we've proven unit economics — is this a WeWork/Webvan-style mistake?"
-- "Our board is basically just the founder's friends — should I be worried?"
-- "We're cutting our most experienced (expensive) staff to save money — sanity check this against Circuit City."
-- "Add [Company Y] as a new case, here's what I know about why it failed: ..."
+## Self-audit checklist (no AI needed)
 
-The skill will pick relevant cases by failure *mechanism*, not just by matching your industry,
-and will push back with the case's actual root-cause questions rather than just summarizing
-history at you.
-
-### What an actual answer looks like
-
-> **You:** We're a 12-person SaaS startup. We just closed a seed round and the plan is to go
-> from 12 to 35 people in the next two months — sales, support, more engineers — before our
-> renewal numbers next quarter come in. Our investors want to see "aggressive growth" in the
-> deck. Is this a mistake?
->
-> **Claude:** This maps closely to `scaling_too_fast`, and the mechanism is closer to
-> [Webvan](cases/webvan.md) and [Kenny Rogers Roasters](cases/kenny-rogers-roasters.md) than to
-> WeWork — smaller scale, but the same core error: **committing fixed cost (headcount) ahead of
-> a metric you haven't validated yet (renewal rate)**. Webvan built $1B of warehouse capacity
-> before proving the model worked in one city; you'd be hiring 3x the headcount before knowing
-> if your existing customers renew.
->
-> Three questions from those cases, applied to you:
-> 1. If your renewal number next quarter comes in soft, can you actually afford the 35-person
->    team, or does the hiring plan only work if renewals hit the optimistic case?
-> 2. Is the hiring pace being set by what your current customer data supports, or by what looks
->    good in a board deck ("aggressive growth")? Webvan's expansion pace was set by investor
->    expectations, not city-by-city profitability data.
-> 3. Of the 23 new hires, how many are reversible (contractors, month-to-month) vs. how many are
->    fixed cost you're locked into regardless of what next quarter's numbers say?
->
-> This doesn't mean don't hire — it means the sequencing (hire *after* the renewal signal, not
-> before) is what those two cases suggest, not the growth itself.
-
-See more in [`dist/learn-from-failure-bundle.md`](dist/learn-from-failure-bundle.md) or just try
-it with your own situation.
-
-## A note on how to read these cases
-
-**This is a pattern-matching tool for reflection, not a prediction engine.** Survivorship bias
-is real: plenty of companies exhibit one or two of these same warning signs (high leverage, a
-dominant founder, aggressive growth) and turn out fine. A match here means "this is worth
-investigating carefully," not "your company will fail." Use it to ask better questions, not to
-get a verdict.
-
-**Case content may be imperfect.** Each case includes a `## Sources` section — check it before
-treating a specific number or claim as gospel, especially for anything you plan to repeat
-publicly. If you spot an error, [file a quick report](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml) or open a PR.
-
-**Don't put confidential information in this repo.** If you use the skill to analyze your own
-company, do that in your own private conversation/workspace — don't commit your internal
-financials, disputes, or cap table into a case file here. New cases contributed to this
-knowledge base should be about companies with genuine public reporting available (news
-coverage, court filings, Wikipedia, etc.).
-
-## Structure
-
-```
-AGENTS.md                — tool-agnostic instructions (Cursor, Windsurf, Codex CLI, Amp, ...)
-.claude/skills/learn-from-failure/
-  SKILL.md                — Claude Code Skill; delegates its logic to AGENTS.md
-.cursor/rules/
-  learn-from-failure.mdc  — Cursor rule; also delegates to AGENTS.md
-cases/
-  _index.md               — tagged index of all cases + failure-type taxonomy
-  _template.md             — template for adding a new case
-  <company>.md             — one file per case
-  contrasts/               — cases where a company faced the same pressure and adapted well
-scripts/
-  validate_cases.py        — checks frontmatter, required sections, and index consistency
-  build_bundle.py          — regenerates dist/learn-from-failure-bundle.md
-  build_site.py            — regenerates docs/data.json for the GitHub Pages browser
-dist/
-  learn-from-failure-bundle.md — single-file bundle for tools with no repo/file access
-docs/
-  index.html, data.json    — searchable static case browser, served via GitHub Pages
-CHECKLIST.md              — static self-audit checklist distilled from every case's questions
-```
-
-## Self-audit without the skill
-
-If you just want a static checklist to run through quarterly (no conversation needed), see
-[CHECKLIST.md](CHECKLIST.md) ([简体中文](CHECKLIST.zh-CN.md)) — it's the "Questions this
-raises" from every case, grouped by failure mechanism.
-
-## Language
-
-Case files themselves are in English (so the `## Sources` links map cleanly to the
-English-language reporting they cite), but the skill responds in whatever language you ask in —
-Chinese, English, whatever — translating the relevant content live rather than requiring the
-case files to be pre-translated. `README.zh-CN.md` and `CHECKLIST.zh-CN.md` are pre-translated
-references for Chinese-speaking users browsing the repo directly.
+[CHECKLIST.md](CHECKLIST.md) ([简体中文](CHECKLIST.zh-CN.md)) is a static list of every case's
+"Questions this raises," grouped by failure mechanism — good for a quarterly review without
+needing a conversation.
 
 ## Contributing
 
-**Know a case that should be here, or a better source for an existing one, but don't want to
-write the full file?** [Suggest a case](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml)
-or [add a source](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=add-source.yml) —
-just fill in what you know, no PR or Markdown required.
+Three ways, from easiest to most involved:
 
-**Want to edit a source or fix something yourself but don't have git set up?** Open the case
-file on GitHub (e.g. `cases/enron.md`), click the ✏️ pencil icon, edit it, and submit — GitHub
-auto-forks and opens a PR for you, no cloning needed.
+1. **Just tell us.** [Suggest a case](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml), [add a source](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=add-source.yml), or [report an error](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml) — fill in a form, no writing or Markdown required.
+2. **Edit on GitHub.** Open any file in `cases/`, click the ✏️ pencil icon, make your change, and submit. GitHub creates the pull request for you — no local setup needed.
+3. **Write a full case locally.** See [CONTRIBUTING.md](CONTRIBUTING.md) for the format and required sections.
 
-**Want to write a full case yourself locally?** See [CONTRIBUTING.md](CONTRIBUTING.md). Short
-version: use `cases/_template.md`, cite real sources, tag it with existing failure-type tags
-where they fit, update `cases/_index.md`, and run `python3 scripts/validate_cases.py` before
-opening a PR (CI runs this automatically too).
+## Project structure
+
+```
+AGENTS.md                 — instructions for AI tools other than Claude Code
+.claude/skills/            — the Claude Code Skill (delegates to AGENTS.md)
+.cursor/rules/              — the Cursor rule (also delegates to AGENTS.md)
+cases/
+  _index.md                — tagged index of every case
+  _template.md               — template for adding a new case
+  <company>.md               — one file per case, each with sources
+  contrasts/                  — cases where a company faced the same pressure and adapted well
+scripts/                   — regenerates the bundle and the website from cases/
+dist/                      — single-file bundle for tools with no file access
+docs/                      — the searchable website (GitHub Pages)
+CHECKLIST.md               — static self-audit checklist
+```
+
+## Language
+
+Case files are written in English so the `## Sources` links map cleanly to the English-language
+reporting they cite. That doesn't mean the conversation has to be in English — ask in Chinese
+(or any language) and the analysis will come back translated. `README.zh-CN.md` and
+`CHECKLIST.zh-CN.md` are ready-made Chinese references if you'd rather read them directly.
 
 ## License
 
-Case summaries are original writing about publicly reported facts; see [LICENSE](LICENSE)
-(MIT) for the repo content. This is commentary/analysis, not a reproduction of any single
-source — check the linked sources for authoritative detail.
+MIT — see [LICENSE](LICENSE). Case write-ups are original analysis of publicly reported facts,
+not a copy of any single source; check the linked sources for authoritative detail.
