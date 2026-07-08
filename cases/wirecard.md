@@ -5,11 +5,11 @@ industry: fintech/payments (Germany)
 founded: 1999
 failed: 2020
 failure_types: [fraud_and_ethics, governance_and_leadership]
-severity: bankruptcy, fraud_conviction
+severity: bankruptcy, fraud_charges_pending
 ---
 
 ## What happened
-Wirecard was a German payment-processing company that grew into a DAX-30 blue chip, at one point worth more than Deutsche Bank. Much of its reported profit came from fabricated transactions and a claimed €1.9 billion in cash held in trustee accounts at two Philippine banks — money that, when auditor EY finally refused to sign off on the 2019 accounts, turned out to never have existed. The company filed for insolvency in June 2020, its CEO was arrested, and its COO fled the country by private jet and remains a fugitive.
+Wirecard was a German payment-processing company that grew into a DAX-30 blue chip, at one point worth more than Deutsche Bank. Much of its reported profit came from transactions and a claimed €1.9 billion in cash held in trustee accounts at two Philippine banks that, when auditor EY finally refused to sign off on the 2019 accounts, were found not to exist. The company filed for insolvency in June 2020. Former CEO Markus Braun was arrested and has been on criminal trial since late 2022 — as of the trial's most recent extension (to end of 2025), no verdict has been delivered, and Braun denies the charges, blaming other former executives. Former COO Jan Marsalek fled the country and remains an internationally wanted fugitive. In a *separate civil case*, a German court ordered Braun and two other former executives to pay €140 million in damages for breach of fiduciary duty.
 
 ## Root causes
 - A large share of reported revenue and profit came from third-party partner businesses in opaque jurisdictions that were never independently verified in a way that could catch fabrication.
@@ -33,3 +33,7 @@ Wirecard was a German payment-processing company that grew into a DAX-30 blue ch
 - [Wirecard scandal — Wikipedia](https://en.wikipedia.org/wiki/Wirecard_scandal)
 - [Wirecard's collapse reveals cracks at the heart of Germany, Inc — CNN Business](https://www.cnn.com/2020/06/27/tech/wirecard-germany)
 - [Wirecard Was Germany's Fintech Star—Now $2 Billion Is Missing — Forbes](https://www.forbes.com/sites/isabeltogoh/2020/06/23/wirecard-was-germanys-fintech-star-now-2-billion-is-missing-and-its-ceo-has-been-arrested/)
+- [German court extends Wirecard trial to end 2025 — no judgement date — Reuters via Yahoo Finance](https://finance.yahoo.com/news/german-court-extends-wirecard-trial-094222992.html)
+- [Ex-Wirecard CEO Braun sentenced to pay damages to insolvency administrator (civil case) — MarketScreener](https://www.marketscreener.com/quote/stock/WIRECARD-AG-129712707/news/Ex-Wirecard-CEO-Braun-sentenced-to-pay-damages-to-insolvency-administrator-47809931/)
+
+*Criminal charges against Markus Braun are unproven allegations; he denies wrongdoing and is presumed innocent unless and until convicted.*

@@ -5,11 +5,11 @@ industry: retail/furniture conglomerate (South Africa)
 founded: 1964
 failed: 2017
 failure_types: [fraud_and_ethics, governance_and_leadership]
-severity: fraud_conviction
+severity: fraud_charges_pending
 ---
 
 ## What happened
-Steinhoff, a South African-founded, Europe-listed global furniture and retail conglomerate (owner of brands like Conforama and Mattress Firm), collapsed in December 2017 when its auditors refused to sign off on its accounts and CEO Markus Jooste resigned the same evening. An investigation later found roughly €6.5 billion in fictitious or irregular transactions with a network of off-balance-sheet entities over nearly a decade. The share price fell more than 95% within days, wiping out over $13 billion for investors including South African pension funds, and triggering lawsuits across three continents.
+Steinhoff, a South African-founded, Europe-listed global furniture and retail conglomerate (owner of brands like Conforama and Mattress Firm), collapsed in December 2017 when its auditors refused to sign off on its accounts and CEO Markus Jooste resigned the same evening. An investigation later found roughly €6.5 billion in fictitious or irregular transactions with a network of off-balance-sheet entities over nearly a decade. The share price fell more than 95% within days, wiping out over $13 billion for investors including South African pension funds, and triggering lawsuits across three continents. Jooste was never criminally tried: South Africa's financial regulator (FSCA) fined him R475 million for publishing false/misleading statements in March 2024, and he died by apparent suicide the next day, shortly before he was due to face separate criminal charges and an arrest warrant from German prosecutors. No individual has been criminally convicted in the case as of this writing; the regulatory and civil proceedings above are administrative/civil findings, not criminal convictions.
 
 ## Root causes
 - Used a network of related off-balance-sheet entities to book fictitious profits and hide losses from real acquisitions, inflating the company's apparent growth from its aggressive acquisition strategy.
@@ -33,3 +33,7 @@ Steinhoff, a South African-founded, Europe-listed global furniture and retail co
 - [Steinhoff International — Wikipedia](https://en.wikipedia.org/wiki/Steinhoff_International)
 - [A Look into the Accounting Fraud Case at Steinhoff International — Arcadia](https://www.byarcadia.org/post/a-look-into-accounting-fraud-case-at-steinhoff-international)
 - [More Violations Uncovered in Steinhoff Scandal — OCCRP](https://www.occrp.org/en/news/more-violations-uncovered-in-steinhoff-scandal)
+- [Ex-Steinhoff CEO Jooste's Death Came After Arrest Warrant Issued — Bloomberg](https://www.bloomberg.com/news/articles/2024-03-22/ex-steinhoff-ceo-jooste-death-came-after-arrest-warrant-issued)
+- [Ex-Steinhoff CEO Markus Jooste Dies Day After He's Fined $25 Million — Bloomberg](https://www.bloomberg.com/news/articles/2024-03-21/former-steinhoff-ceo-markus-jooste-dies-in-south-africa)
+
+*Markus Jooste died before any criminal trial and was never convicted; the account above reflects regulatory/civil findings and reporting, not a criminal conviction.*

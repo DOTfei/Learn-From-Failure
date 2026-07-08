@@ -90,6 +90,10 @@ scripts that CI checks on every change.
 - **Don't paste in confidential company info.** If you're analyzing your own company with an AI
   tool, keep that in your own private chat — don't commit it here. New cases should only cover
   companies with real public reporting (news, court filings, Wikipedia, etc.).
+- **This is commentary, not a legal claim of guilt.** Allegations, indictments, and civil/
+  regulatory findings are described as such — not as criminal convictions — unless a court
+  actually convicted someone. See [LEGAL.md](LEGAL.md) for the full explanation and how to
+  request a correction.
 
 ## Self-audit checklist (no AI needed)
 
@@ -129,7 +133,9 @@ reporting they cite. That doesn't mean the conversation has to be in English —
 (or any language) and the analysis will come back translated. `README.zh-CN.md` and
 `CHECKLIST.zh-CN.md` are ready-made Chinese references if you'd rather read them directly.
 
-## License
+## License & legal
 
 MIT — see [LICENSE](LICENSE). Case write-ups are original analysis of publicly reported facts,
-not a copy of any single source; check the linked sources for authoritative detail.
+not a copy of any single source; check the linked sources for authoritative detail. See
+[LEGAL.md](LEGAL.md) for how this project handles trademarks, allegations vs. convictions, and
+correction requests.

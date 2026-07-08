@@ -80,6 +80,24 @@ def main() -> int:
         if path.name not in index_text:
             errors.append(f"{path.name}: not linked from cases/_index.md")
 
+        # Legal-accuracy guard: "fraud_conviction" asserts a court found someone guilty.
+        # If the body never actually says so, this is very likely describing an unresolved
+        # allegation/indictment/civil finding instead — a meaningful factual (and defamation-risk)
+        # difference. This is a heuristic, not proof of correctness either way; a human should
+        # still sanity-check any case involving a real person's guilt.
+        severity = fm.get("severity", "")
+        if "fraud_conviction" in severity:
+            body_lower = text.lower()
+            conviction_words = ["convicted", "guilty", "conviction", "sentenced"]
+            if not any(w in body_lower for w in conviction_words):
+                errors.append(
+                    f"{path.name}: severity includes 'fraud_conviction' but the body doesn't "
+                    f"contain a word like 'convicted'/'sentenced'/'guilty' — double check this "
+                    f"is an actual criminal conviction, not just charges/an indictment/a civil "
+                    f"or regulatory finding (use 'fraud_charges_pending' if so, and say plainly "
+                    f"in the text that it's unresolved)"
+                )
+
     contrasts_dir = CASES_DIR / "contrasts"
     contrast_files = (
         sorted(p for p in contrasts_dir.glob("*.md") if not p.name.startswith("."))

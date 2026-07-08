@@ -107,6 +107,12 @@ reporting — don't include a claim you can't source. If your tool has web searc
 it to verify facts rather than relying on training data. After adding the file, update the table
 and taxonomy in `cases/_index.md`.
 
+**Never state that a real, named person was "convicted" or is "guilty" unless a court actually
+convicted them.** An arrest, indictment, lawsuit, or regulatory fine is not a conviction — use
+`severity: fraud_charges_pending` and say plainly in the text that it's unresolved ("denies the
+charges," "trial ongoing"). See `LEGAL.md` for why. This is checked (heuristically, not
+perfectly) by `scripts/validate_cases.py`.
+
 ## Language
 
 Case files are written in English so `## Sources` links map cleanly to the English-language

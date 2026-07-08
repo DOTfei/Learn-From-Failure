@@ -40,6 +40,12 @@ To write or edit a case file with the repo cloned locally:
 4. Add a **Sources** section with links to independent reporting (news, Wikipedia, court
    filings, regulatory findings, etc.). If you can't source a specific figure or claim, either
    find a source or leave it out — don't guess.
+   - **Never say a real, named person was "convicted" or is "guilty" unless a court actually
+     convicted them.** An arrest, an indictment, a lawsuit, or a regulatory fine is not a
+     conviction — use `severity: fraud_charges_pending` and say plainly in the text that the
+     matter is unresolved ("denies the charges," "trial ongoing," "civil finding"). See
+     [LEGAL.md](LEGAL.md) for why this matters. `scripts/validate_cases.py` includes an
+     automated check for this, but it's a heuristic, not a substitute for getting it right.
 5. Add a row to the table in `cases/_index.md`, and update the taxonomy section if you added a
    new tag.
 6. Run `python3 scripts/build_bundle.py` and commit the resulting change to

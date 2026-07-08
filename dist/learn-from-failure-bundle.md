@@ -1251,11 +1251,11 @@ industry: retail/furniture conglomerate (South Africa)
 founded: 1964
 failed: 2017
 failure_types: [fraud_and_ethics, governance_and_leadership]
-severity: fraud_conviction
+severity: fraud_charges_pending
 ---
 
 ## What happened
-Steinhoff, a South African-founded, Europe-listed global furniture and retail conglomerate (owner of brands like Conforama and Mattress Firm), collapsed in December 2017 when its auditors refused to sign off on its accounts and CEO Markus Jooste resigned the same evening. An investigation later found roughly €6.5 billion in fictitious or irregular transactions with a network of off-balance-sheet entities over nearly a decade. The share price fell more than 95% within days, wiping out over $13 billion for investors including South African pension funds, and triggering lawsuits across three continents.
+Steinhoff, a South African-founded, Europe-listed global furniture and retail conglomerate (owner of brands like Conforama and Mattress Firm), collapsed in December 2017 when its auditors refused to sign off on its accounts and CEO Markus Jooste resigned the same evening. An investigation later found roughly €6.5 billion in fictitious or irregular transactions with a network of off-balance-sheet entities over nearly a decade. The share price fell more than 95% within days, wiping out over $13 billion for investors including South African pension funds, and triggering lawsuits across three continents. Jooste was never criminally tried: South Africa's financial regulator (FSCA) fined him R475 million for publishing false/misleading statements in March 2024, and he died by apparent suicide the next day, shortly before he was due to face separate criminal charges and an arrest warrant from German prosecutors. No individual has been criminally convicted in the case as of this writing; the regulatory and civil proceedings above are administrative/civil findings, not criminal convictions.
 
 ## Root causes
 - Used a network of related off-balance-sheet entities to book fictitious profits and hide losses from real acquisitions, inflating the company's apparent growth from its aggressive acquisition strategy.
@@ -1279,6 +1279,10 @@ Steinhoff, a South African-founded, Europe-listed global furniture and retail co
 - [Steinhoff International — Wikipedia](https://en.wikipedia.org/wiki/Steinhoff_International)
 - [A Look into the Accounting Fraud Case at Steinhoff International — Arcadia](https://www.byarcadia.org/post/a-look-into-accounting-fraud-case-at-steinhoff-international)
 - [More Violations Uncovered in Steinhoff Scandal — OCCRP](https://www.occrp.org/en/news/more-violations-uncovered-in-steinhoff-scandal)
+- [Ex-Steinhoff CEO Jooste's Death Came After Arrest Warrant Issued — Bloomberg](https://www.bloomberg.com/news/articles/2024-03-22/ex-steinhoff-ceo-jooste-death-came-after-arrest-warrant-issued)
+- [Ex-Steinhoff CEO Markus Jooste Dies Day After He's Fined $25 Million — Bloomberg](https://www.bloomberg.com/news/articles/2024-03-21/former-steinhoff-ceo-markus-jooste-dies-in-south-africa)
+
+*Markus Jooste died before any criminal trial and was never convicted; the account above reflects regulatory/civil findings and reporting, not a criminal conviction.*
 
 
 ---
@@ -1453,11 +1457,11 @@ industry: fintech/payments (Germany)
 founded: 1999
 failed: 2020
 failure_types: [fraud_and_ethics, governance_and_leadership]
-severity: bankruptcy, fraud_conviction
+severity: bankruptcy, fraud_charges_pending
 ---
 
 ## What happened
-Wirecard was a German payment-processing company that grew into a DAX-30 blue chip, at one point worth more than Deutsche Bank. Much of its reported profit came from fabricated transactions and a claimed €1.9 billion in cash held in trustee accounts at two Philippine banks — money that, when auditor EY finally refused to sign off on the 2019 accounts, turned out to never have existed. The company filed for insolvency in June 2020, its CEO was arrested, and its COO fled the country by private jet and remains a fugitive.
+Wirecard was a German payment-processing company that grew into a DAX-30 blue chip, at one point worth more than Deutsche Bank. Much of its reported profit came from transactions and a claimed €1.9 billion in cash held in trustee accounts at two Philippine banks that, when auditor EY finally refused to sign off on the 2019 accounts, were found not to exist. The company filed for insolvency in June 2020. Former CEO Markus Braun was arrested and has been on criminal trial since late 2022 — as of the trial's most recent extension (to end of 2025), no verdict has been delivered, and Braun denies the charges, blaming other former executives. Former COO Jan Marsalek fled the country and remains an internationally wanted fugitive. In a *separate civil case*, a German court ordered Braun and two other former executives to pay €140 million in damages for breach of fiduciary duty.
 
 ## Root causes
 - A large share of reported revenue and profit came from third-party partner businesses in opaque jurisdictions that were never independently verified in a way that could catch fabrication.
@@ -1481,6 +1485,10 @@ Wirecard was a German payment-processing company that grew into a DAX-30 blue ch
 - [Wirecard scandal — Wikipedia](https://en.wikipedia.org/wiki/Wirecard_scandal)
 - [Wirecard's collapse reveals cracks at the heart of Germany, Inc — CNN Business](https://www.cnn.com/2020/06/27/tech/wirecard-germany)
 - [Wirecard Was Germany's Fintech Star—Now $2 Billion Is Missing — Forbes](https://www.forbes.com/sites/isabeltogoh/2020/06/23/wirecard-was-germanys-fintech-star-now-2-billion-is-missing-and-its-ceo-has-been-arrested/)
+- [German court extends Wirecard trial to end 2025 — no judgement date — Reuters via Yahoo Finance](https://finance.yahoo.com/news/german-court-extends-wirecard-trial-094222992.html)
+- [Ex-Wirecard CEO Braun sentenced to pay damages to insolvency administrator (civil case) — MarketScreener](https://www.marketscreener.com/quote/stock/WIRECARD-AG-129712707/news/Ex-Wirecard-CEO-Braun-sentenced-to-pay-damages-to-insolvency-administrator-47809931/)
+
+*Criminal charges against Markus Braun are unproven allegations; he denies wrongdoing and is presumed innocent unless and until convicted.*
 
 
 ---
