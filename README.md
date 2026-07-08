@@ -23,8 +23,8 @@ problem at the real company.
 ## Install
 
 **Option A — as a Claude Code plugin:** this repo has a `.claude-plugin/plugin.json` manifest,
-so once it's pushed to GitHub you can add it via Claude Code's plugin marketplace flow (point
-it at this repo's URL).
+so you can add it via Claude Code's plugin marketplace flow pointed at
+`https://github.com/DOTfei/Learn-From-Failure`.
 
 **Option B — manual:** copy (or symlink) the `.claude/skills/learn-from-failure/` folder into
 your own project's `.claude/skills/` directory, or clone this whole repo and point Claude Code
