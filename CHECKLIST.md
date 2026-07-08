@@ -13,7 +13,7 @@ None of these are pass/fail. They're prompts to investigate. See the
 verdict.
 
 ## Fraud & ethics
-_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
+_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [efishery](cases/efishery.md)_
 
 - [ ] Can an outside expert independently verify our core technical/financial claim, or is it only internal say-so?
 - [ ] Are we, our auditors, or our board financially incentivized to not look too closely at our own numbers?
@@ -25,7 +25,7 @@ _See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md
 - [ ] Do we have an unusually high win-rate on competitive bids or deals that we've never honestly examined the reason for?
 
 ## Governance & leadership
-_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md), [evergrande](cases/evergrande.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
+_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md), [evergrande](cases/evergrande.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [tanihub](cases/tanihub.md)_
 
 - [ ] Does any single individual have effectively unchecked control, and can the board actually say no to them?
 - [ ] Are there transactions where a founder/executive personally benefits at the company's expense?
@@ -35,7 +35,7 @@ _See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [
 - [ ] When credible outside critics raise specific concerns, is our first instinct to investigate the claim or discredit the accuser?
 
 ## Financial management
-_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md)_
+_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md), [byjus](cases/byjus.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] If our single largest revenue source dropped 20-30% in value/volume, would we still be solvent?
 - [ ] Does each unit/order we sell actually make money once fully-loaded costs are included — or are we hoping "scale will fix it"?
@@ -47,7 +47,7 @@ _See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.m
 - [ ] Is there a real delay between a decision we make today and when its true cost becomes visible — and are we accounting for that lag?
 
 ## Disruption denial
-_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md)_
+_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md), [kaodim](cases/kaodim.md)_
 
 - [ ] Do we have an internal idea/prototype that threatens our main revenue line — and if so, who decided to shelve it, and why?
 - [ ] Are we protecting this quarter's profit at the cost of being relevant in five years?
@@ -56,16 +56,17 @@ _See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobil
 - [ ] Is any part of our revenue model something customers openly resent, and are we protecting it instead of fixing it?
 
 ## Product-market fit
-_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md)_
+_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md), [propzy](cases/propzy.md), [kaodim](cases/kaodim.md)_
 
 - [ ] Have we validated the core assumption behind our product with real, unpaid user behavior — or only with funding and press?
 - [ ] Does our product have any organic/viral growth loop, or does every user require a paid acquisition dollar?
 - [ ] Could our core value proposition be replicated by something drastically simpler or cheaper — have we actually tested that?
 - [ ] Is our price point matched to the actual value/problem being solved for the everyday buyer?
 - [ ] Is our confidence in demand based on real customer behavior, or on how impressive the technology/story seems to us and investors?
+- [ ] Once we connect two parties (or make one successful match/sale), is there anything stopping them from transacting directly without us next time?
 
 ## Scaling too fast
-_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md)_
+_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
 - [ ] Is our expansion pace set by what the data says is working, or by external/investor pressure to grow fast?

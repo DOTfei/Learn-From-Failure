@@ -32,13 +32,13 @@
   <!-- stat chips -->
   <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="600">
     <rect x="74" y="222" width="120" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
-    <text x="134" y="247" fill="#efece4" text-anchor="middle">33 cases</text>
+    <text x="134" y="247" fill="#efece4" text-anchor="middle">38 cases</text>
 
     <rect x="206" y="222" width="196" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
     <text x="304" y="247" fill="#efece4" text-anchor="middle">8 failure mechanisms</text>
 
     <rect x="414" y="222" width="150" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
-    <text x="489" y="247" fill="#efece4" text-anchor="middle">10 countries</text>
+    <text x="489" y="247" fill="#efece4" text-anchor="middle">12 countries</text>
 
     <rect x="576" y="222" width="130" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
     <text x="641" y="247" fill="#efece4" text-anchor="middle">MIT licensed</text>

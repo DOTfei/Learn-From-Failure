@@ -11,7 +11,7 @@
 幸存者偏差是真实存在的，很多公司同样有这些警示信号但活得好好的，"匹配"不等于"会失败"。
 
 ## 造假与商业道德
-_参考案例：[enron](cases/enron.md)、[theranos](cases/theranos.md)、[ftx](cases/ftx.md)、[katerra](cases/katerra.md)、[fusionex](cases/fusionex.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）、[wirecard](cases/wirecard.md)（德国 Wirecard）、[satyam](cases/satyam.md)（印度 Satyam）、[steinhoff](cases/steinhoff.md)（南非 Steinhoff）、[hih-insurance](cases/hih-insurance.md)（澳洲 HIH）、[odebrecht](cases/odebrecht.md)（巴西 Odebrecht）_
+_参考案例：[enron](cases/enron.md)、[theranos](cases/theranos.md)、[ftx](cases/ftx.md)、[katerra](cases/katerra.md)、[fusionex](cases/fusionex.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）、[wirecard](cases/wirecard.md)（德国 Wirecard）、[satyam](cases/satyam.md)（印度 Satyam）、[steinhoff](cases/steinhoff.md)（南非 Steinhoff）、[hih-insurance](cases/hih-insurance.md)（澳洲 HIH）、[odebrecht](cases/odebrecht.md)（巴西 Odebrecht）、[efishery](cases/efishery.md)（印尼 eFishery）_
 
 - [ ] 我们的核心技术/财务说法，能不能让外部专家独立验证，还是只有内部人说了算？
 - [ ] 我们（或审计方、董事会）在财务上是不是有动机不去仔细核查自己的数字？
@@ -23,7 +23,7 @@ _参考案例：[enron](cases/enron.md)、[theranos](cases/theranos.md)、[ftx](
 - [ ] 我们在竞标/交易中的中标率是不是高得不寻常，而我们从来没有认真想过为什么？
 
 ## 治理与领导层
-_参考案例：[wework](cases/wework.md)、[ftx](cases/ftx.md)、[yahoo](cases/yahoo.md)、[nokia-mobile](cases/nokia-mobile.md)、[blackberry](cases/blackberry.md)、[lehman-brothers](cases/lehman-brothers.md)、[fusionex](cases/fusionex.md)、[evergrande](cases/evergrande.md)（恒大）、[wirecard](cases/wirecard.md)、[satyam](cases/satyam.md)、[steinhoff](cases/steinhoff.md)、[hih-insurance](cases/hih-insurance.md)、[odebrecht](cases/odebrecht.md)_
+_参考案例：[wework](cases/wework.md)、[ftx](cases/ftx.md)、[yahoo](cases/yahoo.md)、[nokia-mobile](cases/nokia-mobile.md)、[blackberry](cases/blackberry.md)、[lehman-brothers](cases/lehman-brothers.md)、[fusionex](cases/fusionex.md)、[evergrande](cases/evergrande.md)（恒大）、[wirecard](cases/wirecard.md)、[satyam](cases/satyam.md)、[steinhoff](cases/steinhoff.md)、[hih-insurance](cases/hih-insurance.md)、[odebrecht](cases/odebrecht.md)、[byjus](cases/byjus.md)（印度 BYJU'S）、[efishery](cases/efishery.md)、[tanihub](cases/tanihub.md)（印尼 TaniHub）_
 
 - [ ] 有没有某个人实际上不受制衡，董事会真的能对他说"不"吗？
 - [ ] 有没有创始人/高管从公司交易中个人获利、损害公司利益的情况？
@@ -33,7 +33,7 @@ _参考案例：[wework](cases/wework.md)、[ftx](cases/ftx.md)、[yahoo](cases/
 - [ ] 当可信的外部批评者提出具体质疑时，我们的第一反应是去调查这个说法，还是先去质疑对方的动机？
 
 ## 财务管理
-_参考案例：[lehman-brothers](cases/lehman-brothers.md)、[toys-r-us](cases/toys-r-us.md)、[sears](cases/sears.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[katerra](cases/katerra.md)、[silicon-valley-bank](cases/silicon-valley-bank.md)（硅谷银行）、[evergrande](cases/evergrande.md)（恒大）、[hih-insurance](cases/hih-insurance.md)_
+_参考案例：[lehman-brothers](cases/lehman-brothers.md)、[toys-r-us](cases/toys-r-us.md)、[sears](cases/sears.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[katerra](cases/katerra.md)、[silicon-valley-bank](cases/silicon-valley-bank.md)（硅谷银行）、[evergrande](cases/evergrande.md)（恒大）、[hih-insurance](cases/hih-insurance.md)、[byjus](cases/byjus.md)、[propzy](cases/propzy.md)（越南 Propzy）、[tanihub](cases/tanihub.md)_
 
 - [ ] 如果我们最大的单一收入来源下滑 20-30%，公司还能不能撑得住？
 - [ ] 把全部成本算进去，我们卖的每一单/每一件到底是赚钱还是亏钱 —— 还是只是"希望规模上去了就好了"？
@@ -45,7 +45,7 @@ _参考案例：[lehman-brothers](cases/lehman-brothers.md)、[toys-r-us](cases/
 - [ ] 我们今天做的决定和它的真实代价显现出来之间，是不是有一段时间差——我们有没有把这个时间差算进去，还是只看眼前的利润？
 
 ## 拒绝转型（颠覆性变化面前的否认）
-_参考案例：[kodak](cases/kodak.md)、[blockbuster](cases/blockbuster.md)、[nokia-mobile](cases/nokia-mobile.md)、[sears](cases/sears.md)、[borders](cases/borders.md)、[blackberry](cases/blackberry.md)、[circuit-city](cases/circuit-city.md)_
+_参考案例：[kodak](cases/kodak.md)、[blockbuster](cases/blockbuster.md)、[nokia-mobile](cases/nokia-mobile.md)、[sears](cases/sears.md)、[borders](cases/borders.md)、[blackberry](cases/blackberry.md)、[circuit-city](cases/circuit-city.md)、[kaodim](cases/kaodim.md)（马来西亚 Kaodim）_
 
 - [ ] 我们内部有没有一个威胁到主营收入的想法/原型，是谁决定雪藏它的，为什么？
 - [ ] 我们是不是在为了保住这个季度的利润，牺牲五年后还能不能活下去？
@@ -54,16 +54,17 @@ _参考案例：[kodak](cases/kodak.md)、[blockbuster](cases/blockbuster.md)、
 - [ ] 我们的收入模式里，有没有客户公开反感、但我们选择保护而不是修正的部分？
 
 ## 产品与市场不匹配
-_参考案例：[quibi](cases/quibi.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[segway](cases/segway.md)、[theranos](cases/theranos.md)、[myspace](cases/myspace.md)_
+_参考案例：[quibi](cases/quibi.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[segway](cases/segway.md)、[theranos](cases/theranos.md)、[myspace](cases/myspace.md)、[propzy](cases/propzy.md)、[kaodim](cases/kaodim.md)_
 
 - [ ] 我们验证核心假设靠的是真实、未付费的用户行为，还是只靠融资和媒体报道？
 - [ ] 我们的产品有没有自然/病毒式增长的路径，还是每一个用户都要靠付费获客？
 - [ ] 我们的核心价值主张，会不会被一个明显更简单/更便宜的方式轻易替代 —— 我们真的测试过吗？
 - [ ] 我们的定价，跟普通用户实际感受到的价值/要解决的问题是不是匹配的？
 - [ ] 我们对需求的信心，是来自真实的用户行为，还是来自我们和投资人觉得这个技术/故事有多厉害？
+- [ ] 一旦我们成功撮合了双方（或完成一次成功匹配/交易），有没有什么能阻止他们下次绕过我们直接交易？
 
 ## 扩张过快
-_参考案例：[wework](cases/wework.md)、[webvan](cases/webvan.md)、[pets-com](cases/pets-com.md)、[katerra](cases/katerra.md)、[kenny-rogers-roasters](cases/kenny-rogers-roasters.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）、[evergrande](cases/evergrande.md)（恒大）_
+_参考案例：[wework](cases/wework.md)、[webvan](cases/webvan.md)、[pets-com](cases/pets-com.md)、[katerra](cases/katerra.md)、[kenny-rogers-roasters](cases/kenny-rogers-roasters.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）、[evergrande](cases/evergrande.md)（恒大）、[byjus](cases/byjus.md)、[efishery](cases/efishery.md)、[propzy](cases/propzy.md)、[tanihub](cases/tanihub.md)_
 
 - [ ] 在把固定成本投入复制到别的地方之前，我们有没有先在一个地点/细分市场证明模式能盈利？
 - [ ] 我们的扩张节奏，是数据证明可行才推进的，还是被外部/投资人的压力推着走的？

@@ -1,6 +1,6 @@
 # Failure Case Index
 
-32 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+37 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
@@ -39,15 +39,20 @@ any new case you contribute.
 | [boeing-737-max](boeing-737-max.md) | aerospace/manufacturing (US) | safety_and_quality, culture_and_talent, governance_and_leadership |
 | [hih-insurance](hih-insurance.md) | insurance (Australia) | governance_and_leadership, financial_management, fraud_and_ethics |
 | [odebrecht](odebrecht.md) | construction/engineering (Brazil) | fraud_and_ethics, governance_and_leadership |
+| [byjus](byjus.md) | edtech (India) | scaling_too_fast, financial_management, governance_and_leadership |
+| [efishery](efishery.md) | agritech/aquaculture (Indonesia) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
+| [propzy](propzy.md) | proptech/real estate (Vietnam) | scaling_too_fast, financial_management, product_market_fit |
+| [tanihub](tanihub.md) | agritech (Indonesia) | scaling_too_fast, financial_management, governance_and_leadership |
+| [kaodim](kaodim.md) | services marketplace (Malaysia) | product_market_fit, disruption_denial |
 
 ## Failure type taxonomy
 
-- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht)
-- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht)
-- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance)
-- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
-- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande)
+- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
+- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
+- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
+- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace, Kaodim)
+- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy, Kaodim)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
 - **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo, Boeing 737 MAX)
 - **safety_and_quality** — cut corners on product/service safety or quality to save cost or time (Boeing 737 MAX)
 
@@ -64,9 +69,9 @@ These use a different, lighter frontmatter schema (no `severity`/`failed` fields
 ## Geographic coverage
 
 Cases span the US, Canada, Finland, Germany, India, South Africa, China, Malaysia, Australia,
-and Brazil — most of these failure mechanisms aren't specific to one country's business culture.
-If you know a well-documented case from a region not yet covered here, see
-[CONTRIBUTING.md](../CONTRIBUTING.md).
+Brazil, Indonesia, and Vietnam — most of these failure mechanisms aren't specific to one
+country's business culture. If you know a well-documented case from a region not yet covered
+here, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Method & limitations
 

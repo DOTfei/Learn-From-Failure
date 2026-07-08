@@ -49,7 +49,7 @@ checklist, then every individual case file (including contrast cases), each with
 
 # Failure Case Index
 
-32 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+37 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
@@ -88,15 +88,20 @@ any new case you contribute.
 | [boeing-737-max](boeing-737-max.md) | aerospace/manufacturing (US) | safety_and_quality, culture_and_talent, governance_and_leadership |
 | [hih-insurance](hih-insurance.md) | insurance (Australia) | governance_and_leadership, financial_management, fraud_and_ethics |
 | [odebrecht](odebrecht.md) | construction/engineering (Brazil) | fraud_and_ethics, governance_and_leadership |
+| [byjus](byjus.md) | edtech (India) | scaling_too_fast, financial_management, governance_and_leadership |
+| [efishery](efishery.md) | agritech/aquaculture (Indonesia) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
+| [propzy](propzy.md) | proptech/real estate (Vietnam) | scaling_too_fast, financial_management, product_market_fit |
+| [tanihub](tanihub.md) | agritech (Indonesia) | scaling_too_fast, financial_management, governance_and_leadership |
+| [kaodim](kaodim.md) | services marketplace (Malaysia) | product_market_fit, disruption_denial |
 
 ## Failure type taxonomy
 
-- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht)
-- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht)
-- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance)
-- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
-- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande)
+- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
+- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
+- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
+- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace, Kaodim)
+- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy, Kaodim)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
 - **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo, Boeing 737 MAX)
 - **safety_and_quality** — cut corners on product/service safety or quality to save cost or time (Boeing 737 MAX)
 
@@ -113,9 +118,9 @@ These use a different, lighter frontmatter schema (no `severity`/`failed` fields
 ## Geographic coverage
 
 Cases span the US, Canada, Finland, Germany, India, South Africa, China, Malaysia, Australia,
-and Brazil — most of these failure mechanisms aren't specific to one country's business culture.
-If you know a well-documented case from a region not yet covered here, see
-[CONTRIBUTING.md](../CONTRIBUTING.md).
+Brazil, Indonesia, and Vietnam — most of these failure mechanisms aren't specific to one
+country's business culture. If you know a well-documented case from a region not yet covered
+here, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Method & limitations
 
@@ -144,7 +149,7 @@ None of these are pass/fail. They're prompts to investigate. See the
 verdict.
 
 ## Fraud & ethics
-_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
+_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [efishery](cases/efishery.md)_
 
 - [ ] Can an outside expert independently verify our core technical/financial claim, or is it only internal say-so?
 - [ ] Are we, our auditors, or our board financially incentivized to not look too closely at our own numbers?
@@ -156,7 +161,7 @@ _See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md
 - [ ] Do we have an unusually high win-rate on competitive bids or deals that we've never honestly examined the reason for?
 
 ## Governance & leadership
-_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md), [evergrande](cases/evergrande.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
+_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md), [evergrande](cases/evergrande.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [tanihub](cases/tanihub.md)_
 
 - [ ] Does any single individual have effectively unchecked control, and can the board actually say no to them?
 - [ ] Are there transactions where a founder/executive personally benefits at the company's expense?
@@ -166,7 +171,7 @@ _See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [
 - [ ] When credible outside critics raise specific concerns, is our first instinct to investigate the claim or discredit the accuser?
 
 ## Financial management
-_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md)_
+_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md), [byjus](cases/byjus.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] If our single largest revenue source dropped 20-30% in value/volume, would we still be solvent?
 - [ ] Does each unit/order we sell actually make money once fully-loaded costs are included — or are we hoping "scale will fix it"?
@@ -178,7 +183,7 @@ _See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.m
 - [ ] Is there a real delay between a decision we make today and when its true cost becomes visible — and are we accounting for that lag?
 
 ## Disruption denial
-_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md)_
+_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md), [kaodim](cases/kaodim.md)_
 
 - [ ] Do we have an internal idea/prototype that threatens our main revenue line — and if so, who decided to shelve it, and why?
 - [ ] Are we protecting this quarter's profit at the cost of being relevant in five years?
@@ -187,16 +192,17 @@ _See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobil
 - [ ] Is any part of our revenue model something customers openly resent, and are we protecting it instead of fixing it?
 
 ## Product-market fit
-_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md)_
+_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md), [propzy](cases/propzy.md), [kaodim](cases/kaodim.md)_
 
 - [ ] Have we validated the core assumption behind our product with real, unpaid user behavior — or only with funding and press?
 - [ ] Does our product have any organic/viral growth loop, or does every user require a paid acquisition dollar?
 - [ ] Could our core value proposition be replicated by something drastically simpler or cheaper — have we actually tested that?
 - [ ] Is our price point matched to the actual value/problem being solved for the everyday buyer?
 - [ ] Is our confidence in demand based on real customer behavior, or on how impressive the technology/story seems to us and investors?
+- [ ] Once we connect two parties (or make one successful match/sale), is there anything stopping them from transacting directly without us next time?
 
 ## Scaling too fast
-_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md)_
+_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
 - [ ] Is our expansion pace set by what the data says is working, or by external/investor pressure to grow fast?
@@ -385,6 +391,49 @@ Borders outsourced its online bookselling entirely to Amazon in 2001, believing 
 
 ---
 
+<!-- ==== cases/byjus.md ==== -->
+
+---
+slug: byjus
+company: BYJU'S
+industry: edtech (India)
+founded: 2011
+failed: 2023-2024 (valuation collapse, insolvency proceedings)
+failure_types: [scaling_too_fast, financial_management, governance_and_leadership]
+severity: bankruptcy
+---
+
+## What happened
+BYJU'S became India's most valuable startup and a global edtech giant, reaching a $22 billion valuation by aggressively acquiring more than two dozen companies (including a nearly $1 billion acquisition of test-prep giant Aakash). When funding conditions tightened in 2022, the company couldn't service the debt taken on to fund that acquisition spree. It defaulted on a $1.2 billion loan, lost control of Aakash to its lenders/investors, was pulled into insolvency proceedings in India, and its founder publicly said the company — once worth $22 billion — was "worth zero." Investors have also alleged (not yet proven in court) that roughly $533 million of loan proceeds were diverted rather than used for stated purposes.
+
+## Root causes
+- Growth strategy relied on acquiring over two dozen companies in a short period, funded substantially by debt rather than equity or organic cash flow, betting that integration and scale would eventually justify the cost.
+- Integrating that many acquisitions simultaneously — different systems, cultures, and teams — proved far more operationally complex than anticipated, duplicating costs instead of realizing the hoped-for synergies.
+- Heavy reliance on continued external funding to service acquisition debt meant that when the funding environment changed in 2022, there was no fallback plan.
+- Concentrated founder control and a board that reportedly didn't exercise strong independent oversight meant spending and acquisition decisions went largely unchecked during the growth phase.
+
+## Warning signs (visible before the collapse)
+- An acquisition pace (dozens of companies) far outstripping any single team's ability to actually integrate what was being bought.
+- Debt-funded growth in a business (consumer edtech subscriptions) whose revenue durability had not been tested through a funding downturn.
+- Auditor turnover and delayed financial filings in the period before the collapse became public — a common signal that the numbers underneath are harder to produce than they should be.
+- Founder and family retaining concentrated control with limited apparent independent board pushback on the acquisition strategy or spending.
+
+## Questions this raises for another company
+- Are we financing growth (including acquisitions) with debt that assumes funding conditions will stay exactly as favorable as they are today?
+- Have we acquired or launched more things than our team can realistically integrate well, rather than just add to a slide?
+- Is our board actually independent enough to say no to the founder on a major spending or acquisition decision?
+- If our auditor started taking longer to sign off on our numbers, would we treat that as a serious warning sign or just an inconvenience?
+
+## Sources
+- [BYJU'S In 2024: How The $22 Bn Company Crumbled — Inc42](https://inc42.com/features/byjus-2024-review-collapse-edtech-giant-byju-raveendran/)
+- [Byju's founder says his edtech startup, once worth $22B, is now 'worth zero' — TechCrunch](https://techcrunch.com/2024/10/17/byjus-founder-says-his-edtech-startup-once-worth-22b-is-now-worth-zero/)
+- [India's Byju's lost more than $20 billion in valuation — what went wrong — CNBC](https://www.cnbc.com/2024/03/01/the-rise-and-fall-of-byjus-once-a-startup-darling-in-india.html)
+
+*The alleged diversion of loan funds is a claim made by investors in ongoing litigation and has not been proven in court; it is described here as an allegation, not an established fact.*
+
+
+---
+
 <!-- ==== cases/circuit-city.md ==== -->
 
 ---
@@ -421,6 +470,47 @@ In 2007, facing margin pressure, Circuit City fired around 3,400 of its most exp
 ## Sources
 - [Circuit City Cuts 3,400 'Overpaid' Workers — Washington Post](https://www.washingtonpost.com/archive/business/2007/03/29/circuit-city-cuts-3400-overpaid-workers/a67a22c6-0416-4a50-9a40-398a0bf85a02/)
 - [What Happened to Circuit City? — WhatJobs News](https://www.whatjobs.com/news/what-happened-to-circuit-city/)
+
+
+---
+
+<!-- ==== cases/efishery.md ==== -->
+
+---
+slug: efishery
+company: eFishery
+industry: agritech/aquaculture (Indonesia)
+founded: 2013
+failed: 2025 (fraud exposed, criminal conviction)
+failure_types: [fraud_and_ethics, governance_and_leadership, scaling_too_fast]
+severity: bankruptcy, fraud_conviction
+---
+
+## What happened
+eFishery, an Indonesian aquaculture-tech startup providing smart fish-feeders plus financing and market access, became Southeast Asia's first aquaculture unicorn, raising over $290 million from investors including SoftBank and Temasek at a $1.4 billion valuation. In December 2024 a whistleblower alerted the board to accounting irregularities. An investigation found management had maintained two sets of books since as early as 2018, inflating revenue for the first nine months of 2024 from an actual $157 million to a reported $752 million, and reporting a fabricated $16 million profit against a real $35 million loss. Founder and CEO Gibran Huzaifah was arrested and sentenced to nine years in prison; two other former executives were also charged.
+
+## Root causes
+- Dual financial reporting (a real set of books and a fabricated set shown to investors) was maintained for years, meaning the fraud wasn't a one-time manipulation but a sustained, deliberate operating practice.
+- Investors conducting due diligence and ongoing monitoring across multiple funding rounds over several years did not catch a discrepancy of this scale, showing that "sophisticated investor" and "rigorous verification" aren't the same thing.
+- Rapid growth to unicorn status created pressure to keep showing hypergrowth to justify the valuation, which the real numbers apparently couldn't support.
+- It took an internal whistleblower — not routine audit or investor oversight — to surface the fraud, after roughly six years.
+
+## Warning signs (visible before the collapse)
+- Reported revenue growth (from real $157M to claimed $752M in nine months) far beyond what the underlying unit economics of feed/financing services could plausibly support.
+- A profit figure reported to investors and a real financial result moving in opposite directions (reported profit vs. actual loss).
+- Years-long gap between when fabrication reportedly began (2018) and when anyone outside the company caught it (2024) — a red flag about how much external verification was actually happening.
+- Fraud surfaced through an internal whistleblower rather than external audit or investor scrutiny — worth asking whether your own oversight would catch something only a whistleblower could find.
+
+## Questions this raises for another company
+- If we have two versions of our numbers anywhere — a rough internal picture and a polished investor-facing one — how far apart are they, and why?
+- Are our investors' periodic check-ins actually verifying underlying data, or just reviewing what we choose to present?
+- Would a random employee who spotted something wrong know how to report it, and would that report reach someone with the power to act on it?
+- Is our growth story requiring an ever-larger number each period to stay credible, in a way that would eventually become impossible to sustain honestly?
+
+## Sources
+- [eFishery — Wikipedia](https://en.wikipedia.org/wiki/EFishery)
+- [Founder of eFishery receives 9-year prison sentence — We Are Aquaculture](https://weareaquaculture.com/news/finance/founder-of-efishery-receives-9-year-prison-sentence)
+- ['Chilling effect': what an Indonesian startup scandal means for the region — CNBC](https://www.cnbc.com/2025/02/07/efishery-the-impact-a-scandal-has-on-ecosystem-already-in-deep-water.html)
 
 
 ---
@@ -665,6 +755,47 @@ Juicero raised $120M to build a $400 Wi-Fi-connected juicer that squeezed propri
 ## Sources
 - [Juicero — Wikipedia](https://en.wikipedia.org/wiki/Juicero)
 - [The Downfall of Juicero: The Overhyped High-Tech Juicer — Codemotion](https://www.codemotion.com/magazine/dev-life/stories/the-downfall-of-juicero-the-overhyped-high-tech-juicer/)
+
+
+---
+
+<!-- ==== cases/kaodim.md ==== -->
+
+---
+slug: kaodim
+company: Kaodim
+industry: services marketplace (Malaysia)
+founded: 2014
+failed: 2022
+failure_types: [product_market_fit, disruption_denial]
+severity: shutdown
+---
+
+## What happened
+Kaodim, founded by two lawyers, built an online marketplace connecting customers with home-service providers (handymen, contractors, personal trainers) across Malaysia, Singapore, Indonesia, and the Philippines, raising a total of $17.6 million. It hit early momentum — $10 million in sales within four months at one point — but announced in June 2022 that it would shut down entirely on July 1, 2022, citing rising costs, manpower shortages, and an inability to grow the business meaningfully for the long term.
+
+## Root causes
+- The marketplace's core structural weakness was disintermediation: once a customer found a service provider through Kaodim, nothing stopped either side from transacting directly the next time, without paying the platform again — so the platform never captured durable, repeat-transaction value from the relationships it created.
+- Early sales momentum reflected initial matching demand, not a sustainable moat, because the value Kaodim provided (discovery) had a natural expiration point per customer-provider pair.
+- No effective mechanism (fees, lock-in, bundled services) was built to keep transactions on-platform after the first successful match, unlike marketplaces with recurring inherent need for the platform (e.g., ride-hailing, food delivery) where each transaction is independent.
+- Operating across four countries simultaneously multiplied operational costs and complexity without addressing the core retention/monetization problem in any one market.
+
+## Warning signs (visible before the collapse)
+- A marketplace business model where the platform's core value (introducing two parties) is a one-time event per relationship, not a recurring necessity — a structural ceiling on repeat revenue.
+- Strong early transaction volume that didn't translate into growing platform revenue over time, as more matches "graduated" off-platform.
+- Expansion into multiple countries before solving the core retention/monetization problem in the home market.
+- Founders citing an inability to find a path to meaningful long-term growth — often a sign the core model's ceiling was already understood internally before the public announcement.
+
+## Questions this raises for another company
+- Once we successfully connect two parties, is there anything stopping them from transacting directly without us next time?
+- Is our early transaction volume evidence of a repeatable business, or a one-time initial-matching effect that will naturally taper off?
+- Have we built any real mechanism (fees, guarantees, bundled tools, lock-in) that keeps value flowing through our platform after the first successful transaction?
+- Are we expanding into new markets to escape a core monetization problem we haven't actually solved at home?
+
+## Sources
+- [How Kaodim collapsed as a successful startup story in Malaysia — The Runway Ventures](https://www.therunway.ventures/p/kaodim)
+- [Malaysian startup Kaodim to shut down on July 1, cites rising costs among challenges — The Star](https://www.thestar.com.my/tech/tech-news/2022/06/02/malaysian-startup-kaodim-to-shut-down-on-july-1-cites-rising-costs-among-challenges)
+- [What Happened to Kaodim & Why Did It Fail? — Sunset](https://www.sunsethq.com/blog/why-did-kaodim-fail)
 
 
 ---
@@ -1040,6 +1171,47 @@ Pets.com sold pet supplies online, spending heavily on brand advertising (includ
 
 ---
 
+<!-- ==== cases/propzy.md ==== -->
+
+---
+slug: propzy
+company: Propzy
+industry: proptech/real estate (Vietnam)
+founded: 2016
+failed: 2022
+failure_types: [scaling_too_fast, financial_management, product_market_fit]
+severity: shutdown
+---
+
+## What happened
+Propzy raised over $37 million — the largest amount raised by a Vietnamese proptech startup — to build a real-estate transaction platform, growing to 1,200 employees and more than 30 physical transaction centers. Despite branding itself as a technology company, its model relied heavily on manual processes and brokers, which burned cash without the margins a "tech" valuation assumed. A planned acquisition by Singapore's 99 Group fell through in mid-2022 after 99 Group's founder cited concerns about Propzy's weak balance sheet. Propzy ceased all operations in September 2022.
+
+## Root causes
+- Positioned and valued itself as a scalable tech platform while the actual operating model depended on manual, people-heavy processes (brokers, physical centers) with cost structures closer to traditional real estate than software.
+- Scaled headcount (1,200 people) and physical infrastructure (30+ centers) aggressively without those fixed costs being matched by proven, durable margins.
+- Became dependent on an acquisition as an exit/rescue path, which meant due diligence by the acquirer (finding a weak balance sheet) could — and did — kill the company when it fell through.
+- External shocks (pandemic effects, financing market tightening) hit a company that had little cushion left after years of heavy fixed-cost growth.
+
+## Warning signs (visible before the collapse)
+- A "tech" narrative and valuation resting on a business model that, operationally, looked much more like a traditional labor- and real-estate-intensive business.
+- Rapid buildout of physical locations and headcount without correspondingly proven unit economics per location.
+- Being in acquisition talks as the primary path forward, rather than a genuine option among several — a sign the company needed rescue, not just growth capital.
+- An acquirer's own public due-diligence concerns about balance sheet health, shortly before the company shut down entirely.
+
+## Questions this raises for another company
+- Are we valued or positioned as a "tech" company while our actual cost structure and operations look like something much more traditional and labor-intensive?
+- Have we built out headcount or physical footprint faster than we've proven the unit economics of each location or hire?
+- If our current fundraising or acquisition talks fell through tomorrow, do we have any other path forward, or is it our only plan?
+- Would a serious potential acquirer's due diligence turn up the same balance sheet concerns we'd rather not look at closely ourselves?
+
+## Sources
+- [How Propzy's collapse shocked the entire real estate market of Vietnam — The Runway Ventures](https://www.therunway.ventures/p/propzy)
+- [Vietnam's proptech startup Propzy shuts down operations — DealStreetAsia](https://www.dealstreetasia.com/stories/vietnams-proptech-startup-propzy-shuts-down-operations-307594)
+- [What Happened To Propzy & Why Did It Fail? — Sunset](https://www.sunsethq.com/blog/why-did-propzy-fail)
+
+
+---
+
 <!-- ==== cases/quibi.md ==== -->
 
 ---
@@ -1283,6 +1455,47 @@ Steinhoff, a South African-founded, Europe-listed global furniture and retail co
 - [Ex-Steinhoff CEO Markus Jooste Dies Day After He's Fined $25 Million — Bloomberg](https://www.bloomberg.com/news/articles/2024-03-21/former-steinhoff-ceo-markus-jooste-dies-in-south-africa)
 
 *Markus Jooste died before any criminal trial and was never convicted; the account above reflects regulatory/civil findings and reporting, not a criminal conviction.*
+
+
+---
+
+<!-- ==== cases/tanihub.md ==== -->
+
+---
+slug: tanihub
+company: TaniHub
+industry: agritech (Indonesia)
+founded: 2015
+failed: 2022-2023
+failure_types: [scaling_too_fast, financial_management, governance_and_leadership]
+severity: shutdown
+---
+
+## What happened
+TaniHub grew into a household name in Indonesian agritech, at one point cited by President Joko Widodo as an example of the country's tech future, and raised over $110 million including a $65.5 million Series B in 2021. High operational costs in its consumer-facing (B2C) logistics and marketing led it to shut that segment down in March 2022 to focus on B2B. Its lending arm, TaniFund, was separately sanctioned by Indonesia's financial regulator (OJK) after failing to resolve widespread loan defaults — only 36% of some 90-day loans were repaid — and faced allegations of mismanagement affecting around 128 investors. The company underwent repeated layoffs through 2022-2023 and a CEO change, sharply shrinking from its earlier ambitions.
+
+## Root causes
+- Expanded into a capital-intensive consumer logistics business (B2C delivery) without the underlying margins in agricultural distribution to support the cost structure, forcing a retreat once external funding tightened.
+- Launched a lending arm (TaniFund) whose loan book quality was not managed well enough to satisfy the regulator, turning a growth product into a liability once defaults mounted.
+- Rapid, high-profile growth (including political attention) created pressure to keep expanding into new business lines (B2C, lending) before the core B2B model's economics were fully proven.
+- Leadership turnover during the crisis (a new CEO brought in, then departing within months) suggests governance and strategy weren't stable enough to execute a coherent turnaround.
+
+## Warning signs (visible before the collapse)
+- A consumer-facing logistics business layered onto a fundamentally low-margin category (agricultural products) without a clear path to sustainable unit economics.
+- A lending/fintech arm added to the business without loan underwriting and collection processes robust enough to survive a stress period.
+- High-profile public attention and political endorsement substituting for demonstrated, resilient unit economics.
+- Regulatory sanctions and public allegations of mismanagement in a financial product (loans) tied to the core business.
+
+## Questions this raises for another company
+- Have we added a capital-intensive new business line (logistics, lending, etc.) on top of a core business whose margins can't really support it?
+- If we operate any kind of lending or credit product, would our underwriting and collections withstand a regulator's scrutiny today?
+- Is public attention or political/media endorsement standing in for real evidence that our unit economics work?
+- Has our leadership been stable enough through a stress period to actually execute a turnaround plan, or is turnover adding to the chaos?
+
+## Sources
+- [TaniHub: The Agritech Giant's Shocking Collapse in Indonesia — The Runway Ventures](https://www.therunway.ventures/p/tanihub)
+- [No B2C, no lending, new CEO: Indonesian agritech TaniHub's reality check — The Ken](https://the-ken.com/sea/story/no-b2c-no-lending-new-ceo-indonesian-agritech-tanihubs-reality-check/)
+- [Fate of Indonesia's agritech startup TaniHub hangs in balance — DealStreetAsia](https://www.dealstreetasia.com/stories/tanihub-deep-water-332548)
 
 
 ---
