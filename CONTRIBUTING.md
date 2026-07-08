@@ -1,5 +1,12 @@
 # Contributing a case
 
+Don't want to write the full file or open a PR? [Suggest a case via the issue form](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml)
+instead — just answer what you know, no Markdown or git required. Someone (a maintainer, or an
+AI agent pointed at this repo per `AGENTS.md`) can turn it into a proper case file from there.
+Found a mistake in an existing case? [Report it here](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml).
+
+To write the full case file yourself:
+
 1. Copy `cases/_template.md` to `cases/<company-slug>.md`.
 2. Fill in the frontmatter:
    - `slug`, `company`, `industry`, `founded`, `failed`, `severity`

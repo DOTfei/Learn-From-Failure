@@ -1,0 +1,30 @@
+name: 🐛 Report an error in an existing case
+description: Flag a factual mistake, outdated figure, or broken source link in a case file.
+title: "[Fix] "
+labels: ["case-error"]
+body:
+  - type: input
+    id: case
+    attributes:
+      label: Which case?
+      placeholder: e.g. cases/enron.md, or just "Enron"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What's wrong?
+      description: A specific claim/number/quote that's inaccurate, outdated, or unsourced — quote the exact sentence if you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say instead? (with a source, if you have one)
+      placeholder: |
+        Correct figure/claim: ...
+        Source: https://...
+    validations:
+      required: false

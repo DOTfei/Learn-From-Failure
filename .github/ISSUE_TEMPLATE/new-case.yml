@@ -1,0 +1,67 @@
+name: 💥 Suggest a failure case
+description: Propose a company to add to the knowledge base — you don't need to write the full case file or open a PR, just tell us what you know.
+title: "[Case] "
+labels: ["new-case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a case! You don't need to write the full write-up or know our
+        Markdown format — just answer what you can below and a maintainer (or an AI agent
+        pointed at this repo) will turn it into a proper case file following
+        [CONTRIBUTING.md](../../CONTRIBUTING.md). If you *do* want to write the full case
+        yourself, feel free to open a PR instead using `cases/_template.md`.
+
+  - type: input
+    id: company
+    attributes:
+      label: Company name
+      placeholder: e.g. Theranos
+    validations:
+      required: true
+
+  - type: input
+    id: industry
+    attributes:
+      label: Industry / country (if not obvious)
+      placeholder: e.g. healthcare/tech, or "China" if a region is relevant
+    validations:
+      required: false
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened, as best you know it
+      description: A few sentences is fine — doesn't need to be polished. What did the company do, and how did it fail (bankruptcy, fraud conviction, shutdown, forced acquisition, etc.)?
+      placeholder: "e.g. Raised a huge round on a technology claim that never actually worked, exposed by investigative journalism in 2015..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_relevant
+    attributes:
+      label: Why do you think this is a useful case?
+      description: What's the core mechanism — is it closest to fraud, governance failure, cash burn, disruption denial, product-market fit, scaling too fast, or culture/talent? (See the tags in cases/_index.md — pick one or more, or say "not sure.")
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (if you have any)
+      description: Links to news coverage, Wikipedia, court filings, etc. Every case in this repo needs at least one independent source — if you don't have any handy, that's OK, just say so and whoever picks this up will research it.
+      placeholder: |
+        - https://en.wikipedia.org/wiki/...
+        - https://www.reuters.com/...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: A couple of quick checks
+      options:
+        - label: This is a real, publicly reported company/situation (not my own company's confidential situation — see the README's note on privacy)
+          required: true
+        - label: I checked cases/_index.md and this company isn't already covered
+          required: false

@@ -95,7 +95,7 @@ get a verdict.
 
 **Case content may be imperfect.** Each case includes a `## Sources` section — check it before
 treating a specific number or claim as gospel, especially for anything you plan to repeat
-publicly. If you spot an error, please open an issue or PR.
+publicly. If you spot an error, [file a quick report](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml) or open a PR.
 
 **Don't put confidential information in this repo.** If you use the skill to analyze your own
 company, do that in your own private conversation/workspace — don't commit your internal
@@ -143,9 +143,14 @@ references for Chinese-speaking users browsing the repo directly.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: use `cases/_template.md`, cite real
-sources, tag it with existing failure-type tags where they fit, update `cases/_index.md`, and
-run `python3 scripts/validate_cases.py` before opening a PR (CI runs this automatically too).
+**Know a case that should be here but don't want to write the full file?**
+[Suggest a case](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml) —
+just fill in what you know, no PR or Markdown required.
+
+**Want to write the full case yourself?** See [CONTRIBUTING.md](CONTRIBUTING.md). Short
+version: use `cases/_template.md`, cite real sources, tag it with existing failure-type tags
+where they fit, update `cases/_index.md`, and run `python3 scripts/validate_cases.py` before
+opening a PR (CI runs this automatically too).
 
 ## License
 

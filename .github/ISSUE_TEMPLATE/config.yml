@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Contributing guide
+    url: https://github.com/DOTfei/Learn-From-Failure/blob/main/CONTRIBUTING.md
+    about: Prefer to write the full case yourself? See the format and required sections here, then open a PR.
