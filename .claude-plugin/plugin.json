@@ -1,7 +1,7 @@
 {
   "name": "learn-from-failure",
   "version": "0.1.0",
-  "description": "Analyze your company/decision against a sourced knowledge base of real corporate failure case studies, organized by failure mechanism (fraud, governance, cash burn, disruption denial, product-market fit, scaling too fast, culture) rather than industry.",
+  "description": "Analyze your company/decision against a sourced knowledge base of real corporate failure case studies, organized by failure mechanism (fraud, governance, cash burn, disruption denial, product-market fit, scaling too fast, culture) rather than industry. Also proactively warns when an everyday business decision matches a known failure pattern, even if you didn't ask.",
   "author": "Learn From Failure contributors",
   "homepage": "https://github.com/DOTfei/Learn-From-Failure",
   "license": "MIT",

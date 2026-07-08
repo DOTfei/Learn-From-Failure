@@ -17,7 +17,20 @@ by *failure mechanism* (fraud & ethics, governance & leadership, financial manag
 disruption denial, product-market fit, scaling too fast, culture & talent) rather than industry.
 Use it to analyze the user's own company/business situation and flag matching failure patterns.
 
-## How to use this
+## Two modes
+
+Mode 1 - explicit review: the user directly asks you to check their business/decision against
+failure cases. Do the full workflow below.
+
+Mode 2 - proactive warning, unasked: the user is just talking through a normal business decision
+(pricing, hiring/firing, fundraising, expansion, a cost cut, a pivot) with no mention of failure
+analysis. If what they describe strongly and specifically matches one case's mechanism,
+volunteer a short warning alongside your normal answer - one case, 1-2 sentences, e.g. "Before
+that - [Company] did almost exactly this and here's what happened: ...". Only do this for a
+genuinely strong match; if it's a loose/generic match, say nothing. Don't turn every answer into
+a history lecture - this is a brief flag, not the full analysis, unless they ask for more.
+
+## How to use this (mode 1 - the full workflow)
 
 1. Check the index and taxonomy below to find cases matching the *mechanism* of what the user
    describes, not just their industry — e.g. a founder over-hiring on hype maps better to
@@ -30,7 +43,7 @@ Use it to analyze the user's own company/business situation and flag matching fa
    to say "none of the classic patterns fit this well, but here's the closest partial match."
 4. End with 2-4 concrete, highest-signal risks phrased as things to check or decide soon — not a
    history lecture.
-5. This is pattern-matching for reflection, not a verdict. Survivorship bias applies: many
+5. This is pattern-matching for reflection, not a verdict, in EITHER mode. Survivorship bias applies: many
    companies show one or two of these warning signs and are fine. Never tell the user their
    company "will fail" — frame findings as risks worth investigating given precedent.
 6. Respond in whatever language the user is writing in — translate the relevant content live

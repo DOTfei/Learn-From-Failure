@@ -14,11 +14,54 @@ form of these same instructions (auto-loaded, no setup needed).
 
 ## When to use this
 
-When the user asks you to review their business/company/startup/decision against past
-failures, asks "will this fail," "what are we missing," "is this a red flag," references this
-repo, or wants to add a new case to the knowledge base.
+Two modes — the user doesn't need to explicitly ask for either one:
 
-## How to run this
+1. **Explicit review.** The user asks you to review their business/company/startup/decision
+   against past failures, asks "will this fail," "what are we missing," "is this a red flag,"
+   references this repo, or wants to add a new case to the knowledge base. Do the full workflow
+   below.
+
+2. **Proactive warning (no explicit ask required).** The user describes an ordinary business
+   decision or plan — pricing, hiring or firing, fundraising, expansion, a board/investor
+   matter, a cost cut, a pivot, a partnership, anything with real stakes — *without* asking you
+   to check it against failure cases. If what they describe clearly maps to a specific case's
+   mechanism, volunteer a short warning as part of your normal answer. See "Proactive warnings"
+   below for how to do this without turning every reply into a lecture.
+
+## Proactive warnings (mode 2)
+
+Don't wait to be asked. If a user mentions something like "we're cutting our senior staff to
+save money" or "we're expanding to 10 new cities next quarter" in the course of a normal
+conversation — not a request for failure analysis — and it's a strong, specific match to a case
+here, say so before or alongside your normal answer. Keep it short:
+
+> Before that — worth knowing that [Circuit City](cases/circuit-city.md) did almost exactly
+> this in 2007 (cut 3,400 of their most experienced, highest-paid staff to save ~$45M/year) and
+> it gutted the customer service that had differentiated them; they were bankrupt within two
+> years. Their replacement hires couldn't do what the experienced staff did. Worth checking [X]
+> before you commit.
+
+Rules for this mode, because false positives here are more costly than in explicit-review mode
+(the user didn't ask, so an irrelevant warning reads as noise, not insight):
+
+- **Only surface a genuinely strong, specific mechanism match** — not "this is technically
+  tagged `scaling_too_fast` so I'll mention Webvan." If it's a loose or generic match, say
+  nothing; don't force a citation into every answer.
+- **One case, one or two sentences, then move on** — this is a flag, not the full analysis. If
+  the user wants more, they'll ask, and then you do the full workflow below.
+- **Don't interrupt the actual answer to their question.** Give them what they asked for; the
+  warning is additive context, not a replacement for answering.
+- **Never say "you will fail."** Same rule as explicit mode — "worth checking against precedent"
+  is the frame, not a prediction.
+- If genuinely nothing here matches, don't manufacture a connection. Silence is the correct
+  output most of the time — most business questions won't hit a specific enough precedent to be
+  worth citing.
+
+## How to run this (mode 1 — explicit review)
+
+For a quick mode-2 proactive flag, you don't need this whole workflow — skim `cases/_index.md`,
+confirm the match is strong, and give the short version above. This full workflow is for when
+the user actually wants the analysis.
 
 1. **Read `cases/_index.md` first.** It lists every case with its industry and failure-type
    tags (`fraud_and_ethics`, `governance_and_leadership`, `financial_management`,

@@ -1,6 +1,6 @@
 ---
 name: learn-from-failure
-description: Analyze a user's company/business situation against a knowledge base of real corporate failure case studies to spot matching failure patterns and warning signs before they repeat. Use when the user asks to review their business/company/startup/decision against past failures, asks "will this fail," "what are we missing," "is this a red flag," or explicitly invokes /learn-from-failure. Also use when the user wants to add a new failure case to the knowledge base.
+description: Analyze a user's company/business situation against a knowledge base of real corporate failure case studies to spot matching failure patterns and warning signs before they repeat. Use when the user explicitly asks to review their business/decision against past failures, asks "will this fail," "what are we missing," "is this a red flag," or wants to add a new case. ALSO use proactively (without being asked) whenever the user describes an ordinary business decision — pricing, hiring/firing, fundraising, expansion, a board/investor matter, a cost cut, a pivot — that strongly and specifically matches a known failure mechanism in this knowledge base; surface a brief warning citing the case even if the user didn't ask for failure analysis.
 ---
 
 # Learn From Failure

@@ -1,5 +1,5 @@
 ---
-description: Analyze a user's business situation against a knowledge base of sourced corporate failure case studies. Apply when the user asks to review their company/decision against past failures, or wants to add a new case.
+description: Analyze a user's business situation against a knowledge base of sourced corporate failure case studies. Apply when the user asks to review their company/decision against past failures or wants to add a new case — AND proactively whenever the user describes an ordinary business decision that strongly matches a known failure mechanism, even unasked.
 alwaysApply: false
 ---
 

@@ -38,6 +38,12 @@ be used *conversationally*: describe your situation, and get pointed at the 3-6 
 the actual mechanism of your risk — plus the exact questions that, in hindsight, would have
 caught the problem at the real company.
 
+**You don't have to ask for it, either.** If you're just talking through a normal business
+decision — cutting costs, expanding fast, a hiring plan — and it strongly matches a known
+failure pattern, the AI will flag it on its own: *"Before that — [Company] did almost exactly
+this and here's what happened."* You still get the warning even if checking against failure
+cases wasn't what you were asking about.
+
 ## See it in action
 
 > **You:** We're a 12-person SaaS startup. We just closed a seed round and plan to grow from 12
