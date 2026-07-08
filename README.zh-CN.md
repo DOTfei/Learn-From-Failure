@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img alt="Learn From Failure（从失败中学习）—— 一个按失败机制分类、可查证来源的企业失败案例知识库" src="assets/banner-light.svg" width="100%">
+</picture>
+
 # Learn From Failure（从失败中学习）
 
 [English](README.md) | 简体中文

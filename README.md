@@ -1,4 +1,8 @@
-# Learn From Failure
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img alt="Learn From Failure — a sourced knowledge base of corporate failure case studies, organized by failure mechanism, not industry" src="assets/banner-light.svg" width="100%">
+</picture>
 
 English | [简体中文](README.zh-CN.md)
 

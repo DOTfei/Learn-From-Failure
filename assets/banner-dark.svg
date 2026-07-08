@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Learn From Failure">
+  <defs>
+    <linearGradient id="fadeD" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a241d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3a241d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="320" fill="#171613"/>
+  <rect width="1280" height="320" fill="url(#fadeD)"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#e08a72"/>
+
+  <!-- decorative fractured seal, right side -->
+  <g transform="translate(1010,40)" opacity="0.95">
+    <circle cx="120" cy="120" r="108" fill="none" stroke="#3a362e" stroke-width="3"/>
+    <path d="M120 12 L120 95 M120 95 L78 150 M120 95 L165 140 M120 95 L145 228 M120 95 L60 210 M120 95 L28 118"
+          fill="none" stroke="#e08a72" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="120" cy="95" r="7" fill="#e08a72"/>
+    <circle cx="120" cy="12" r="4" fill="#f0b9a5"/>
+    <circle cx="78" cy="150" r="4" fill="#f0b9a5"/>
+    <circle cx="165" cy="140" r="4" fill="#f0b9a5"/>
+    <circle cx="145" cy="228" r="4" fill="#f0b9a5"/>
+    <circle cx="60" cy="210" r="4" fill="#f0b9a5"/>
+    <circle cx="28" cy="118" r="4" fill="#f0b9a5"/>
+  </g>
+
+  <text x="72" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#efece4">Learn From Failure</text>
+
+  <text x="74" y="160" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="21" fill="#a39c8f">A sourced knowledge base of corporate failure case studies —</text>
+  <text x="74" y="188" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="21" fill="#a39c8f">organized by <tspan font-weight="700" fill="#e08a72">failure mechanism</tspan>, not industry.</text>
+
+  <!-- stat chips -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="600">
+    <rect x="74" y="222" width="120" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
+    <text x="134" y="247" fill="#efece4" text-anchor="middle">33 cases</text>
+
+    <rect x="206" y="222" width="196" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
+    <text x="304" y="247" fill="#efece4" text-anchor="middle">8 failure mechanisms</text>
+
+    <rect x="414" y="222" width="150" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
+    <text x="489" y="247" fill="#efece4" text-anchor="middle">10 countries</text>
+
+    <rect x="576" y="222" width="130" height="40" rx="20" fill="#211f1b" stroke="#3a362e"/>
+    <text x="641" y="247" fill="#efece4" text-anchor="middle">MIT licensed</text>
+  </g>
+
+  <text x="74" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#e08a72" font-weight="600">dotfei.github.io/Learn-From-Failure</text>
+</svg>
