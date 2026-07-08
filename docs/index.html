@@ -56,8 +56,21 @@
     margin: 0 0 0.4rem;
   }
   header.site p.tagline { color: var(--text-muted); margin: 0 0 0.9rem; max-width: 60ch; }
-  .lang-toggle, .gh-link { font-size: 0.85rem; }
+  .gh-link { font-size: 0.85rem; }
   .top-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.3rem; }
+  .lang-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lang-btn.active { background: var(--chip-active-bg); color: var(--chip-active-text); }
+  .body-note { color: var(--text-muted); font-size: 0.78rem; font-style: italic; margin: 0.5rem 0 0; }
   .cta {
     margin-top: 1rem;
     padding: 0.9rem 1.1rem;
@@ -168,17 +181,21 @@
 <body>
 <div class="wrap">
   <header class="site">
-    <h1>Learn From Failure</h1>
-    <p class="tagline">Sourced corporate failure case studies, organized by <strong>failure
+    <h1 data-i18n="title">Learn From Failure</h1>
+    <p class="tagline" data-i18n="tagline">Sourced corporate failure case studies, organized by <strong>failure
       mechanism</strong> — fraud, governance, cash burn, disruption denial, product-market fit,
       scaling too fast, culture — not just industry. Browse them here, or point an AI tool at
       the repo to analyze your own company against them.</p>
     <div class="top-links">
-      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure" target="_blank" rel="noopener">GitHub repo →</a>
-      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/README.zh-CN.md" target="_blank" rel="noopener">简体中文 →</a>
-      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CHECKLIST.md" target="_blank" rel="noopener">Self-audit checklist →</a>
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure" target="_blank" rel="noopener" data-i18n="linkRepo">GitHub repo →</a>
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/README.zh-CN.md" target="_blank" rel="noopener" data-i18n="linkReadmeZh">中文完整说明 →</a>
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CHECKLIST.md" target="_blank" rel="noopener" data-i18n="linkChecklist">Self-audit checklist →</a>
+      <div class="lang-switch">
+        <button class="lang-btn" id="langEn" type="button">EN</button>
+        <button class="lang-btn" id="langZh" type="button">中文</button>
+      </div>
     </div>
-    <div class="cta">
+    <div class="cta" data-i18n="cta">
       <strong>Want an AI to analyze your own company against these?</strong>
       This page is just for browsing. To ask "does my company have any of these failure
       patterns?", use it with Claude Code, Cursor, ChatGPT, or any AI tool —
@@ -189,43 +206,122 @@
   <div class="controls">
     <input id="search" type="search" placeholder="Search company, industry, or keyword…" autocomplete="off">
     <div class="chips" id="tagChips"></div>
+    <p class="body-note" id="bodyNote" style="display:none;"></p>
   </div>
   <p class="count" id="count"></p>
 
   <div class="grid" id="grid"></div>
-  <div class="empty-state" id="emptyState" style="display:none;">No cases match your filters.</div>
+  <div class="empty-state" id="emptyState" style="display:none;" data-i18n="empty">No cases match your filters.</div>
 
   <footer>
-    Content licensed MIT · analysis/commentary on publicly reported facts — check each case's
+    <span data-i18n="footerNote">Content licensed MIT · analysis/commentary on publicly reported facts — check each case's
     Sources before citing a figure with confidence · survivorship bias applies, a match is a
-    prompt to investigate, not a verdict.
+    prompt to investigate, not a verdict.</span>
     <br>
-    <a href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute a case</a>
+    <a href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-i18n="footerContribute">Contribute a case</a>
     ·
-    <a href="https://github.com/DOTfei/Learn-From-Failure/issues/new/choose" target="_blank" rel="noopener">Suggest a case / add a source / report an error</a>
+    <a href="https://github.com/DOTfei/Learn-From-Failure/issues/new/choose" target="_blank" rel="noopener" data-i18n="footerSuggest">Suggest a case / add a source / report an error</a>
     ·
-    <a href="https://github.com/DOTfei/Learn-From-Failure/blob/main/LEGAL.md" target="_blank" rel="noopener">Legal / trademarks / corrections</a>
+    <a href="https://github.com/DOTfei/Learn-From-Failure/blob/main/LEGAL.md" target="_blank" rel="noopener" data-i18n="footerLegal">Legal / trademarks / corrections</a>
   </footer>
 </div>
 
 <script>
 const TAG_LABELS = {
-  fraud_and_ethics: "Fraud & ethics",
-  governance_and_leadership: "Governance & leadership",
-  financial_management: "Financial management",
-  disruption_denial: "Disruption denial",
-  product_market_fit: "Product-market fit",
-  scaling_too_fast: "Scaling too fast",
-  culture_and_talent: "Culture & talent",
+  en: {
+    fraud_and_ethics: "Fraud & ethics",
+    governance_and_leadership: "Governance & leadership",
+    financial_management: "Financial management",
+    disruption_denial: "Disruption denial",
+    product_market_fit: "Product-market fit",
+    scaling_too_fast: "Scaling too fast",
+    culture_and_talent: "Culture & talent",
+    safety_and_quality: "Safety & quality",
+  },
+  zh: {
+    fraud_and_ethics: "造假与商业道德",
+    governance_and_leadership: "治理与领导层",
+    financial_management: "财务管理",
+    disruption_denial: "拒绝转型",
+    product_market_fit: "产品市场不匹配",
+    scaling_too_fast: "扩张过快",
+    culture_and_talent: "文化与人才",
+    safety_and_quality: "安全与品质",
+  },
+};
+
+const STRINGS = {
+  en: {
+    title: "Learn From Failure",
+    tagline: 'Sourced corporate failure case studies, organized by <strong>failure mechanism</strong> — fraud, governance, cash burn, disruption denial, product-market fit, scaling too fast, culture — not just industry. Browse them here, or point an AI tool at the repo to analyze your own company against them.',
+    linkRepo: "GitHub repo →",
+    linkReadmeZh: "中文完整说明 →",
+    linkChecklist: "Self-audit checklist →",
+    cta: '<strong>Want an AI to analyze your own company against these?</strong> This page is just for browsing. To ask "does my company have any of these failure patterns?", use it with Claude Code, Cursor, ChatGPT, or any AI tool — see <a href="https://github.com/DOTfei/Learn-From-Failure#platform-support" target="_blank" rel="noopener">Platform support</a> in the README.',
+    searchPlaceholder: "Search company, industry, or keyword…",
+    bodyNote: "",
+    empty: "No cases match your filters.",
+    footerNote: "Content licensed MIT · analysis/commentary on publicly reported facts — check each case's Sources before citing a figure with confidence · survivorship bias applies, a match is a prompt to investigate, not a verdict.",
+    footerContribute: "Contribute a case",
+    footerSuggest: "Suggest a case / add a source / report an error",
+    footerLegal: "Legal / trademarks / corrections",
+    contrastPill: "contrast case",
+    countTemplate: (n, total) => `${n} of ${total} case${total === 1 ? "" : "s"}`,
+  },
+  zh: {
+    title: "Learn From Failure（从失败中学习）",
+    tagline: '按<strong>失败机制</strong>分类、可查证来源的企业失败案例——造假、治理失控、财务管理不当、拒绝转型、产品市场不匹配、扩张过快、文化/人才问题——不只是按行业分类。在这里直接浏览，或者让 AI 工具指向这个仓库来分析你自己的公司。',
+    linkRepo: "GitHub 仓库 →",
+    linkReadmeZh: "中文完整说明 →",
+    linkChecklist: "自查清单 →",
+    cta: '<strong>想让 AI 帮你分析自己的公司？</strong>这个页面只能浏览。如果想问"我的公司有没有这些失败模式"，可以配合 Claude Code、Cursor、ChatGPT 或任何 AI 工具使用——详见 README 里的 <a href="https://github.com/DOTfei/Learn-From-Failure#platform-support" target="_blank" rel="noopener">Platform support</a>。',
+    searchPlaceholder: "搜索公司、行业或关键词…",
+    bodyNote: "案例正文目前只有英文（方便对照引用来源的英文报道），界面已切换成中文。",
+    empty: "没有符合筛选条件的案例。",
+    footerNote: "内容采用 MIT 协议 · 基于公开报道事实的评论/分析——引用具体数字前请先核对每个案例的 Sources · 幸存者偏差是真实存在的，"+"匹配"+"意味着值得调查，不是结论。",
+    footerContribute: "贡献一个案例",
+    footerSuggest: "提交案例线索 / 补充来源 / 报告错误",
+    footerLegal: "法律声明 / 商标 / 更正请求",
+    contrastPill: "对照案例",
+    countTemplate: (n, total) => `共 ${total} 个案例，符合条件 ${n} 个`,
+  },
 };
 
 let DATA = { cases: [], tags: [] };
 let activeTags = new Set();
 let query = "";
+let lang = localStorage.getItem("lfof_lang") || (navigator.language && navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+
+function applyStaticStrings() {
+  const s = STRINGS[lang];
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (s[key] !== undefined) el.innerHTML = s[key];
+  });
+  document.getElementById("search").placeholder = s.searchPlaceholder;
+  const note = document.getElementById("bodyNote");
+  if (s.bodyNote) { note.textContent = s.bodyNote; note.style.display = "block"; }
+  else { note.style.display = "none"; }
+  document.getElementById("langEn").classList.toggle("active", lang === "en");
+  document.getElementById("langZh").classList.toggle("active", lang === "zh");
+}
+
+function setLang(newLang) {
+  lang = newLang;
+  localStorage.setItem("lfof_lang", lang);
+  applyStaticStrings();
+  renderChips();
+  render();
+}
+
+document.getElementById("langEn").addEventListener("click", () => setLang("en"));
+document.getElementById("langZh").addEventListener("click", () => setLang("zh"));
 
 async function load() {
   const res = await fetch("data.json");
   DATA = await res.json();
+  applyStaticStrings();
   renderChips();
   render();
 }
@@ -233,10 +329,11 @@ async function load() {
 function renderChips() {
   const el = document.getElementById("tagChips");
   el.innerHTML = "";
+  const labels = TAG_LABELS[lang];
   DATA.tags.forEach(tag => {
     const chip = document.createElement("div");
     chip.className = "chip";
-    chip.textContent = TAG_LABELS[tag] || tag;
+    chip.textContent = labels[tag] || tag;
     chip.dataset.tag = tag;
     chip.addEventListener("click", () => {
       if (activeTags.has(tag)) activeTags.delete(tag); else activeTags.add(tag);
@@ -254,6 +351,8 @@ function matches(c) {
 }
 
 function render() {
+  const s = STRINGS[lang];
+  const labels = TAG_LABELS[lang];
   document.querySelectorAll(".chip").forEach(chip => {
     chip.classList.toggle("active", activeTags.has(chip.dataset.tag));
   });
@@ -261,8 +360,7 @@ function render() {
   const filtered = DATA.cases.filter(matches);
   const grid = document.getElementById("grid");
   const empty = document.getElementById("emptyState");
-  document.getElementById("count").textContent =
-    `${filtered.length} of ${DATA.cases.length} case${DATA.cases.length === 1 ? "" : "s"}`;
+  document.getElementById("count").textContent = s.countTemplate(filtered.length, DATA.cases.length);
 
   grid.innerHTML = "";
   empty.style.display = filtered.length ? "none" : "block";
@@ -275,8 +373,8 @@ function render() {
     const meta = [c.industry, c.founded && c.failed ? `${c.founded}–${c.failed}` : ""]
       .filter(Boolean).join(" · ");
 
-    const tagsHtml = c.tags.map(t => `<span class="tag-pill">${TAG_LABELS[t] || t}</span>`).join("");
-    const contrastHtml = c.is_contrast ? `<span class="contrast-pill">contrast case</span>` : "";
+    const tagsHtml = c.tags.map(t => `<span class="tag-pill">${labels[t] || t}</span>`).join("");
+    const contrastHtml = c.is_contrast ? `<span class="contrast-pill">${s.contrastPill}</span>` : "";
 
     card.innerHTML = `
       <div class="card-head" role="button" tabindex="0">
