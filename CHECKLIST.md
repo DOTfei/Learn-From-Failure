@@ -1,5 +1,7 @@
 # Self-Audit Checklist
 
+English | [简体中文](CHECKLIST.zh-CN.md)
+
 A distilled version of the "Questions this raises for another company" from every case in
 `cases/`, grouped by failure mechanism. Meant for periodic self-review (quarterly board meeting,
 before a big raise/hire/expansion decision) rather than a one-time chat with the skill. If you

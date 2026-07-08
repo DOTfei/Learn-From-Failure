@@ -1,5 +1,7 @@
 # Learn From Failure
 
+English | [简体中文](README.zh-CN.md)
+
 A knowledge base of real, sourced corporate failure case studies — packaged as a
 [Claude Code](https://claude.com/claude-code) Skill — so you can ask "does my company have any
 of the failure patterns that killed [company X]?" and get an analysis grounded in what actually
@@ -20,9 +22,13 @@ problem at the real company.
 
 ## Install
 
-Copy (or symlink) the `.claude/skills/learn-from-failure/` folder into your own project's
-`.claude/skills/` directory, or clone this whole repo and point Claude Code at it directly. The
-skill reads case files from the `cases/` folder at this repo's root.
+**Option A — as a Claude Code plugin:** this repo has a `.claude-plugin/plugin.json` manifest,
+so once it's pushed to GitHub you can add it via Claude Code's plugin marketplace flow (point
+it at this repo's URL).
+
+**Option B — manual:** copy (or symlink) the `.claude/skills/learn-from-failure/` folder into
+your own project's `.claude/skills/` directory, or clone this whole repo and point Claude Code
+at it directly. The skill reads case files from the `cases/` folder at this repo's root.
 
 ## Usage
 
@@ -73,8 +79,16 @@ CHECKLIST.md        — a static self-audit checklist distilled from every case'
 ## Self-audit without the skill
 
 If you just want a static checklist to run through quarterly (no conversation needed), see
-[CHECKLIST.md](CHECKLIST.md) — it's the "Questions this raises" from every case, grouped by
-failure mechanism.
+[CHECKLIST.md](CHECKLIST.md) ([简体中文](CHECKLIST.zh-CN.md)) — it's the "Questions this
+raises" from every case, grouped by failure mechanism.
+
+## Language
+
+Case files themselves are in English (so the `## Sources` links map cleanly to the
+English-language reporting they cite), but the skill responds in whatever language you ask in —
+Chinese, English, whatever — translating the relevant content live rather than requiring the
+case files to be pre-translated. `README.zh-CN.md` and `CHECKLIST.zh-CN.md` are pre-translated
+references for Chinese-speaking users browsing the repo directly.
 
 ## Contributing
 

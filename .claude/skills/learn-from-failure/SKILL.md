@@ -64,6 +64,18 @@ verifiable via public sources), that's fine — just skip the Sources section an
 as if it were a citable public case; keep it in a clearly separate area if the repo maintainer
 wants public cases and private ones kept apart.
 
+## Language
+
+Case files (`cases/*.md`) are written in English so that the cited `## Sources` map cleanly to
+the English-language reporting they're drawn from. **This does not mean the conversation has to
+be in English.** Respond to the user in whatever language they're writing in (e.g. reply fully
+in 简体中文 if the user writes in Simplified Chinese) — translate the relevant "Root causes" /
+"Warning signs" / "Questions" content into that language as you present it, rather than quoting
+the English verbatim. Keep company names, and it's fine to keep one short English source title
+in parentheses if useful for searching later, but the analysis itself should read naturally in
+the user's language. `README.zh-CN.md` and `CHECKLIST.zh-CN.md` are pre-translated references
+you can point a Chinese-speaking user to.
+
 ## Notes
 
 - This is pattern-matching for reflection, not a verdict. Never tell the user their company
