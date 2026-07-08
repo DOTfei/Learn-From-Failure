@@ -1,0 +1,21 @@
+name: Validate case files
+
+on:
+  push:
+    paths:
+      - "cases/**"
+      - "scripts/validate_cases.py"
+  pull_request:
+    paths:
+      - "cases/**"
+      - "scripts/validate_cases.py"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: python3 scripts/validate_cases.py

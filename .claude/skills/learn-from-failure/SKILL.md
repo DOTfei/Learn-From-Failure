@@ -41,6 +41,11 @@ base to analyze the user's own company/situation and flag matching failure patte
 5. **End with a short, concrete list** — the 2-4 highest-signal risks, phrased as things to
    check or decide this week/month, not a lecture on corporate history.
 
+6. **If a matched case has a contrast file** (see `cases/contrasts/`, e.g. `netflix-pivot.md`
+   contrasts with `blockbuster.md`), consider surfacing it too — it shows what a company that
+   faced the *same* pressure but responded well actually did differently, which is often more
+   actionable than only hearing about the failure.
+
 ## Adding a new case to the knowledge base
 
 When the user wants to add a new failure case (their own past venture, a case they read about,

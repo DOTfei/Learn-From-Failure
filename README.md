@@ -64,12 +64,23 @@ cases/
   <company>.md      — one file per case
 .claude/skills/learn-from-failure/
   SKILL.md          — the skill definition Claude Code reads
+scripts/
+  validate_cases.py — checks frontmatter, required sections, and index consistency
+CHECKLIST.md        — a static self-audit checklist distilled from every case's questions,
+                       for periodic review without needing a conversation
 ```
+
+## Self-audit without the skill
+
+If you just want a static checklist to run through quarterly (no conversation needed), see
+[CHECKLIST.md](CHECKLIST.md) — it's the "Questions this raises" from every case, grouped by
+failure mechanism.
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: use `cases/_template.md`, cite real
-sources, tag it with existing failure-type tags where they fit, and update `cases/_index.md`.
+sources, tag it with existing failure-type tags where they fit, update `cases/_index.md`, and
+run `python3 scripts/validate_cases.py` before opening a PR (CI runs this automatically too).
 
 ## License
 

@@ -1,6 +1,6 @@
 # Failure Case Index
 
-19 cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+23 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
@@ -29,6 +29,7 @@ any new case you contribute.
 | [yahoo](yahoo.md) | tech/internet | governance_and_leadership, culture_and_talent, product_market_fit |
 | [katerra](katerra.md) | construction/proptech | scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics |
 | [fusionex](fusionex.md) | tech/data analytics (Malaysia) | governance_and_leadership, financial_management, fraud_and_ethics |
+| [kenny-rogers-roasters](kenny-rogers-roasters.md) | restaurant/franchise | scaling_too_fast, financial_management |
 
 ## Failure type taxonomy
 
@@ -37,8 +38,18 @@ any new case you contribute.
 - **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex)
 - **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
 - **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters)
 - **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo)
+
+## Contrast cases (`cases/contrasts/`)
+
+Not every company that saw a disruption coming failed to respond — it's worth reading the failure
+next to the company that faced the *same* shift and adapted, to see what a real response looks
+like versus a token one:
+
+- [netflix-pivot](contrasts/netflix-pivot.md) — contrasts directly with [blockbuster](blockbuster.md): same disruption (DVD rental → streaming), opposite response.
+
+These use a different, lighter frontmatter schema (no `severity`/`failed` fields) and are excluded from `scripts/validate_cases.py`, which only validates `cases/*.md`.
 
 ## Method & limitations
 
