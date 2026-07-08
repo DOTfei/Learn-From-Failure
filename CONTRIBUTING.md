@@ -26,7 +26,10 @@
    `dist/learn-from-failure-bundle.md`. This file is a single-file copy of the whole knowledge
    base for platforms with no repo/file access (ChatGPT Custom GPT, Gemini Gem, raw API calls —
    see README → Platform support). CI checks it's up to date and will fail your PR if you forget.
-7. Run `python3 scripts/validate_cases.py` — CI runs this too, but it's faster to catch issues
+7. Run `python3 scripts/build_site.py` and commit the resulting change to `docs/data.json` —
+   this feeds the GitHub Pages case browser at `docs/index.html`. CI checks this stays in sync
+   too.
+8. Run `python3 scripts/validate_cases.py` — CI runs this too, but it's faster to catch issues
    locally.
 
 If you're updating shared workflow logic (not adding a case), edit `AGENTS.md` at the repo

@@ -9,7 +9,9 @@
 知识库本身就是纯 Markdown 文件，没有平台锁定：[Claude Code](https://claude.com/claude-code)
 有原生 Skill；Cursor、Windsurf、OpenAI Codex CLI、Amp、Continue 等大多数 agentic 编程工具
 通过通用的 `AGENTS.md` 规范读取同一份指令；没有文件访问能力的纯对话工具（ChatGPT、Gemini、
-直接调 API）可以用打包成单文件的版本。详见下面的"平台支持"。
+直接调 API）可以用打包成单文件的版本。详见下面的"平台支持"。不想用任何 AI 工具？
+**直接浏览 [dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/)**
+——可搜索、可按失败机制筛选，不需要安装任何东西。
 
 每个案例都用同样的结构拆解：发生了什么、根本原因、崩溃前就已经存在的警示信号，以及一组
 可以套用在任何公司身上的通用问题。带标签的索引（`cases/_index.md`）按**失败机制**分类
@@ -31,10 +33,11 @@
 | **ChatGPT Custom GPT、Gemini Gem，或任何支持上传"知识文件"但不能访问仓库的工具** | 上传 `dist/learn-from-failure-bundle.md` —— 一份包含指令、索引、清单和所有带来源案例的单文件，由 `scripts/build_bundle.py` 生成。 |
 | **直接调 API（OpenAI、Anthropic 等），完全没有工具能力** | 把 `dist/learn-from-failure-bundle.md` 的内容粘贴进（或作为）system prompt / context。纯 Markdown，不需要特殊解析。 |
 | **其他没有文件上传功能的聊天工具** | 直接把 `dist/learn-from-failure-bundle.md` 里相关的部分（比如索引 + 3-4 个案例）复制粘贴进对话框。 |
+| **不用任何 AI 工具，只想读案例** | 浏览 [dotfei.github.io/Learn-From-Failure](https://dotfei.github.io/Learn-From-Failure/) —— 一个可搜索、可筛选的静态网站（`docs/`，由 `scripts/build_site.py` 生成），不需要安装任何东西也不需要 AI。 |
 
-以上三种方式读取的都是 `cases/` 里同一份源文件 —— 没有手动重复维护多份内容，所以知识库
-不会在不同平台之间出现不一致。`dist/learn-from-failure-bundle.md` 由 `scripts/build_bundle.py`
-生成，CI 会检查它是否和最新案例保持同步（见"贡献"部分）。
+以上方式读取的都是 `cases/` 里同一份源文件 —— 没有手动重复维护多份内容，所以知识库
+不会在不同平台之间出现不一致。`dist/learn-from-failure-bundle.md` 和 `docs/data.json`
+都由 CI 校验的脚本自动生成（见"贡献"部分）。
 
 ## 使用方式
 
@@ -45,6 +48,29 @@
 - "我们董事会基本上都是创始人的朋友，这样有风险吗？"
 - "我们为了省钱在裁最有经验（也最贵）的员工，拿 Circuit City 的案例帮我 sanity check 一下。"
 - "帮我把 [某公司] 加进案例库，这是我了解到的它失败的原因：……"
+
+### 一次真实分析长什么样
+
+> **你：** 我们是个 12 人的 SaaS 创业公司，刚拿到种子轮，计划两个月内从 12 人扩到 35 人——
+> 销售、客服、再加几个工程师——赶在下个季度续费数据出来之前。投资人想在 deck 里看到"激进
+> 增长"。这样做是不是有问题？
+>
+> **Claude：** 这跟 `scaling_too_fast`（扩张过快）这个机制很像，而且比起 WeWork 更接近
+> [Webvan](cases/webvan.md) 和 [Kenny Rogers Roasters](cases/kenny-rogers-roasters.md) 的
+> 情况——规模小很多，但核心错误一样：**在还没验证一个关键指标（续费率）之前，先把固定成本
+> （人头）投进去了**。Webvan 在证明模式能在一个城市跑通之前，先建了 10 亿美元的仓库产能；
+> 你现在是在还不知道现有客户会不会续费之前，先把团队扩大三倍。
+>
+> 把这两个案例的问题套到你身上：
+> 1. 如果下个季度的续费数据不理想，35 人的团队你还养得起吗，还是说这个招聘计划只有在续费
+>    数据乐观的情况下才成立？
+> 2. 招聘节奏是现有客户数据支撑的，还是为了让 deck 看起来"激进增长"好看？Webvan 的扩张
+>    节奏是投资人期待推着走的，不是一个城市一个城市验证盈利后才推进的。
+> 3. 这 23 个新增岗位里，有多少是可逆的（合同工、按月签），有多少是不管下季度数据如何都
+>    锁死的固定成本？
+>
+> 这不是说不能招人——而是说这两个案例给出的建议是招聘的**顺序**（先看到续费信号再招，而
+> 不是反过来），而不是反对增长本身。
 
 Skill 会按失败**机制**而不是单纯按行业来匹配案例，并且会直接抛出案例里那些真正的根因
 问题让你自查，而不是只给你讲一遍历史。
@@ -80,8 +106,11 @@ cases/
 scripts/
   validate_cases.py              — 检查 frontmatter、必需章节、索引一致性
   build_bundle.py                — 重新生成 dist/learn-from-failure-bundle.md
+  build_site.py                  — 重新生成 docs/data.json（GitHub Pages 案例浏览器用）
 dist/
   learn-from-failure-bundle.md   — 给没有仓库/文件访问能力的工具用的单文件打包版本
+docs/
+  index.html, data.json          — 可搜索的静态案例浏览器，通过 GitHub Pages 提供服务
 CHECKLIST.md / CHECKLIST.zh-CN.md — 从所有案例的"问题"提炼出的静态自查清单
 ```
 

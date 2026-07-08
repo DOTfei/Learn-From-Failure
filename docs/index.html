@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn From Failure — Corporate Failure Case Browser</title>
+<meta name="description" content="Browse sourced corporate failure case studies organized by failure mechanism — fraud, governance, cash burn, disruption denial, product-market fit, scaling too fast, culture.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-elevated: #f6f5f3;
+    --text: #1b1a17;
+    --text-muted: #635f57;
+    --border: #e4e1da;
+    --accent: #9a3b2f;
+    --accent-bg: #f6e8e4;
+    --link: #7a4a2b;
+    --chip-bg: #efece5;
+    --chip-text: #4a463d;
+    --chip-active-bg: #1b1a17;
+    --chip-active-text: #ffffff;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171613;
+      --bg-elevated: #211f1b;
+      --text: #efece4;
+      --text-muted: #a39c8f;
+      --border: #3a362e;
+      --accent: #e08a72;
+      --accent-bg: #3a241d;
+      --link: #e0b088;
+      --chip-bg: #2a271f;
+      --chip-text: #cfc9ba;
+      --chip-active-bg: #efece4;
+      --chip-active-text: #171613;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.25rem 6rem; }
+  header.site { margin-bottom: 2rem; }
+  header.site h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    margin: 0 0 0.4rem;
+  }
+  header.site p.tagline { color: var(--text-muted); margin: 0 0 0.9rem; max-width: 60ch; }
+  .lang-toggle, .gh-link { font-size: 0.85rem; }
+  .top-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .cta {
+    margin-top: 1rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.92rem;
+  }
+  .cta strong { color: var(--accent); }
+
+  .controls { margin: 1.75rem 0 1.25rem; }
+  #search {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+  #search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    cursor: pointer;
+    padding: 0.32rem 0.75rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    font-size: 0.8rem;
+    border: 1px solid transparent;
+    user-select: none;
+  }
+  .chip.active {
+    background: var(--chip-active-bg);
+    color: var(--chip-active-text);
+  }
+  .count { color: var(--text-muted); font-size: 0.85rem; margin: 0.6rem 0 0; }
+
+  .grid { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-elevated);
+    overflow: hidden;
+  }
+  .card-head {
+    padding: 0.95rem 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .card-head:hover { background: var(--accent-bg); }
+  .card-title { font-weight: 600; font-size: 1.02rem; }
+  .card-meta { color: var(--text-muted); font-size: 0.82rem; margin-top: 0.15rem; }
+  .card-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; justify-content: flex-end; max-width: 45%; }
+  .tag-pill {
+    font-size: 0.68rem;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    white-space: nowrap;
+  }
+  .contrast-pill {
+    font-size: 0.68rem;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    white-space: nowrap;
+  }
+  .card-body {
+    display: none;
+    padding: 0 1.1rem 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+  .card.open .card-body { display: block; }
+  .card-body h4 { font-size: 0.95rem; margin: 1.1rem 0 0.4rem; }
+  .card-body h4:first-child { margin-top: 1rem; }
+  .card-body h5 { font-size: 0.85rem; margin: 0.9rem 0 0.3rem; color: var(--text-muted); }
+  .card-body p, .card-body ul { font-size: 0.92rem; margin: 0.3rem 0; }
+  .card-body ul { padding-left: 1.3rem; }
+  .card-body li { margin: 0.25rem 0; }
+  .caret { transition: transform 0.15s ease; color: var(--text-muted); }
+  .card.open .caret { transform: rotate(90deg); }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+  footer a { color: var(--text-muted); }
+  .empty-state { color: var(--text-muted); padding: 2rem 0; text-align: center; }
+
+  @media (max-width: 600px) {
+    .card-head { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .card-tags { max-width: 100%; justify-content: flex-start; }
+    .caret { position: absolute; top: 1rem; right: 1.1rem; }
+    .card-head { position: relative; padding-right: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <h1>Learn From Failure</h1>
+    <p class="tagline">Sourced corporate failure case studies, organized by <strong>failure
+      mechanism</strong> — fraud, governance, cash burn, disruption denial, product-market fit,
+      scaling too fast, culture — not just industry. Browse them here, or point an AI tool at
+      the repo to analyze your own company against them.</p>
+    <div class="top-links">
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure" target="_blank" rel="noopener">GitHub repo →</a>
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/README.zh-CN.md" target="_blank" rel="noopener">简体中文 →</a>
+      <a class="gh-link" href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CHECKLIST.md" target="_blank" rel="noopener">Self-audit checklist →</a>
+    </div>
+    <div class="cta">
+      <strong>Want an AI to analyze your own company against these?</strong>
+      This page is just for browsing. To ask "does my company have any of these failure
+      patterns?", use it with Claude Code, Cursor, ChatGPT, or any AI tool —
+      see <a href="https://github.com/DOTfei/Learn-From-Failure#platform-support" target="_blank" rel="noopener">Platform support</a> in the README.
+    </div>
+  </header>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search company, industry, or keyword…" autocomplete="off">
+    <div class="chips" id="tagChips"></div>
+  </div>
+  <p class="count" id="count"></p>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty-state" id="emptyState" style="display:none;">No cases match your filters.</div>
+
+  <footer>
+    Content licensed MIT · analysis/commentary on publicly reported facts — check each case's
+    Sources before citing a figure with confidence · survivorship bias applies, a match is a
+    prompt to investigate, not a verdict.
+    <br>
+    <a href="https://github.com/DOTfei/Learn-From-Failure/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute a case</a>
+    ·
+    <a href="https://github.com/DOTfei/Learn-From-Failure/issues/new" target="_blank" rel="noopener">Report an error / suggest a case</a>
+  </footer>
+</div>
+
+<script>
+const TAG_LABELS = {
+  fraud_and_ethics: "Fraud & ethics",
+  governance_and_leadership: "Governance & leadership",
+  financial_management: "Financial management",
+  disruption_denial: "Disruption denial",
+  product_market_fit: "Product-market fit",
+  scaling_too_fast: "Scaling too fast",
+  culture_and_talent: "Culture & talent",
+};
+
+let DATA = { cases: [], tags: [] };
+let activeTags = new Set();
+let query = "";
+
+async function load() {
+  const res = await fetch("data.json");
+  DATA = await res.json();
+  renderChips();
+  render();
+}
+
+function renderChips() {
+  const el = document.getElementById("tagChips");
+  el.innerHTML = "";
+  DATA.tags.forEach(tag => {
+    const chip = document.createElement("div");
+    chip.className = "chip";
+    chip.textContent = TAG_LABELS[tag] || tag;
+    chip.dataset.tag = tag;
+    chip.addEventListener("click", () => {
+      if (activeTags.has(tag)) activeTags.delete(tag); else activeTags.add(tag);
+      render();
+    });
+    el.appendChild(chip);
+  });
+}
+
+function matches(c) {
+  if (activeTags.size > 0 && !c.tags.some(t => activeTags.has(t))) return false;
+  if (!query) return true;
+  const hay = (c.company + " " + c.industry + " " + c.tags.join(" ")).toLowerCase();
+  return hay.includes(query);
+}
+
+function render() {
+  document.querySelectorAll(".chip").forEach(chip => {
+    chip.classList.toggle("active", activeTags.has(chip.dataset.tag));
+  });
+
+  const filtered = DATA.cases.filter(matches);
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("emptyState");
+  document.getElementById("count").textContent =
+    `${filtered.length} of ${DATA.cases.length} case${DATA.cases.length === 1 ? "" : "s"}`;
+
+  grid.innerHTML = "";
+  empty.style.display = filtered.length ? "none" : "block";
+
+  filtered.forEach(c => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.id = c.slug;
+
+    const meta = [c.industry, c.founded && c.failed ? `${c.founded}–${c.failed}` : ""]
+      .filter(Boolean).join(" · ");
+
+    const tagsHtml = c.tags.map(t => `<span class="tag-pill">${TAG_LABELS[t] || t}</span>`).join("");
+    const contrastHtml = c.is_contrast ? `<span class="contrast-pill">contrast case</span>` : "";
+
+    card.innerHTML = `
+      <div class="card-head" role="button" tabindex="0">
+        <div>
+          <div class="card-title">${c.company}</div>
+          <div class="card-meta">${meta}</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <div class="card-tags">${contrastHtml}${tagsHtml}</div>
+          <span class="caret">▶</span>
+        </div>
+      </div>
+      <div class="card-body">${c.html}</div>
+    `;
+
+    const head = card.querySelector(".card-head");
+    const toggle = () => card.classList.toggle("open");
+    head.addEventListener("click", toggle);
+    head.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+
+    grid.appendChild(card);
+  });
+
+  if (location.hash) {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) {
+      target.classList.add("open");
+      target.scrollIntoView({ block: "start" });
+    }
+  }
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  query = e.target.value.trim().toLowerCase();
+  render();
+});
+
+load();
+</script>
+</body>
+</html>
