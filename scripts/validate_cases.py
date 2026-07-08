@@ -20,6 +20,7 @@ KNOWN_TAGS = {
     "product_market_fit",
     "scaling_too_fast",
     "culture_and_talent",
+    "safety_and_quality",
 }
 SKIP = {"_template.md", "_index.md"}
 

@@ -14,7 +14,8 @@ PREAMBLE = """\
 
 You are being given a knowledge base of real, sourced corporate failure case studies, organized
 by *failure mechanism* (fraud & ethics, governance & leadership, financial management,
-disruption denial, product-market fit, scaling too fast, culture & talent) rather than industry.
+disruption denial, product-market fit, scaling too fast, culture & talent, safety & quality)
+rather than industry.
 Use it to analyze the user's own company/business situation and flag matching failure patterns.
 
 ## Two modes

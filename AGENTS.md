@@ -65,7 +65,8 @@ the user actually wants the analysis.
 
 1. **Read `cases/_index.md` first.** It lists every case with its industry and failure-type
    tags (`fraud_and_ethics`, `governance_and_leadership`, `financial_management`,
-   `disruption_denial`, `product_market_fit`, `scaling_too_fast`, `culture_and_talent`), plus a
+   `disruption_denial`, `product_market_fit`, `scaling_too_fast`, `culture_and_talent`,
+   `safety_and_quality`), plus a
    one-line description of each tag. Use it to decide which case files are actually relevant —
    don't read every case file for every question.
 

@@ -2,7 +2,8 @@
 
 You are being given a knowledge base of real, sourced corporate failure case studies, organized
 by *failure mechanism* (fraud & ethics, governance & leadership, financial management,
-disruption denial, product-market fit, scaling too fast, culture & talent) rather than industry.
+disruption denial, product-market fit, scaling too fast, culture & talent, safety & quality)
+rather than industry.
 Use it to analyze the user's own company/business situation and flag matching failure patterns.
 
 ## Two modes
@@ -48,48 +49,56 @@ checklist, then every individual case file (including contrast cases), each with
 
 # Failure Case Index
 
-25 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+32 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
 
 | Case | Industry | Primary failure types |
 |---|---|---|
-| [enron](enron.md) | energy/finance | fraud_and_ethics, governance_and_leadership, financial_management |
-| [lehman-brothers](lehman-brothers.md) | finance | financial_management, governance_and_leadership |
-| [kodak](kodak.md) | manufacturing/tech | disruption_denial, culture_and_talent |
-| [blockbuster](blockbuster.md) | retail/media | disruption_denial, product_market_fit |
-| [nokia-mobile](nokia-mobile.md) | tech/hardware | disruption_denial, culture_and_talent, governance_and_leadership |
-| [theranos](theranos.md) | healthcare/tech | fraud_and_ethics, governance_and_leadership, product_market_fit |
-| [wework](wework.md) | real estate/tech | governance_and_leadership, financial_management, scaling_too_fast |
-| [quibi](quibi.md) | media/streaming | product_market_fit, governance_and_leadership |
-| [pets-com](pets-com.md) | e-commerce | product_market_fit, financial_management, scaling_too_fast |
-| [webvan](webvan.md) | e-commerce/logistics | scaling_too_fast, financial_management, product_market_fit |
-| [toys-r-us](toys-r-us.md) | retail | financial_management, disruption_denial |
-| [sears](sears.md) | retail | financial_management, disruption_denial, culture_and_talent |
-| [borders](borders.md) | retail | disruption_denial, culture_and_talent |
-| [juicero](juicero.md) | hardware | product_market_fit, financial_management |
-| [ftx](ftx.md) | crypto/finance | fraud_and_ethics, governance_and_leadership, financial_management |
-| [segway](segway.md) | hardware | product_market_fit, governance_and_leadership |
-| [myspace](myspace.md) | tech/social | culture_and_talent, disruption_denial, product_market_fit |
-| [circuit-city](circuit-city.md) | retail | culture_and_talent, financial_management, disruption_denial |
-| [blackberry](blackberry.md) | tech/hardware | disruption_denial, culture_and_talent, governance_and_leadership |
-| [yahoo](yahoo.md) | tech/internet | governance_and_leadership, culture_and_talent, product_market_fit |
-| [katerra](katerra.md) | construction/proptech | scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics |
+| [enron](enron.md) | energy/finance (US) | fraud_and_ethics, governance_and_leadership, financial_management |
+| [lehman-brothers](lehman-brothers.md) | finance (US) | financial_management, governance_and_leadership |
+| [kodak](kodak.md) | manufacturing/tech (US) | disruption_denial, culture_and_talent |
+| [blockbuster](blockbuster.md) | retail/media (US) | disruption_denial, product_market_fit |
+| [nokia-mobile](nokia-mobile.md) | tech/hardware (Finland) | disruption_denial, culture_and_talent, governance_and_leadership |
+| [theranos](theranos.md) | healthcare/tech (US) | fraud_and_ethics, governance_and_leadership, product_market_fit |
+| [wework](wework.md) | real estate/tech (US) | governance_and_leadership, financial_management, scaling_too_fast |
+| [quibi](quibi.md) | media/streaming (US) | product_market_fit, governance_and_leadership |
+| [pets-com](pets-com.md) | e-commerce (US) | product_market_fit, financial_management, scaling_too_fast |
+| [webvan](webvan.md) | e-commerce/logistics (US) | scaling_too_fast, financial_management, product_market_fit |
+| [toys-r-us](toys-r-us.md) | retail (US) | financial_management, disruption_denial |
+| [sears](sears.md) | retail (US) | financial_management, disruption_denial, culture_and_talent |
+| [borders](borders.md) | retail (US) | disruption_denial, culture_and_talent |
+| [juicero](juicero.md) | hardware (US) | product_market_fit, financial_management |
+| [ftx](ftx.md) | crypto/finance (US/Bahamas) | fraud_and_ethics, governance_and_leadership, financial_management |
+| [segway](segway.md) | hardware (US) | product_market_fit, governance_and_leadership |
+| [myspace](myspace.md) | tech/social (US) | culture_and_talent, disruption_denial, product_market_fit |
+| [circuit-city](circuit-city.md) | retail (US) | culture_and_talent, financial_management, disruption_denial |
+| [blackberry](blackberry.md) | tech/hardware (Canada) | disruption_denial, culture_and_talent, governance_and_leadership |
+| [yahoo](yahoo.md) | tech/internet (US) | governance_and_leadership, culture_and_talent, product_market_fit |
+| [katerra](katerra.md) | construction/proptech (US) | scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics |
 | [fusionex](fusionex.md) | tech/data analytics (Malaysia) | governance_and_leadership, financial_management, fraud_and_ethics |
-| [kenny-rogers-roasters](kenny-rogers-roasters.md) | restaurant/franchise | scaling_too_fast, financial_management |
+| [kenny-rogers-roasters](kenny-rogers-roasters.md) | restaurant/franchise (US) | scaling_too_fast, financial_management |
 | [luckin-coffee](luckin-coffee.md) | retail/F&B (China) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
-| [silicon-valley-bank](silicon-valley-bank.md) | finance/banking | financial_management, governance_and_leadership |
+| [silicon-valley-bank](silicon-valley-bank.md) | finance/banking (US) | financial_management, governance_and_leadership |
+| [evergrande](evergrande.md) | real estate (China) | financial_management, scaling_too_fast, governance_and_leadership |
+| [wirecard](wirecard.md) | fintech/payments (Germany) | fraud_and_ethics, governance_and_leadership |
+| [satyam](satyam.md) | IT services (India) | fraud_and_ethics, governance_and_leadership |
+| [steinhoff](steinhoff.md) | retail conglomerate (South Africa) | fraud_and_ethics, governance_and_leadership |
+| [boeing-737-max](boeing-737-max.md) | aerospace/manufacturing (US) | safety_and_quality, culture_and_talent, governance_and_leadership |
+| [hih-insurance](hih-insurance.md) | insurance (Australia) | governance_and_leadership, financial_management, fraud_and_ethics |
+| [odebrecht](odebrecht.md) | construction/engineering (Brazil) | fraud_and_ethics, governance_and_leadership |
 
 ## Failure type taxonomy
 
-- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee)
-- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank)
-- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank)
+- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht)
+- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht)
+- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance)
 - **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
 - **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee)
-- **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande)
+- **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo, Boeing 737 MAX)
+- **safety_and_quality** — cut corners on product/service safety or quality to save cost or time (Boeing 737 MAX)
 
 ## Contrast cases (`cases/contrasts/`)
 
@@ -101,12 +110,19 @@ like versus a token one:
 
 These use a different, lighter frontmatter schema (no `severity`/`failed` fields) and are excluded from `scripts/validate_cases.py`, which only validates `cases/*.md`.
 
+## Geographic coverage
+
+Cases span the US, Canada, Finland, Germany, India, South Africa, China, Malaysia, Australia,
+and Brazil — most of these failure mechanisms aren't specific to one country's business culture.
+If you know a well-documented case from a region not yet covered here, see
+[CONTRIBUTING.md](../CONTRIBUTING.md).
+
 ## Method & limitations
 
 These are pattern-matching prompts for reflection, not predictions. Survivorship bias applies:
 plenty of companies exhibited one or two of these warning signs and survived anyway. Treat a
 match as "worth investigating," never as "this means we will fail." See the root disclaimer in
-the repo [README](../README.md#a-note-on-how-to-read-these-cases).
+the repo [README](../README.md#how-to-read-these-cases).
 
 
 ---
@@ -128,7 +144,7 @@ None of these are pass/fail. They're prompts to investigate. See the
 verdict.
 
 ## Fraud & ethics
-_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md)_
+_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
 
 - [ ] Can an outside expert independently verify our core technical/financial claim, or is it only internal say-so?
 - [ ] Are we, our auditors, or our board financially incentivized to not look too closely at our own numbers?
@@ -136,18 +152,21 @@ _See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md
 - [ ] Do people who raise uncomfortable questions get heard, or get sidelined/fired?
 - [ ] Is there any structure where funds held for someone else (customers, clients) could be used for our own operations, even informally?
 - [ ] Is there pressure on any team to hit a growth/sales number that only makes sense if part of it is manufactured rather than real?
+- [ ] Are the same handful of related counterparties or entities showing up across multiple of our transactions?
+- [ ] Do we have an unusually high win-rate on competitive bids or deals that we've never honestly examined the reason for?
 
 ## Governance & leadership
-_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md)_
+_See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md), [evergrande](cases/evergrande.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md)_
 
 - [ ] Does any single individual have effectively unchecked control, and can the board actually say no to them?
 - [ ] Are there transactions where a founder/executive personally benefits at the company's expense?
 - [ ] Does our board have anyone who can meaningfully challenge leadership on substance, not just vision?
 - [ ] Has our strategic direction changed multiple times recently without any version being given time to actually work?
 - [ ] Is critical operational knowledge (passwords, contracts, key relationships) concentrated in one or two people who could walk away with it?
+- [ ] When credible outside critics raise specific concerns, is our first instinct to investigate the claim or discredit the accuser?
 
 ## Financial management
-_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md)_
+_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md)_
 
 - [ ] If our single largest revenue source dropped 20-30% in value/volume, would we still be solvent?
 - [ ] Does each unit/order we sell actually make money once fully-loaded costs are included — or are we hoping "scale will fix it"?
@@ -155,6 +174,8 @@ _See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.m
 - [ ] Is our debt load sized to what the business can service even under sustained competitive pressure?
 - [ ] Are we pulling capital out of the business (dividends, buybacks, distributions) faster than we reinvest in what keeps customers coming back?
 - [ ] Is a large share of our deposits/customers/revenue concentrated in one tightly networked community that could all move in the same direction at once?
+- [ ] Are we using customer deposits/prepayments as working capital for something other than what they were paid for?
+- [ ] Is there a real delay between a decision we make today and when its true cost becomes visible — and are we accounting for that lag?
 
 ## Disruption denial
 _See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md)_
@@ -175,7 +196,7 @@ _See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/web
 - [ ] Is our confidence in demand based on real customer behavior, or on how impressive the technology/story seems to us and investors?
 
 ## Scaling too fast
-_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md)_
+_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md)_
 
 - [ ] Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
 - [ ] Is our expansion pace set by what the data says is working, or by external/investor pressure to grow fast?
@@ -183,12 +204,21 @@ _See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pet
 - [ ] Do we have the operational capacity to actually integrate everything we've acquired or launched?
 
 ## Culture & talent
-_See: [kodak](cases/kodak.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [circuit-city](cases/circuit-city.md), [myspace](cases/myspace.md)_
+_See: [kodak](cases/kodak.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [circuit-city](cases/circuit-city.md), [myspace](cases/myspace.md), [boeing-737-max](cases/boeing-737-max.md)_
 
 - [ ] If we cut costs by removing our most experienced people, are we also cutting away the reason customers choose us?
 - [ ] Do bad-news signals reach leadership honestly and quickly, or get softened on the way up?
 - [ ] Is our organizational culture built around obsessing over the product/customer, or around extracting revenue from an existing asset?
 - [ ] Would our best customers notice, and be upset, by a cost cut we're considering?
+- [ ] Do employees privately raise safety/quality/ethical concerns that never surface through official channels?
+
+## Safety & quality
+_See: [boeing-737-max](cases/boeing-737-max.md)_
+
+- [ ] Are we making a safety- or quality-related decision specifically to avoid a disclosure, approval, or training requirement — rather than to make the product genuinely safer or better?
+- [ ] Does any critical system or process rely on a single point of failure that someone has already flagged as risky?
+- [ ] Is our team effectively self-certifying its own safety/quality claims, with no truly independent check?
+- [ ] Is competitor or schedule pressure driving a shortcut on safety or quality we wouldn't normally take?
 
 
 ---
@@ -269,6 +299,48 @@ Blockbuster passed on the chance to buy Netflix for $50M in 2000, dismissing DVD
 ## Sources
 - [Blockbuster 'laughed us out of the room,' recalls Netflix cofounder — Fortune](https://fortune.com/2023/04/14/netflix-cofounder-marc-randolph-recalls-blockbuster-rejecting-chance-to-buy-it/)
 - [Fact Check: Did Blockbuster Turn Down Chance to Buy Netflix for $50 Million — Newsweek](https://www.newsweek.com/fact-check-did-blockbuster-turn-down-chance-buy-netflix-50-million-1575557)
+
+
+---
+
+<!-- ==== cases/boeing-737-max.md ==== -->
+
+---
+slug: boeing-737-max
+company: Boeing (737 MAX program)
+industry: aerospace/manufacturing
+founded: 1916 (737 MAX launched 2016)
+failed: 2018-2019 (crashes and worldwide grounding)
+failure_types: [safety_and_quality, culture_and_talent, governance_and_leadership]
+severity: shutdown
+---
+
+## What happened
+To compete quickly with Airbus's new fuel-efficient A320neo, Boeing rushed the 737 MAX to market by fitting larger engines onto its decades-old 737 airframe, which changed the plane's handling characteristics. To avoid costly pilot retraining and keep the plane certified as "just another 737," Boeing added a software system (MCAS) that automatically pushed the nose down based on a single angle-of-attack sensor, and did not disclose its existence to pilots. Two planes crashed within five months — Lion Air in October 2018 (189 dead) and Ethiopian Airlines in March 2019 (157 dead) — both traced to MCAS misfiring on faulty sensor data. The entire global fleet was grounded for about 20 months, costing Boeing over $20 billion.
+
+## Root causes
+- Commercial pressure to match a competitor's timeline and avoid pilot-retraining costs drove a design choice (hide a new flight-control system rather than disclose and train for it) that prioritized schedule and cost over a full safety case.
+- MCAS relied on a single angle-of-attack sensor with no redundancy, despite engineers reportedly flagging the risk of relying on one sensor for a system with this much control authority.
+- The FAA had delegated large parts of the safety certification process to Boeing itself (a self-certification model), removing an independent check exactly where one mattered most.
+- Internal culture reportedly shifted over years toward emphasizing financial performance and shareholder returns, with safety/engineering concerns escalated less forcefully as a result — documented later in internal communications and congressional investigations.
+
+## Warning signs (visible before the collapse)
+- A safety-critical new system built to avoid disclosure/training requirements rather than to be independently and fully evaluated on its own merits.
+- Single point of failure (one sensor) in a system with significant control authority over the aircraft, despite internal engineering concern about exactly this risk.
+- A regulator relying on the manufacturer's own engineers to certify safety-critical systems, rather than independent verification.
+- Internal communications later revealed employees privately joking about or expressing concern over the plane's safety and the certification process, while the company's public position remained confident.
+
+## Questions this raises for another company
+- Are we making a safety- or quality-critical design/process decision specifically to avoid a disclosure, training, or approval requirement, rather than to make the product actually safer?
+- Does any critical system rely on a single point of failure that an engineer has already flagged as risky?
+- Is our own team effectively self-certifying its own safety/quality claims, with no truly independent check?
+- Do employees privately express safety or quality concerns that never surface in official channels or leadership's public confidence?
+- Is schedule or cost pressure from a competitor's timeline driving a shortcut on safety or quality that we wouldn't take under normal circumstances?
+
+## Sources
+- [Boeing 737 MAX groundings — Wikipedia](https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings)
+- [The Boeing 737 MAX: Lessons for Engineering Ethics — PMC/National Institutes of Health](https://pmc.ncbi.nlm.nih.gov/articles/PMC7351545/)
+- [Case Study: The $20 Billion Boeing 737 Max Disaster — Henrico Dolfing](https://www.henricodolfing.com/2024/08/case-study-19-20-billion-boeing-737-max.html)
 
 
 ---
@@ -394,6 +466,47 @@ Enron used mark-to-market accounting and off-balance-sheet special purpose entit
 
 ---
 
+<!-- ==== cases/evergrande.md ==== -->
+
+---
+slug: evergrande
+company: China Evergrande Group
+industry: real estate (China)
+founded: 1996
+failed: 2021 (default), 2024 (liquidation ordered)
+failure_types: [financial_management, scaling_too_fast, governance_and_leadership]
+severity: bankruptcy
+---
+
+## What happened
+Evergrande grew into China's second-largest property developer by borrowing heavily to fund land purchases and construction across hundreds of projects in 200+ cities, while also expanding into unrelated businesses (electric vehicles, theme parks, a football club). When Chinese regulators introduced debt limits ("three red lines") in 2020, Evergrande couldn't refinance its way out of over $300 billion in liabilities. It defaulted on dollar bonds in December 2021 — the largest-ever dollar-bond default by an Asian company — and a Hong Kong court ordered its liquidation in January 2024.
+
+## Root causes
+- Business model depended on continuously raising new debt to fund new projects, using presale deposits from homebuyers on unfinished units as working capital — a structure that only works as long as growth (and new buyer deposits) never slows down.
+- Diversified into capital-intensive, unrelated businesses (EVs, theme parks) using cash that a highly leveraged core business couldn't spare, spreading risk across ventures with no track record.
+- Grew past all three of the regulator's own leverage thresholds (debt-to-cash, debt-to-equity, debt-to-assets) — the company's own numbers showed the danger before the external shock hit.
+- When financing conditions tightened, there was no fallback: the whole structure assumed uninterrupted access to new capital forever.
+
+## Warning signs (visible before the collapse)
+- Debt ratios exceeding every one of a regulator's own published risk thresholds, for a company that size, for years.
+- Presale/deposit-funded construction model with a large gap between homes sold (and paid for) and homes actually delivered.
+- Rapid unrelated diversification (EVs, entertainment, sports) funded by a core business that was already highly leveraged.
+- Heavy reliance on the assumption that credit markets and government policy would stay accommodating indefinitely.
+
+## Questions this raises for another company
+- Are we using customer deposits or prepayments as working capital for unrelated growth, rather than holding them against the specific obligation they were paid for?
+- Do we know exactly where we sit against any leverage/risk thresholds a regulator, lender, or our own board has set — and are we already past them?
+- Are we diversifying into ventures with no proven track record, funded by a core business that itself carries a lot of debt?
+- Does our entire growth model assume that credit will always be available on the same terms it is today?
+
+## Sources
+- [Chinese property sector crisis (2020–present) — Wikipedia](https://en.wikipedia.org/wiki/Chinese_property_sector_crisis_(2020%E2%80%93present))
+- [What is the Evergrande debt crisis and why does it matter for the global economy? — World Economic Forum](https://www.weforum.org/stories/2021/09/evergrande-debt-crisis-global-economy/)
+- [China developer Evergrande: debt crisis, bond default and investor risks — CNBC](https://www.cnbc.com/2021/09/17/china-developer-evergrande-debt-crisis-bond-default-and-investor-risks.html)
+
+
+---
+
 <!-- ==== cases/ftx.md ==== -->
 
 ---
@@ -471,6 +584,47 @@ Fusionex, a Malaysian big-data analytics firm founded by Ivan Teh, grew from a L
 - [Fusionex: Rise and Collapse — The Runway Ventures](https://www.therunway.ventures/p/fusionex)
 - [Fusionex liquidators probing alleged diversion of business to third parties — The Edge Malaysia](https://theedgemalaysia.com/node/710771)
 - [Hitachi court petition to wind up Fusionex — Digital News Asia](https://www.digitalnewsasia.com/business/hitachi-court-petition-wind-fusionex-reveal-grim-picture-alleged-unethical-and)
+
+
+---
+
+<!-- ==== cases/hih-insurance.md ==== -->
+
+---
+slug: hih-insurance
+company: HIH Insurance
+industry: insurance (Australia)
+founded: 1968
+failed: 2001
+failure_types: [governance_and_leadership, financial_management, fraud_and_ethics]
+severity: bankruptcy, fraud_conviction
+---
+
+## What happened
+HIH was Australia's second-largest general insurer before it was placed into provisional liquidation in March 2001, in what remains the largest corporate collapse in Australian history, with losses eventually estimated at up to A$5.3 billion. The company had systematically underpriced insurance risk to win market share, made a large acquisition (FAI Insurance) that turned out to be far weaker than represented, and used aggressive accounting to understate its liabilities (reserves it would eventually need to pay out on claims) for years. A board with plenty of relevant expertise nonetheless failed to challenge a dominant CEO, and several executives were later convicted of related offenses.
+
+## Root causes
+- Chronic underpricing of insurance policies to win business meant the company was collecting premiums that were, in aggregate, not enough to cover the claims they would eventually have to pay — a slow-motion insolvency that took years to surface because insurance claims are paid out long after premiums are collected.
+- A major acquisition (FAI) was completed without adequately verifying the target's true financial condition, importing a much bigger reserving problem than disclosed.
+- Aggressive/optimistic reserving (understating how much the company would eventually owe policyholders) flattered short-term profit at the direct expense of long-term solvency.
+- Board included experienced insurance and accounting professionals, but deferred heavily to a dominant CEO and did not exercise independent challenge on the specific numbers that mattered most (reserve adequacy).
+
+## Warning signs (visible before the collapse)
+- Pricing that was persistently and noticeably below what competitors charged for comparable risk, sustained over years — profitable-looking growth that is actually accumulating future losses.
+- A major acquisition completed on the acquirer's own optimistic assessment rather than independent, rigorous due diligence of the target's real financial position.
+- A board with real technical expertise that nonetheless didn't independently push back on the CEO's numbers — expertise on paper doesn't guarantee genuine oversight in practice.
+- A business model (insurance) where the true cost of decisions made today (how much risk to write, at what price) isn't visible for years — a structural reason to distrust short-term profit signals alone.
+
+## Questions this raises for another company
+- Are we winning business by pricing below what the underlying risk or cost actually justifies, and would we know if we were?
+- Did we verify a major acquisition's true financial condition independently, or trust the numbers we were given going into the deal?
+- Does our board have genuine technical expertise AND the independence to challenge leadership's specific numbers — or just the former?
+- Is there a meaningful delay between a decision we make today and when its true cost becomes visible — and are we accounting for that lag, or just looking at today's profit?
+
+## Sources
+- [HIH Insurance — Wikipedia](https://en.wikipedia.org/wiki/HIH_Insurance)
+- [Case Study on Corporate Governance Failures: The Collapse of HIH Insurance — MBA Knowledge Base](https://mbaknol.com/business-ethics/case-study-on-corporate-governance-failures-the-collapse-of-hih-insurance/)
+- [HIH Insurance Group — Australia's biggest corporate collapse](https://www.hihsupport.com.au/hih-insurance-group/)
 
 
 ---
@@ -805,6 +959,47 @@ Nokia was the world's dominant phone maker when the iPhone launched in 2007. It 
 
 ---
 
+<!-- ==== cases/odebrecht.md ==== -->
+
+---
+slug: odebrecht
+company: Odebrecht S.A.
+industry: construction/engineering (Brazil)
+founded: 1944
+failed: 2016 (guilty plea), ongoing restructuring/rebrand
+failure_types: [fraud_and_ethics, governance_and_leadership]
+severity: fraud_conviction
+---
+
+## What happened
+Odebrecht, Latin America's largest construction and engineering conglomerate, ran a dedicated internal division ("Division of Structured Operations," effectively a bribery department with its own budget, staff, and even encrypted software) that paid roughly $788 million in bribes across a dozen countries between 2001 and 2016 to win public infrastructure contracts. The scheme was exposed through Brazil's "Operation Car Wash" investigation. Odebrecht pleaded guilty to U.S. and Brazilian charges in 2016 in what was then the largest foreign-bribery settlement ever prosecuted (over $2.6 billion in fines), its CEO was jailed, and the resulting political fallout toppled or implicated presidents and senior officials in multiple Latin American countries.
+
+## Root causes
+- Bribery was not a rogue individual's misconduct but an institutionalized, budgeted internal function with its own staff, software, and operating procedures — corruption was built into the business model for winning contracts, not an occasional lapse.
+- Heavy reliance on government infrastructure contracts created a direct incentive to influence the officials awarding them, and the company built durable, repeatable relationships to do so across many countries.
+- Success bred scale: as the bribery apparatus worked in one country, it was systematized and exported to others, compounding both the financial exposure and the number of jurisdictions eventually investigating.
+- Weak or captured oversight in the countries where contracts were awarded meant the scheme could run for over a decade before a single investigation (in this case, aimed initially at money laundering, not Odebrecht itself) unraveled it.
+
+## Warning signs (visible before the collapse)
+- An unusually high win-rate on competitively bid government contracts across many countries over a long period.
+- A dedicated internal unit or function whose actual purpose is opaque even to much of the rest of the organization, operating with its own budget and tools.
+- Business heavily dependent on relationships with government decision-makers in jurisdictions with weaker transparency or anti-corruption enforcement.
+- Rapid replication of a "successful" approach to winning contracts from one country to many, without anyone asking why it worked so consistently.
+
+## Questions this raises for another company
+- If we win an unusually high share of competitive government or institutional bids, have we honestly examined why?
+- Do we have any internal function whose real purpose isn't transparent to the rest of the organization, even at a senior level?
+- Is a large share of our revenue dependent on relationships with a small number of government or institutional decision-makers?
+- Are we replicating an approach that "works" in one market into new markets without scrutinizing why it's been so effective?
+
+## Sources
+- [Odebrecht — Wikipedia](https://en.wikipedia.org/wiki/Odebrecht)
+- [Bribery Division: What is Odebrecht? Who is Involved? — ICIJ](https://www.icij.org/investigations/bribery-division/bribery-division-what-is-odebrecht-who-is-involved/)
+- [Petrobras scandal — Britannica](https://www.britannica.com/event/Petrobras-scandal)
+
+
+---
+
 <!-- ==== cases/pets-com.md ==== -->
 
 ---
@@ -881,6 +1076,47 @@ Quibi raised $1.75B to launch a mobile-only, short-form ($5-10 min episodes), pr
 ## Sources
 - [Quibi shuts down: Why the $1.75 billion streaming app failed — Yahoo Finance](https://finance.yahoo.com/news/quibi-shuts-down-why-the-175-billion-streaming-app-failed-104534579.html)
 - [7 Reasons Quibi Failed Despite Raising $1.8B — Failory](https://www.failory.com/cemetery/quibi)
+
+
+---
+
+<!-- ==== cases/satyam.md ==== -->
+
+---
+slug: satyam
+company: Satyam Computer Services
+industry: IT services (India)
+founded: 1987
+failed: 2009
+failure_types: [fraud_and_ethics, governance_and_leadership]
+severity: fraud_conviction
+---
+
+## What happened
+Satyam was one of India's largest IT outsourcing companies. In January 2009, founder-chairman Ramalinga Raju confessed in a letter to the board that he had fabricated the company's accounts for years — inflating revenue, profit, and cash balances by roughly $1.5 billion, including over $1 billion in cash and bank balances that simply did not exist. The fraud was reportedly used to secure bank loans that were then diverted into unrelated real-estate ventures, and unraveled when a related property deal collapsed and drew scrutiny. It became known as "India's Enron."
+
+## Root causes
+- Founder held concentrated control over both the company and the diversion of its funds into personal/family real-estate ventures, with no internal check strong enough to catch or stop it.
+- Fabricated financials were used as collateral to secure real loans from real banks — turning an accounting fraud into an actual cash diversion, not just a paper exercise.
+- Board included qualified, independent-seeming directors, but a related-party transaction (an attempted $1.6B acquisition of two Raju-family-linked firms) was nearly approved before shareholder backlash forced its reversal — showing the board's scrutiny was more form than function.
+- The fraud was sustained for years by continuously growing the fabrication to stay ahead of scrutiny, a treadmill that only stops when external conditions (here, a property market downturn) force a reckoning.
+
+## Warning signs (visible before the collapse)
+- A board approving (however briefly) a large related-party acquisition benefiting the founder's own family, with governance processes that looked adequate on paper.
+- Reported cash and bank balances large enough that basic third-party verification (bank confirmations) should have been routine — and evidently wasn't rigorous enough.
+- Fraud reportedly tied to and dependent on an unrelated market (real estate) staying strong — when that market turned, the whole scheme was exposed.
+- A founder whose personal financial dealings were closely intertwined with the company's balance sheet.
+
+## Questions this raises for another company
+- Could our founder or a small group of insiders move company funds into their own ventures without the board or auditors independently verifying it?
+- Are our reported cash balances actually confirmed directly with our banks by an independent party, or only reported internally?
+- Is any part of our company's financial health quietly dependent on an unrelated market or venture staying strong?
+- Does our board actually block related-party transactions that benefit insiders, or does it approve them and rely on after-the-fact shareholder pressure to reverse mistakes?
+
+## Sources
+- [Satyam scandal — Wikipedia](https://en.wikipedia.org/wiki/Satyam_scandal)
+- [Founder Of Indian IT Giant Satyam Gets 7 Years For Fraud — NPR](https://www.npr.org/sections/thetwo-way/2015/04/09/398503322/founder-of-indian-it-giant-satyam-gets-7-years-in-fraud)
+- [Satyam Scandal: Inside India's Enron — Transparently.ai](https://www.transparently.ai/blog/satyam-scandal-indias-enron)
 
 
 ---
@@ -1002,6 +1238,47 @@ SVB, the primary bank for much of the U.S. venture-backed startup ecosystem, inv
 - [Collapse of Silicon Valley Bank — Wikipedia](https://en.wikipedia.org/wiki/Collapse_of_Silicon_Valley_Bank)
 - [The Collapse Of Silicon Valley Bank — NPR Planet Money](https://www.npr.org/sections/money/2023/03/14/1163200179/the-collapse-of-silicon-valley-bank)
 - [Material Loss Review of Silicon Valley Bank — Federal Reserve OIG](https://oig.federalreserve.gov/reports/board-material-loss-review-silicon-valley-bank-sep2023.pdf)
+
+
+---
+
+<!-- ==== cases/steinhoff.md ==== -->
+
+---
+slug: steinhoff
+company: Steinhoff International
+industry: retail/furniture conglomerate (South Africa)
+founded: 1964
+failed: 2017
+failure_types: [fraud_and_ethics, governance_and_leadership]
+severity: fraud_conviction
+---
+
+## What happened
+Steinhoff, a South African-founded, Europe-listed global furniture and retail conglomerate (owner of brands like Conforama and Mattress Firm), collapsed in December 2017 when its auditors refused to sign off on its accounts and CEO Markus Jooste resigned the same evening. An investigation later found roughly €6.5 billion in fictitious or irregular transactions with a network of off-balance-sheet entities over nearly a decade. The share price fell more than 95% within days, wiping out over $13 billion for investors including South African pension funds, and triggering lawsuits across three continents.
+
+## Root causes
+- Used a network of related off-balance-sheet entities to book fictitious profits and hide losses from real acquisitions, inflating the company's apparent growth from its aggressive acquisition strategy.
+- Rapid, debt-funded, cross-border acquisition spree (Europe, US, Africa, Australia) created enough complexity that consolidated financial statements were extremely hard for outsiders — and apparently even some insiders — to scrutinize.
+- Long-tenured relationships between the CEO and the network of transaction counterparties meant conflicts of interest weren't flagged through normal channels.
+- Auditor turnover/pressure dynamics meant red flags accumulated for years before an audit firm finally refused to sign off, at which point the exposure was already enormous.
+
+## Warning signs (visible before the collapse)
+- An acquisition pace and geographic spread fast enough that even sophisticated investors and analysts struggled to fully understand the consolidated business.
+- Profit growth that consistently outpaced what organic performance in the underlying retail brands could plausibly explain.
+- A concentrated, long-standing network of transaction counterparties tied to leadership, used repeatedly across deals.
+- Auditors reportedly raising concerns for a period before ultimately refusing to sign off — a gap between "still auditing" and "confident in the numbers."
+
+## Questions this raises for another company
+- Have we grown so fast through acquisition that even our own board or investors can't fully explain how the consolidated numbers add up?
+- Are the same handful of counterparties or related entities showing up across multiple of our transactions?
+- Is our reported profit growth consistently outrunning what the underlying operating businesses could organically produce?
+- If our auditor privately had doubts for a year before finally acting, would we have any independent way of finding out sooner?
+
+## Sources
+- [Steinhoff International — Wikipedia](https://en.wikipedia.org/wiki/Steinhoff_International)
+- [A Look into the Accounting Fraud Case at Steinhoff International — Arcadia](https://www.byarcadia.org/post/a-look-into-accounting-fraud-case-at-steinhoff-international)
+- [More Violations Uncovered in Steinhoff Scandal — OCCRP](https://www.occrp.org/en/news/more-violations-uncovered-in-steinhoff-scandal)
 
 
 ---
@@ -1163,6 +1440,47 @@ WeWork signed long-term leases on office space and rented it out short-term, mar
 ## Sources
 - [What exactly happened to WeWork? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/what-exactly-happened-to-wework/)
 - [The WeWork Collapse: Governance Failures, Founder Control & Lessons Learned — Directors Institute](https://www.directors-institute.com/post/the-wework-collapse-governance-failures-founder-control-lessons-learned)
+
+
+---
+
+<!-- ==== cases/wirecard.md ==== -->
+
+---
+slug: wirecard
+company: Wirecard AG
+industry: fintech/payments (Germany)
+founded: 1999
+failed: 2020
+failure_types: [fraud_and_ethics, governance_and_leadership]
+severity: bankruptcy, fraud_conviction
+---
+
+## What happened
+Wirecard was a German payment-processing company that grew into a DAX-30 blue chip, at one point worth more than Deutsche Bank. Much of its reported profit came from fabricated transactions and a claimed €1.9 billion in cash held in trustee accounts at two Philippine banks — money that, when auditor EY finally refused to sign off on the 2019 accounts, turned out to never have existed. The company filed for insolvency in June 2020, its CEO was arrested, and its COO fled the country by private jet and remains a fugitive.
+
+## Root causes
+- A large share of reported revenue and profit came from third-party partner businesses in opaque jurisdictions that were never independently verified in a way that could catch fabrication.
+- The auditor (EY) signed off on the same fabricated figures for over a decade before finally refusing — long-tenured auditor relationships did not translate into genuine scrutiny.
+- The German financial regulator (BaFin) reportedly investigated journalists and short-sellers who raised fraud allegations, rather than investigating the company itself, delaying the reckoning by years.
+- National pride in a homegrown fintech champion (competing narrative to Silicon Valley) made institutional actors reluctant to challenge the company's numbers.
+
+## Warning signs (visible before the collapse)
+- Investigative journalism (Financial Times) and short-sellers publishing detailed, specific fraud allegations years before the collapse, initially dismissed by the company and regulator alike.
+- A large share of profit concentrated in unverifiable "third-party acquirer" partnerships in jurisdictions with weak transparency.
+- Regulatory response to fraud allegations directed at the accusers (journalists, short-sellers) rather than the company being accused.
+- A single long-tenured auditor relationship with no apparent escalation of scrutiny despite years of accumulating red flags.
+
+## Questions this raises for another company
+- Is a large share of our reported profit concentrated in relationships or jurisdictions that are hard for an outside auditor to independently verify?
+- Has the same auditor signed off on our numbers for many years — and would a fresh set of eyes actually catch something they've stopped looking for?
+- When credible outside critics (journalists, short-sellers, analysts) raise specific fraud allegations, is our first instinct to investigate the claim or to discredit the accuser?
+- Are we, or our regulators, treating a company as "too important to be fraudulent" because of what it represents (national champion, hot sector) rather than what its numbers actually show?
+
+## Sources
+- [Wirecard scandal — Wikipedia](https://en.wikipedia.org/wiki/Wirecard_scandal)
+- [Wirecard's collapse reveals cracks at the heart of Germany, Inc — CNN Business](https://www.cnn.com/2020/06/27/tech/wirecard-germany)
+- [Wirecard Was Germany's Fintech Star—Now $2 Billion Is Missing — Forbes](https://www.forbes.com/sites/isabeltogoh/2020/06/23/wirecard-was-germanys-fintech-star-now-2-billion-is-missing-and-its-ceo-has-been-arrested/)
 
 
 ---
