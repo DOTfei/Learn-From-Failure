@@ -8,6 +8,11 @@
 
 English | [简体中文](README.zh-CN.md)
 
+[![Validate case files](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml/badge.svg)](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/DOTfei/Learn-From-Failure?style=social)](https://github.com/DOTfei/Learn-From-Failure/stargazers)
+[![Cases](https://img.shields.io/badge/cases-38-9a3b2f)](cases/_index.md)
+
 **A library of real, sourced corporate failure case studies — usable with any AI tool, or with no AI tool at all.**
 
 Ask "does my company have any of the failure patterns that killed [Company X]?" and get an
@@ -130,6 +135,9 @@ scripts/                   — regenerates the bundle and the website from cases
 dist/                      — single-file bundle for tools with no file access
 docs/                      — the searchable website (GitHub Pages)
 CHECKLIST.md               — static self-audit checklist
+CHANGELOG.md               — what's changed, release by release
+CODE_OF_CONDUCT.md         — expectations for contributors and discussion
+LEGAL.md                   — sourcing standards, trademarks, corrections
 ```
 
 ## Language
