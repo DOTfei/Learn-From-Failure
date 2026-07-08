@@ -1,0 +1,8 @@
+---
+description: Analyze a user's business situation against a knowledge base of sourced corporate failure case studies. Apply when the user asks to review their company/decision against past failures, or wants to add a new case.
+alwaysApply: false
+---
+
+Follow the instructions in `AGENTS.md` at the repo root — that is the single source of truth for
+how to use this knowledge base (which lives in `cases/`). Do not duplicate its logic here; if it
+needs updating, edit `AGENTS.md`.

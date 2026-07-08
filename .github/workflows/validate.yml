@@ -4,11 +4,13 @@ on:
   push:
     paths:
       - "cases/**"
-      - "scripts/validate_cases.py"
+      - "CHECKLIST.md"
+      - "scripts/**"
   pull_request:
     paths:
       - "cases/**"
-      - "scripts/validate_cases.py"
+      - "CHECKLIST.md"
+      - "scripts/**"
 
 jobs:
   validate:
@@ -19,3 +21,8 @@ jobs:
         with:
           python-version: "3.x"
       - run: python3 scripts/validate_cases.py
+      - name: Check dist/learn-from-failure-bundle.md is up to date
+        run: |
+          python3 scripts/build_bundle.py
+          git diff --exit-code -- dist/learn-from-failure-bundle.md || \
+            (echo "::error::dist/learn-from-failure-bundle.md is stale — run 'python3 scripts/build_bundle.py' and commit the result." && exit 1)

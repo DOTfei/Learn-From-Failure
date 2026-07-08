@@ -22,6 +22,17 @@
    find a source or leave it out — don't guess.
 5. Add a row to the table in `cases/_index.md`, and update the taxonomy section if you added a
    new tag.
+6. Run `python3 scripts/build_bundle.py` and commit the resulting change to
+   `dist/learn-from-failure-bundle.md`. This file is a single-file copy of the whole knowledge
+   base for platforms with no repo/file access (ChatGPT Custom GPT, Gemini Gem, raw API calls —
+   see README → Platform support). CI checks it's up to date and will fail your PR if you forget.
+7. Run `python3 scripts/validate_cases.py` — CI runs this too, but it's faster to catch issues
+   locally.
+
+If you're updating shared workflow logic (not adding a case), edit `AGENTS.md` at the repo
+root — it's the single source of truth read by Claude Code (`SKILL.md` delegates to it), Cursor
+(`.cursor/rules/learn-from-failure.mdc` delegates to it), and other AGENTS.md-aware tools. Don't
+fork the logic into multiple files.
 
 ## What makes a good case
 
