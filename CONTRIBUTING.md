@@ -1,11 +1,24 @@
-# Contributing a case
+# Contributing
 
-Don't want to write the full file or open a PR? [Suggest a case via the issue form](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml)
-instead — just answer what you know, no Markdown or git required. Someone (a maintainer, or an
-AI agent pointed at this repo per `AGENTS.md`) can turn it into a proper case file from there.
-Found a mistake in an existing case? [Report it here](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml).
+There are three ways to contribute, from lowest to highest effort — pick whichever fits:
 
-To write the full case file yourself:
+## 1. No git, no Markdown — just tell us
+
+- **New case:** [Suggest a case via the issue form](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml) — answer what you know, someone (a maintainer, or an AI agent pointed at this repo per `AGENTS.md`) turns it into a proper case file.
+- **Found a mistake:** [Report an error](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml).
+- **Have a better/additional source for an existing case:** [Add a source](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=add-source.yml) — a link and a sentence on what it supports is enough.
+
+## 2. Edit directly on GitHub, no local git setup
+
+Every case is a single Markdown file. Open the file (e.g. `cases/enron.md`), click the ✏️
+pencil icon in the top right, make your edit (add a link to the `## Sources` list, fix a
+number, tighten a sentence), and click "Propose changes." GitHub automatically forks the repo
+and opens a pull request for you — no cloning, no command line. This works for adding a source,
+fixing a typo, or even writing a whole new case if you're comfortable with the format below.
+
+## 3. Full local workflow (cloning, running scripts, opening a PR yourself)
+
+To write or edit a case file with the repo cloned locally:
 
 1. Copy `cases/_template.md` to `cases/<company-slug>.md`.
 2. Fill in the frontmatter:

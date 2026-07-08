@@ -143,11 +143,16 @@ references for Chinese-speaking users browsing the repo directly.
 
 ## Contributing
 
-**Know a case that should be here but don't want to write the full file?**
-[Suggest a case](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml) —
+**Know a case that should be here, or a better source for an existing one, but don't want to
+write the full file?** [Suggest a case](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=new-case.yml)
+or [add a source](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=add-source.yml) —
 just fill in what you know, no PR or Markdown required.
 
-**Want to write the full case yourself?** See [CONTRIBUTING.md](CONTRIBUTING.md). Short
+**Want to edit a source or fix something yourself but don't have git set up?** Open the case
+file on GitHub (e.g. `cases/enron.md`), click the ✏️ pencil icon, edit it, and submit — GitHub
+auto-forks and opens a PR for you, no cloning needed.
+
+**Want to write a full case yourself locally?** See [CONTRIBUTING.md](CONTRIBUTING.md). Short
 version: use `cases/_template.md`, cite real sources, tag it with existing failure-type tags
 where they fit, update `cases/_index.md`, and run `python3 scripts/validate_cases.py` before
 opening a PR (CI runs this automatically too).

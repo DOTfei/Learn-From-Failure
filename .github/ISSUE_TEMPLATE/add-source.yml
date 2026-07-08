@@ -1,0 +1,40 @@
+name: 🔗 Add or update a source on an existing case
+description: Found a better/newer/missing source for a case that's already in the repo? Submit it here — no PR or Markdown required.
+title: "[Source] "
+labels: ["source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this if the case's facts are basically right but you have a source to add — a more
+        authoritative article, a primary document (court filing, SEC release, company statement),
+        an updated figure, or a source for a claim that currently has none. If you think a fact
+        itself is *wrong*, use the "Report an error" template instead.
+
+        Prefer to just edit the file yourself? Click the pencil icon on the case's `.md` file on
+        GitHub, edit the `## Sources` section directly, and it'll open a PR for you automatically
+        — no git required.
+
+  - type: input
+    id: case
+    attributes:
+      label: Which case?
+      placeholder: e.g. cases/enron.md, or just "Enron"
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: What does this source support or add?
+      description: e.g. "confirms the $180M SEC penalty figure", "primary source for the court filing mentioned in Root causes", "more recent reporting than what's currently cited"
+    validations:
+      required: false
