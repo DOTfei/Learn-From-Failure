@@ -13,13 +13,14 @@ None of these are pass/fail. They're prompts to investigate. See the
 verdict.
 
 ## Fraud & ethics
-_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md)_
+_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md)_
 
 - [ ] Can an outside expert independently verify our core technical/financial claim, or is it only internal say-so?
 - [ ] Are we, our auditors, or our board financially incentivized to not look too closely at our own numbers?
 - [ ] If a customer/client/investor asked for a full, honest audit tomorrow, could we produce clean records immediately?
 - [ ] Do people who raise uncomfortable questions get heard, or get sidelined/fired?
 - [ ] Is there any structure where funds held for someone else (customers, clients) could be used for our own operations, even informally?
+- [ ] Is there pressure on any team to hit a growth/sales number that only makes sense if part of it is manufactured rather than real?
 
 ## Governance & leadership
 _See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [nokia-mobile](cases/nokia-mobile.md), [blackberry](cases/blackberry.md), [lehman-brothers](cases/lehman-brothers.md), [fusionex](cases/fusionex.md)_
@@ -31,13 +32,14 @@ _See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [
 - [ ] Is critical operational knowledge (passwords, contracts, key relationships) concentrated in one or two people who could walk away with it?
 
 ## Financial management
-_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md)_
+_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md)_
 
 - [ ] If our single largest revenue source dropped 20-30% in value/volume, would we still be solvent?
 - [ ] Does each unit/order we sell actually make money once fully-loaded costs are included — or are we hoping "scale will fix it"?
 - [ ] If external funding dried up tomorrow, how many months could we survive?
 - [ ] Is our debt load sized to what the business can service even under sustained competitive pressure?
 - [ ] Are we pulling capital out of the business (dividends, buybacks, distributions) faster than we reinvest in what keeps customers coming back?
+- [ ] Is a large share of our deposits/customers/revenue concentrated in one tightly networked community that could all move in the same direction at once?
 
 ## Disruption denial
 _See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md)_
@@ -58,7 +60,7 @@ _See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/web
 - [ ] Is our confidence in demand based on real customer behavior, or on how impressive the technology/story seems to us and investors?
 
 ## Scaling too fast
-_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md)_
+_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md)_
 
 - [ ] Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
 - [ ] Is our expansion pace set by what the data says is working, or by external/investor pressure to grow fast?

@@ -11,13 +11,14 @@
 幸存者偏差是真实存在的，很多公司同样有这些警示信号但活得好好的，"匹配"不等于"会失败"。
 
 ## 造假与商业道德
-_参考案例：[enron](cases/enron.md)、[theranos](cases/theranos.md)、[ftx](cases/ftx.md)、[katerra](cases/katerra.md)、[fusionex](cases/fusionex.md)_
+_参考案例：[enron](cases/enron.md)、[theranos](cases/theranos.md)、[ftx](cases/ftx.md)、[katerra](cases/katerra.md)、[fusionex](cases/fusionex.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）_
 
 - [ ] 我们的核心技术/财务说法，能不能让外部专家独立验证，还是只有内部人说了算？
 - [ ] 我们（或审计方、董事会）在财务上是不是有动机不去仔细核查自己的数字？
 - [ ] 如果客户/合作方/投资人明天要求做一次彻底、诚实的审计，我们能不能马上拿出干净的账目？
 - [ ] 提出让人不舒服的问题的人，是被认真对待，还是被边缘化/开除？
 - [ ] 有没有任何结构，让替别人（客户、委托方）持有的资金可能被挪用到自己公司的运营中，哪怕只是非正式的？
+- [ ] 有没有哪个团队被要求达成一个增长/销售数字，而这个数字只有靠部分造假才能凑出来？
 
 ## 治理与领导层
 _参考案例：[wework](cases/wework.md)、[ftx](cases/ftx.md)、[yahoo](cases/yahoo.md)、[nokia-mobile](cases/nokia-mobile.md)、[blackberry](cases/blackberry.md)、[lehman-brothers](cases/lehman-brothers.md)、[fusionex](cases/fusionex.md)_
@@ -29,13 +30,14 @@ _参考案例：[wework](cases/wework.md)、[ftx](cases/ftx.md)、[yahoo](cases/
 - [ ] 关键的运营知识（密码、合同、核心关系）是不是集中在一两个人身上，他们一走就带走了？
 
 ## 财务管理
-_参考案例：[lehman-brothers](cases/lehman-brothers.md)、[toys-r-us](cases/toys-r-us.md)、[sears](cases/sears.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[katerra](cases/katerra.md)_
+_参考案例：[lehman-brothers](cases/lehman-brothers.md)、[toys-r-us](cases/toys-r-us.md)、[sears](cases/sears.md)、[pets-com](cases/pets-com.md)、[webvan](cases/webvan.md)、[juicero](cases/juicero.md)、[katerra](cases/katerra.md)、[silicon-valley-bank](cases/silicon-valley-bank.md)（硅谷银行）_
 
 - [ ] 如果我们最大的单一收入来源下滑 20-30%，公司还能不能撑得住？
 - [ ] 把全部成本算进去，我们卖的每一单/每一件到底是赚钱还是亏钱 —— 还是只是"希望规模上去了就好了"？
 - [ ] 如果外部融资明天断了，公司还能撑几个月？
 - [ ] 我们的债务规模，是不是在持续竞争压力下也还能承受的水平？
 - [ ] 我们从公司抽走资金（分红、回购、分配）的速度，是不是比投入到留住客户的地方还快？
+- [ ] 我们的存款/客户/收入是不是大量集中在一个联系紧密的圈子里，一旦有风吹草动他们可能会同时采取同样的行动？
 
 ## 拒绝转型（颠覆性变化面前的否认）
 _参考案例：[kodak](cases/kodak.md)、[blockbuster](cases/blockbuster.md)、[nokia-mobile](cases/nokia-mobile.md)、[sears](cases/sears.md)、[borders](cases/borders.md)、[blackberry](cases/blackberry.md)、[circuit-city](cases/circuit-city.md)_
@@ -56,7 +58,7 @@ _参考案例：[quibi](cases/quibi.md)、[pets-com](cases/pets-com.md)、[webva
 - [ ] 我们对需求的信心，是来自真实的用户行为，还是来自我们和投资人觉得这个技术/故事有多厉害？
 
 ## 扩张过快
-_参考案例：[wework](cases/wework.md)、[webvan](cases/webvan.md)、[pets-com](cases/pets-com.md)、[katerra](cases/katerra.md)、[kenny-rogers-roasters](cases/kenny-rogers-roasters.md)_
+_参考案例：[wework](cases/wework.md)、[webvan](cases/webvan.md)、[pets-com](cases/pets-com.md)、[katerra](cases/katerra.md)、[kenny-rogers-roasters](cases/kenny-rogers-roasters.md)、[luckin-coffee](cases/luckin-coffee.md)（瑞幸咖啡）_
 
 - [ ] 在把固定成本投入复制到别的地方之前，我们有没有先在一个地点/细分市场证明模式能盈利？
 - [ ] 我们的扩张节奏，是数据证明可行才推进的，还是被外部/投资人的压力推着走的？
