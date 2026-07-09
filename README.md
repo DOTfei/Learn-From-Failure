@@ -1,8 +1,8 @@
 <a href="https://dotfei.github.io/Learn-From-Failure/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img alt="Learn From Failure — a sourced knowledge base of corporate failure case studies, organized by failure mechanism, not industry. Click to browse the site." src="assets/banner-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/DOTfei/Learn-From-Failure@main/assets/banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/DOTfei/Learn-From-Failure@main/assets/banner-light.svg">
+    <img alt="Learn From Failure — a sourced knowledge base of corporate failure case studies, organized by failure mechanism, not industry. Click to browse the site." src="https://cdn.jsdelivr.net/gh/DOTfei/Learn-From-Failure@main/assets/banner-light.svg" width="100%">
   </picture>
 </a>
 
