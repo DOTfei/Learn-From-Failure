@@ -4,34 +4,38 @@ company: Katerra
 industry: construction/proptech
 founded: 2015
 failed: 2021
-failure_types: [scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics]
+failure_types: [scaling_too_fast, governance_and_leadership, financial_management]
 severity: bankruptcy
 ---
 
+## Evidence and limits
+**Research pending — do not use this entry for failure-pattern matching.**
+Reviewed October 2, 2026. Legacy dates, outcome label and remaining tags are discovery metadata, not verified findings. Earlier financial figures, motive claims and serious allegations have been withdrawn. The fraud tag has been removed; this is not a finding that wrongdoing did or did not occur.
+
 ## What happened
-Katerra raised over $2B (largely from SoftBank) with a vision to industrialize construction end-to-end — architecture, manufacturing, and building, all under one roof — expanding into dozens of business lines and acquiring numerous companies simultaneously. It struggled to integrate the acquisitions or make any single business line actually profitable, burned cash rapidly, and after falling short of projections reportedly presented its board with intentionally misstated financial reports. SoftBank gave a $200M rescue in late 2020, but once its own lender (Greensill) collapsed and no further cash came, Katerra filed for bankruptcy in June 2021.
+A replacement factual summary is pending. No historical narrative from the previous entry is retained as verified evidence in this batch.
 
 ## Root causes
-- Attempted to vertically integrate and industrialize an entire complex industry (construction) all at once, rather than proving the model in one narrow segment first.
-- Aggressive, investor-driven growth capital (large SoftBank checks) enabled scaling headcount, acquisitions, and factories far ahead of any proven, repeatable, profitable process.
-- Integrating many disparate acquired companies and business lines simultaneously created enormous operational complexity that leadership could not manage effectively.
-- Construction is a notoriously low-margin, execution-heavy, locally-regulated industry; the "move fast" software mentality applied here left little room for error and made mistakes very expensive (physical factories, real buildings).
+Not established here. Do not attribute a general hypothesis about business integration, investor influence or reporting practices to Katerra without claim-level evidence.
 
-## Warning signs (visible before the collapse)
-- Enormous capital raised and deployed into rapid expansion across many business lines before unit economics were validated in any one of them.
-- Growth funded primarily by a single large investor's conviction rather than by internally generated proof points.
-- A string of leadership departures and reported cultural/operational instability accompanying the rapid scaling.
-- An industry with structurally thin margins and high physical/regulatory execution risk being approached with a "blitzscale" software growth playbook.
-- When results fell short of projections, financial reporting to the board was reportedly manipulated rather than the strategy being honestly reassessed.
+## Warning signs
+Not established here. A later account is not proof that a signal was publicly visible before failure.
 
 ## Questions this raises for another company
-- Are we scaling into many new lines of business simultaneously before proving profitability in even one?
-- Is our growth funded by conviction from one investor/backer rather than by our own internally validated economics?
-- Does our industry have low margins and high execution risk that make "move fast and break things" a genuinely dangerous strategy?
-- Do we have the operational capacity to actually integrate everything we've acquired or launched, or are we accumulating unmanaged complexity?
-- When we miss our own projections, is the reporting to our board/investors honest, or softened/adjusted to look better than reality?
+No Katerra-specific lessons are currently supported. Questions about multiple business lines may still be useful, but must be framed as general, untested questions rather than conclusions from this case.
+
+## When this is not a close match
+This entry is not eligible as evidence for any match until suitable sources, their reuse boundaries and the relevant legal status have been reviewed.
+
+## One small check — untested learning suggestion, not a Katerra lesson
+For one proposed business-line launch, list its dependencies on existing teams, systems and funding, and name who will verify each dependency before launch. Demonstrated spare capacity and few shared dependencies would weaken a complexity concern. This is a general learning exercise, not evidence about Katerra or a proven way to reduce failure rates.
 
 ## Sources
-- [SoftBank-Backed Katerra Files Bankruptcy With Billions in Debt — Bloomberg](https://www.bloomberg.com/news/articles/2021-06-07/softbank-backed-katerra-files-bankruptcy-with-billions-in-debt)
-- [Katerra Bankruptcy: How SoftBank's American House of Cards Collapsed — Bloomberg Opinion](https://www.bloomberg.com/opinion/articles/2021-06-08/katerra-bankruptcy-how-softbank-s-american-house-of-cards-collapsed)
-- [Softbank-backed Katerra's collapse is a failure of pattern-matching — Axios](https://www.axios.com/2021/06/08/katerra-bankruptcy-softbank)
+Research entrances, not verified support for the withdrawn narrative:
+- [Katerra claims-agent entrance](https://cases.primeclerk.com/katerra): access attempt October 2, 2026 returned HTTP 403. No docket documents or site-specific reuse permission were obtained; no bypass attempted. Publication date not established.
+- Kroll corporate terms (revision May 2026): checked October 2, 2026, use restrictions read. Public/commercial reuse and linking are restricted; no portal content or Kroll hyperlink is included here. These general terms do not establish every claims portal's terms or ownership of court documents.
+- [2025 English court judgment research lead](https://www.bailii.org/ew/cases/EWHC/Ch/2025/2631.html): search surfaced Credit Suisse Virtuoso v Softbank, dated October 15, 2025; direct opening October 2, 2026 returned Access Denied. Judgment body and later legal developments not reviewed; do not use it as a finding about the withdrawn reporting allegation or as a current-status determination.
+- [BAILII source-use policy](https://www.bailii.org/bailii/copyright.html): checked October 2, 2026 through indexed policy excerpts only; direct opening returned Access Denied. Publication date not established. A complete policy/rights check remains pending; no judgment text imported.
+- Searches also led to paywalled reporting and accounts repeating that reporting. They were not treated as independent corroboration; no paywall bypass or restricted database import was attempted.
+
+These notes record access and research limits, not exhaustive investigation, clearance of rights, a court finding or proof that the Skill works.

@@ -1,47 +1,270 @@
 # Learn From Failure — Bundled Knowledge Base
 
-You are being given a knowledge base of real, sourced corporate failure case studies, organized
-by *failure mechanism* (fraud & ethics, governance & leadership, financial management,
-disruption denial, product-market fit, scaling too fast, culture & talent, safety & quality)
-rather than industry.
-Use it to analyze the user's own company/business situation and flag matching failure patterns.
+# Learn From Failure — Agent Instructions
 
-## Two modes
+This file follows the [AGENTS.md](https://agents.md) convention read by most coding/agentic AI
+tools (Cursor, Windsurf, OpenAI Codex CLI, Amp, Continue, Claude Code, etc.). If your tool
+doesn't auto-discover this file, paste its contents into your system prompt / custom
+instructions, or point the tool at this repo.
 
-Mode 1 - explicit review: the user directly asks you to check their business/decision against
-failure cases. Do the full workflow below.
+This repo is a knowledge base of sourced corporate failure case studies, organized by *failure
+mechanism* rather than industry, meant to be used conversationally: a user describes their
+company/decision, and you analyze it against real precedent.
 
-Mode 2 - proactive warning, unasked: the user is just talking through a normal business decision
-(pricing, hiring/firing, fundraising, expansion, a cost cut, a pivot) with no mention of failure
-analysis. If what they describe strongly and specifically matches one case's mechanism,
-volunteer a short warning alongside your normal answer - one case, 1-2 sentences, e.g. "Before
-that - [Company] did almost exactly this and here's what happened: ...". Only do this for a
-genuinely strong match; if it's a loose/generic match, say nothing. Don't turn every answer into
-a history lecture - this is a brief flag, not the full analysis, unless they ask for more.
+Claude Code users: see `.claude/skills/learn-from-failure/SKILL.md` for the equivalent Skill
+form of these same instructions (auto-loaded, no setup needed).
 
-## How to use this (mode 1 - the full workflow)
+## Evidence and scope
 
-1. Check the index and taxonomy below to find cases matching the *mechanism* of what the user
-   describes, not just their industry — e.g. a founder over-hiring on hype maps better to
-   WeWork/Katerra/Webvan (scaling too fast) than to Kodak (disruption denial).
-2. Select 3-6 relevant cases. For each: name the case and the specific mechanism that failed
-   (not just "they went bankrupt"), map it concretely to what the user described using their own
-   numbers/decisions/wording, and ask the case's "Questions this raises" directly, adapted to
-   their situation — so they self-diagnose rather than being told.
-3. Be honest when nothing matches well — false-positive pattern-matching erodes trust. It's fine
-   to say "none of the classic patterns fit this well, but here's the closest partial match."
-4. End with 2-4 concrete, highest-signal risks phrased as things to check or decide soon — not a
-   history lecture.
-5. This is pattern-matching for reflection, not a verdict, in EITHER mode. Survivorship bias applies: many
-   companies show one or two of these warning signs and are fine. Never tell the user their
-   company "will fail" — frame findings as risks worth investigating given precedent.
-6. Respond in whatever language the user is writing in — translate the relevant content live
-   rather than quoting the English below verbatim.
-7. Don't ask the user to paste confidential internal details back into any public place; keep
-   company-specific analysis in the conversation.
+This is an experimental, AI-assisted learning Skill. Maintainers have no business-operation
+or consulting experience. Its usefulness has not yet been demonstrated by user studies.
+Offer questions and checks, not professional advice or predictions.
 
-Everything from here down is the knowledge base itself: the tagged index, the self-audit
-checklist, then every individual case file (including contrast cases), each with its sources.
+- Put a direct source link beside every material historical claim in the user's answer;
+  a link to our case file alone is not evidence. Name the publisher and publication date
+  when known. Prefer original filings, court records and official statements, while
+  identifying whose account they represent. Do not imply multiple reports are independent
+  if they repeat the same underlying source.
+- Separate reported facts, our interpretation, the user's account and unverified AI ideas.
+  A case's Sources list does not establish every claim in its body. Read the relevant source
+  if available; otherwise say the claim was not checked in this session. Never invent dates,
+  quotations, measurements or verification status. Historical evidence does not prove current
+  legal status; check later developments before describing a status as current.
+- Explain an important difference between the case and the user's situation. Evidence of a
+  past failure is not proof of its cause, a future failure, or an AI solution's effectiveness.
+  A warning sign needs contemporaneous evidence to be described as visible before collapse;
+  otherwise label it a retrospective inference. Say when evidence or a close match is absent.
+- End an explicit review with one small evidence-gathering check and explain what result
+  would challenge the hypothesis. Let the user set decision thresholds; do not invent risk scores.
+- Explore AI ideas when requested: label them untested, identify necessary inputs, human
+  review, a simple non-AI alternative and a small test. Never claim savings or outcomes without
+  measured evidence. Keep private company records in the user's private environment.
+- Use original summaries and direct links, not copied articles, translations of whole articles,
+  screenshots or downloaded databases. Attribution is not permission. Check source terms and
+  licenses before importing data; an API or llms.txt does not itself grant redistribution rights.
+  Follow LEGAL.md, including the TrustMRR permission restriction.
+
+Example answer structure (adapt to the question): reported fact + source/date; possible match;
+important difference; missing evidence; one next check. Use a brief linked factual reminder
+for proactive warnings rather than forcing the full structure into every response.
+
+## Usage modes
+
+Two modes — the user doesn't need to explicitly ask for either one:
+
+1. **Explicit review.** The user asks you to review their business/company/startup/decision
+   against past failures, asks "will this fail," "what are we missing," "is this a red flag,"
+   references this repo, or wants to add a new case to the knowledge base. Do the full workflow
+   below.
+
+2. **Proactive warning (no explicit ask required).** The user describes an ordinary business
+   decision or plan — pricing, hiring or firing, fundraising, expansion, a board/investor
+   matter, a cost cut, a pivot, a partnership, anything with real stakes — *without* asking you
+   to check it against failure cases. If what they describe clearly maps to a specific case's
+   mechanism, volunteer a short warning as part of your normal answer. See "Proactive warnings"
+   below for how to do this without turning every reply into a lecture.
+
+## Proactive warnings (mode 2)
+
+Don't wait to be asked. If a user mentions something like "we're cutting our senior staff to
+save money" or "we're expanding to 10 new cities next quarter" in the course of a normal
+conversation — not a request for failure analysis — and it's a strong, specific match to a case
+here, say so before or alongside your normal answer. Keep it short:
+
+> If you are committing fixed capacity before demand is confirmed, Webvan's company disclosures
+> are a useful partial analogy: its [10-K filed April 2, 2001](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt)
+> reported order volumes below levels needed for facility profitability. Your margins and exit
+> options may differ; check what contracted demand covers the proposed commitment.
+
+Rules for this mode, because false positives here are more costly than in explicit-review mode
+(the user didn't ask, so an irrelevant warning reads as noise, not insight):
+
+- **Only surface a genuinely strong, specific mechanism match** — not "this is technically
+  tagged `scaling_too_fast` so I'll mention Webvan." If it's a loose or generic match, say
+  nothing; don't force a citation into every answer.
+- **One case, one or two sentences, then move on** — this is a flag, not the full analysis. If
+  the user wants more, they'll ask, and then you do the full workflow below.
+- **Don't interrupt the actual answer to their question.** Give them what they asked for; the
+  warning is additive context, not a replacement for answering.
+- **Never say "you will fail."** Same rule as explicit mode — "worth checking against precedent"
+  is the frame, not a prediction.
+- If genuinely nothing here matches, don't manufacture a connection. Silence is the correct
+  output most of the time — most business questions won't hit a specific enough precedent to be
+  worth citing.
+
+## How to run this (mode 1 — explicit review)
+
+For a quick mode-2 proactive flag, you don't need this whole workflow — skim `cases/_index.md`,
+confirm the match is strong, and give the short version above. This full workflow is for when
+the user actually wants the analysis.
+
+1. **Read `cases/_index.md` first.** It lists every case with its industry and failure-type
+   tags (`fraud_and_ethics`, `governance_and_leadership`, `financial_management`,
+   `disruption_denial`, `product_market_fit`, `scaling_too_fast`, `culture_and_talent`,
+   `safety_and_quality`), plus a
+   one-line description of each tag. Use it to decide which case files are actually relevant —
+   don't read every case file for every question. Exclude entries marked research pending
+   in both explicit reviews and proactive warnings; their tags are legacy discovery
+   metadata, not verified mechanisms.
+
+2. **Understand what the user is asking about.** If it's vague ("look at my company"), ask
+   briefly: what's the business, and what specifically are they worried about (cash, a big
+   decision, a competitor, growth pace, a co-founder/investor issue, etc.)? One round of
+   clarification is usually enough.
+
+3. **Select up to 3 relevant cases; none is acceptable**, not by industry match alone but by *mechanism* match — a SaaS
+   founder adding fixed capacity ahead of confirmed demand may have a partial match to Webvan,
+   but hiring alone is not evidence of the same mechanism. Read the "Root causes" and "Questions this raises" sections of
+   the selected files in `cases/`.
+
+4. **Analyze, don't just summarize.** For each pattern that plausibly applies:
+   - Name the case and the specific mechanism that failed (not just "they went bankrupt").
+   - Map it concretely to what the user described — use their numbers/decisions/wording, not
+     generic restatements.
+   - Ask the "Questions this raises" from the case file directly, adapted to their situation, so
+     they self-diagnose rather than just being told.
+   - Be honest when a pattern does NOT clearly apply — false-positive pattern-matching erodes
+     trust. It's fine to say "none of the classic patterns fit this well, but here's the closest
+     partial match and why it's not a full match."
+
+5. **End with one concrete check** of the most important uncertain assumption, including
+   what evidence would challenge it. Do not turn a historical analogy into a decision for the user.
+
+6. **Surface contrast cases when relevant** (`cases/contrasts/`, e.g. `netflix-pivot.md`
+   contrasts with `blockbuster.md`) — a company that faced the *same* pressure and responded
+   well is often more actionable to hear about than only the failure.
+
+## One problem pilot — explicit requests only
+
+When the user explicitly asks about repeated low-risk support questions or an AI idea for that
+problem, read `problems/repetitive-support.md`. It is an untested problem note, not a failure
+case or verified success story; do not force a case match or proactively pitch it. Establish
+the user's actual bottleneck, show the scoped original-source links and limitations, compare
+the non-AI baseline, and offer the note's one small check. No automated replies or private-data
+imports are authorized by reading the note. Its Starter Story entrance is a research lead only.
+
+## Adding a new case
+
+Use `cases/_template.md` as the structure. Required frontmatter: `slug`, `company`, `industry`,
+`founded`, `failed`, `failure_types` (reuse tags from `cases/_index.md` where they fit),
+`severity`. Required sections: What happened, Root causes, Warning signs, Questions this raises
+for another company (phrased generically), and a **Sources** section with links to independent
+reporting — don't include a claim you can't source. If your tool has web search/browsing, use
+it to verify facts rather than relying on training data. After adding the file, update the table
+and taxonomy in `cases/_index.md`.
+
+**Never state that a real, named person was "convicted" or is "guilty" unless a court actually
+convicted them.** An arrest, indictment, lawsuit, or regulatory fine is not a conviction — use
+`severity: fraud_charges_pending` and say plainly in the text that it's unresolved ("denies the
+charges," "trial ongoing"). See `LEGAL.md` for why. This is checked (heuristically, not
+perfectly) by `scripts/validate_cases.py`.
+
+## Language
+
+Case files are written in English so `## Sources` links map cleanly to the English-language
+reporting they cite. Respond to the user in whatever language they're writing in — translate the
+relevant content live rather than quoting English verbatim. `README.zh-CN.md` and
+`CHECKLIST.zh-CN.md` are pre-translated references for Chinese-speaking users.
+
+## Notes
+
+- This is pattern-matching for reflection, not a verdict. Never tell the user their company
+  "will fail" — frame findings as risks/questions worth taking seriously given precedent.
+  Survivorship bias applies: many companies show one or two of these warning signs and are
+  fine. A match is a prompt to investigate, not a diagnosis.
+- If the user's business is in an industry not well represented here (e.g. a local service
+  business), still apply the mechanism-level patterns — most transcend industry, which is why
+  `cases/_index.md` organizes by failure mechanism, not just industry.
+- Privacy: the user may share sensitive internal details to get a good analysis. Don't suggest
+  committing that detail into this repo's case files — keep company-specific analysis in the
+  conversation, not in files intended for the shared knowledge base.
+
+## If you can't read files directly
+
+If your environment doesn't support reading repo files (e.g. a plain chat interface with no
+file/browsing tool), ask the user to paste in `dist/learn-from-failure-bundle.md` — a single
+concatenated file containing the full index, checklist, and all cases, meant to be pasted as
+context or uploaded as a knowledge file (see `README.md` → "Platform support").
+
+
+---
+
+# Source use and legal limits
+
+This experimental, AI-assisted learning Skill is not professional advice. Maintainers have
+no business-operation or consulting experience. Sources do not prove the Skill works.
+No disclaimer, attribution or software license guarantees freedom from claims or lawsuits.
+Applicable law depends on jurisdiction and use; obtain qualified legal review for commercial
+reuse, disputed allegations or substantial third-party data use.
+
+## Publishing evidence
+
+Write original, limited factual summaries with direct links beside material claims.
+Record publisher/author, publication date when known, check date, what the source supports
+and what remains interpretation. Preserve allegations, responses and legal-status distinctions.
+A prosecution release is an official account, not a substitute for reading the complete record.
+Check later developments before presenting an old report as current.
+
+Do not copy articles, full translations, images, screenshots, charts or datasets into this repo
+without an applicable license or explicit permission for that use. Attribution alone does not
+authorize reproduction. Facts and expression are distinct under U.S. copyright guidance, but
+that does not settle contract restrictions, database rights, privacy, defamation or other laws:
+[U.S. Copyright Office](https://www.copyright.gov/help/faq/faq-protect.html).
+
+Public access, robots.txt, an API and llms.txt are not blanket reuse licenses. Check current
+terms before accessing/importing material. Do not bypass login/paywalls, rate limits or access
+controls. Avoid systematic extraction and redistribution without permission. Keep only the
+minimum original summary and links; if permission is unclear, omit the material and use another
+source. Never describe this project as endorsed by a source.
+
+## Source-specific restrictions checked October 2, 2026
+
+- **TrustMRR:** [Terms, section 9](https://trustmrr.com/terms) restrict API reuse, redistribution
+  and systematic database reconstruction; section 9.3 requires prior written permission for
+  using API data to ground, train, evaluate or populate AI systems/datasets. Do not import
+  TrustMRR metrics into our cases, bundles, indexes or model context absent permission covering
+  that use. A public API is not permission. The provider also distinguishes payment-derived
+  metrics from founder-provided descriptions; neither establishes a product's effectiveness.
+  Only the terms and access documentation were reviewed here; no startup data was imported.
+- **The Runway Ventures:** the [Fusionex article](https://www.therunway.ventures/p/fusionex)
+  is a research lead with reporting links and author opinions, not an identified open-license
+  dataset. No reuse permission was established. Link readers to the article, independently
+  check underlying reporting, and do not reproduce its article, images or full translation.
+  No article content was imported in this change.
+
+The Star's [copyright terms](https://www.thestar.com.my/Terms), checked October 2, 2026,
+restrict online content reuse and use in AI systems without written consent. Do not import
+its articles into the Skill or bundle absent appropriate permission. A link is not permission.
+
+Recheck terms before each proposed integration. Keep any permission record with its scope and
+date; permission to read does not necessarily include storage or public redistribution.
+
+## Starter Story pilot boundary — checked October 3, 2026
+
+[Starter Story terms](https://www.starterstory.com/terms) and the currently linked
+[HubSpot website terms](https://legal.hubspot.com/website-terms-of-use) were checked for
+content-use restrictions. No public Skill/database reuse permission was established.
+Keep only research entrances; do not import articles, interview transcripts, revenue tables
+or database records absent suitable permission. A search snippet is not an open license.
+The pilot's GitLab process references do not verify Starter Story founder claims. Its separate
+source/license review is recorded in `problems/repetitive-support.md`, not blanket clearance.
+
+## Privacy and corrections
+
+Keep private company information in private conversations. Publish feedback only with consent
+and after removing identifying/confidential details; do not request bank records or customer
+data for a public repository.
+
+Use the [correction form](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml)
+for factual, sourcing or rights concerns. Review promptly, remove disputed material pending
+review where appropriate, and record corrections. This is a procedure, not immunity from liability.
+
+## License
+
+The repository's MIT license does not grant rights to third-party articles, images or data
+linked here. Their owners retain their rights. License notices and disclaimers do not make
+inaccurate statements or unauthorized reuse lawful.
+
 
 ---
 
@@ -49,7 +272,17 @@ checklist, then every individual case file (including contrast cases), each with
 
 # Failure Case Index
 
-37 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+37 entries, including research-pending entries excluded from pattern matching.
+One company can span multiple tags. Evidence-review notes are not certifications of accuracy.
+
+October 2, 2026 review: SVB has a scoped official-source summary; FTX has a partial evidence
+note; Webvan and WeWork have scoped original-source reviews, not exhaustive causal verification.
+Kaodim and Katerra are research pending and must not be recommended. Katerra's fraud tag was
+withdrawn; Webvan's product-market-fit tag was removed because this review does not establish
+lack of demand at a particular price. WeWork's scaling tag was removed: the reviewed claims
+support lease-duration and decision-right questions, not a verified growth-at-all-costs cause.
+Tags on reviewed cases are interpretive learning prompts, not established causes.
+Other cases await claim-level review.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
@@ -62,10 +295,10 @@ any new case you contribute.
 | [blockbuster](blockbuster.md) | retail/media (US) | disruption_denial, product_market_fit |
 | [nokia-mobile](nokia-mobile.md) | tech/hardware (Finland) | disruption_denial, culture_and_talent, governance_and_leadership |
 | [theranos](theranos.md) | healthcare/tech (US) | fraud_and_ethics, governance_and_leadership, product_market_fit |
-| [wework](wework.md) | real estate/tech (US) | governance_and_leadership, financial_management, scaling_too_fast |
+| [wework](wework.md) | real estate/tech (US) | governance_and_leadership, financial_management |
 | [quibi](quibi.md) | media/streaming (US) | product_market_fit, governance_and_leadership |
 | [pets-com](pets-com.md) | e-commerce (US) | product_market_fit, financial_management, scaling_too_fast |
-| [webvan](webvan.md) | e-commerce/logistics (US) | scaling_too_fast, financial_management, product_market_fit |
+| [webvan](webvan.md) | e-commerce/logistics (US) | scaling_too_fast, financial_management |
 | [toys-r-us](toys-r-us.md) | retail (US) | financial_management, disruption_denial |
 | [sears](sears.md) | retail (US) | financial_management, disruption_denial, culture_and_talent |
 | [borders](borders.md) | retail (US) | disruption_denial, culture_and_talent |
@@ -76,7 +309,7 @@ any new case you contribute.
 | [circuit-city](circuit-city.md) | retail (US) | culture_and_talent, financial_management, disruption_denial |
 | [blackberry](blackberry.md) | tech/hardware (Canada) | disruption_denial, culture_and_talent, governance_and_leadership |
 | [yahoo](yahoo.md) | tech/internet (US) | governance_and_leadership, culture_and_talent, product_market_fit |
-| [katerra](katerra.md) | construction/proptech (US) | scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics |
+| [katerra — research pending](katerra.md) | construction/proptech (US) | legacy tags only; excluded from matching |
 | [fusionex](fusionex.md) | tech/data analytics (Malaysia) | governance_and_leadership, financial_management, fraud_and_ethics |
 | [kenny-rogers-roasters](kenny-rogers-roasters.md) | restaurant/franchise (US) | scaling_too_fast, financial_management |
 | [luckin-coffee](luckin-coffee.md) | retail/F&B (China) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
@@ -92,16 +325,16 @@ any new case you contribute.
 | [efishery](efishery.md) | agritech/aquaculture (Indonesia) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
 | [propzy](propzy.md) | proptech/real estate (Vietnam) | scaling_too_fast, financial_management, product_market_fit |
 | [tanihub](tanihub.md) | agritech (Indonesia) | scaling_too_fast, financial_management, governance_and_leadership |
-| [kaodim](kaodim.md) | services marketplace (Malaysia) | product_market_fit, disruption_denial |
+| [kaodim — research pending](kaodim.md) | services marketplace (Malaysia) | legacy tags only; excluded from matching |
 
 ## Failure type taxonomy
 
-- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
-- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
-- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
-- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace, Kaodim)
-- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy, Kaodim)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
+- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
+- **governance_and_leadership** — concentrated decision rights, oversight concerns or conflicted leadership; check each case's evidence rather than assuming the board never pushed back (WeWork, FTX, Yahoo, Nokia, BlackBerry, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
+- **financial_management** — debt/leverage, negative unit economics or cash commitments outlasting revenue; not a claim that profitability was impossible (Lehman, Toys R Us, Sears, Pets.com, Webvan, WeWork, Juicero, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
+- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
+- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (Webvan, Pets.com, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
 - **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo, Boeing 737 MAX)
 - **safety_and_quality** — cut corners on product/service safety or quality to save cost or time (Boeing 737 MAX)
 
@@ -114,6 +347,13 @@ like versus a token one:
 - [netflix-pivot](contrasts/netflix-pivot.md) — contrasts directly with [blockbuster](blockbuster.md): same disruption (DVD rental → streaming), opposite response.
 
 These use a different, lighter frontmatter schema (no `severity`/`failed` fields) and are excluded from `scripts/validate_cases.py`, which only validates `cases/*.md`.
+
+## One problem pilot — separate from failure cases
+
+- [Repetitive support questions](../problems/repetitive-support.md): explicit requests only;
+  original-source process references plus an untested check. The Starter Story research lead
+  is not independently verified. Not a failure/success case, not part of the 37-entry count,
+  and not eligible for proactive failure warnings. No website feature is added for this pilot.
 
 ## Geographic coverage
 
@@ -149,7 +389,7 @@ None of these are pass/fail. They're prompts to investigate. See the
 verdict.
 
 ## Fraud & ethics
-_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [katerra](cases/katerra.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [efishery](cases/efishery.md)_
+_See: [enron](cases/enron.md), [theranos](cases/theranos.md), [ftx](cases/ftx.md), [fusionex](cases/fusionex.md), [luckin-coffee](cases/luckin-coffee.md), [wirecard](cases/wirecard.md), [satyam](cases/satyam.md), [steinhoff](cases/steinhoff.md), [hih-insurance](cases/hih-insurance.md), [odebrecht](cases/odebrecht.md), [efishery](cases/efishery.md)_
 
 - [ ] Can an outside expert independently verify our core technical/financial claim, or is it only internal say-so?
 - [ ] Are we, our auditors, or our board financially incentivized to not look too closely at our own numbers?
@@ -171,7 +411,7 @@ _See: [wework](cases/wework.md), [ftx](cases/ftx.md), [yahoo](cases/yahoo.md), [
 - [ ] When credible outside critics raise specific concerns, is our first instinct to investigate the claim or discredit the accuser?
 
 ## Financial management
-_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [katerra](cases/katerra.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md), [byjus](cases/byjus.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
+_See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.md), [sears](cases/sears.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [silicon-valley-bank](cases/silicon-valley-bank.md), [evergrande](cases/evergrande.md), [hih-insurance](cases/hih-insurance.md), [byjus](cases/byjus.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] If our single largest revenue source dropped 20-30% in value/volume, would we still be solvent?
 - [ ] Does each unit/order we sell actually make money once fully-loaded costs are included — or are we hoping "scale will fix it"?
@@ -183,7 +423,7 @@ _See: [lehman-brothers](cases/lehman-brothers.md), [toys-r-us](cases/toys-r-us.m
 - [ ] Is there a real delay between a decision we make today and when its true cost becomes visible — and are we accounting for that lag?
 
 ## Disruption denial
-_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md), [kaodim](cases/kaodim.md)_
+_See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobile](cases/nokia-mobile.md), [sears](cases/sears.md), [borders](cases/borders.md), [blackberry](cases/blackberry.md), [circuit-city](cases/circuit-city.md)_
 
 - [ ] Do we have an internal idea/prototype that threatens our main revenue line — and if so, who decided to shelve it, and why?
 - [ ] Are we protecting this quarter's profit at the cost of being relevant in five years?
@@ -192,7 +432,7 @@ _See: [kodak](cases/kodak.md), [blockbuster](cases/blockbuster.md), [nokia-mobil
 - [ ] Is any part of our revenue model something customers openly resent, and are we protecting it instead of fixing it?
 
 ## Product-market fit
-_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/webvan.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md), [propzy](cases/propzy.md), [kaodim](cases/kaodim.md)_
+_See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [juicero](cases/juicero.md), [segway](cases/segway.md), [theranos](cases/theranos.md), [myspace](cases/myspace.md), [propzy](cases/propzy.md)_
 
 - [ ] Have we validated the core assumption behind our product with real, unpaid user behavior — or only with funding and press?
 - [ ] Does our product have any organic/viral growth loop, or does every user require a paid acquisition dollar?
@@ -202,7 +442,7 @@ _See: [quibi](cases/quibi.md), [pets-com](cases/pets-com.md), [webvan](cases/web
 - [ ] Once we connect two parties (or make one successful match/sale), is there anything stopping them from transacting directly without us next time?
 
 ## Scaling too fast
-_See: [wework](cases/wework.md), [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [katerra](cases/katerra.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
+_See: [webvan](cases/webvan.md), [pets-com](cases/pets-com.md), [kenny-rogers-roasters](cases/kenny-rogers-roasters.md), [luckin-coffee](cases/luckin-coffee.md), [evergrande](cases/evergrande.md), [byjus](cases/byjus.md), [efishery](cases/efishery.md), [propzy](cases/propzy.md), [tanihub](cases/tanihub.md)_
 
 - [ ] Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
 - [ ] Is our expansion pace set by what the data says is working, or by external/investor pressure to grow fast?
@@ -630,6 +870,21 @@ FTX, a crypto exchange, secretly funneled billions of dollars of customer deposi
 - Are we treating standard financial controls as bureaucratic friction rather than as protection against catastrophic failure?
 - If customers/clients all asked for their money back tomorrow, could we actually return it?
 
+## Evidence and limits
+- **Fact checked:** the U.S. Department of Justice reported on March 28, 2024 that
+  Bankman-Fried was sentenced to 25 years after a fraud conviction, and that he diverted
+  customer deposits to Alameda. [DOJ announcement](https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes).
+- **Checked:** October 2, 2026; the announcement was read, not the complete court record.
+  This describes the 2024 sentence, not a separate check of subsequent appeals or current status.
+- **Limit:** this official prosecution account supports those events. It does not establish
+  every governance/culture claim above, their visibility before collapse, or whether an AI
+  intervention could prevent similar misuse. Those interpretations need separate evidence.
+- **Reuse:** original summary and source link; no article reproduction.
+
+## When this is not a close match
+An ordinary operating-cash shortage is not evidence of customer-fund diversion or fraud.
+Check whether the company actually holds funds on behalf of others before using this analogy.
+
 ## Sources
 - [Bankruptcy of FTX — Wikipedia](https://en.wikipedia.org/wiki/Bankruptcy_of_FTX)
 - [Samuel Bankman-Fried Sentenced to 25 Years — U.S. Department of Justice](https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes)
@@ -771,31 +1026,37 @@ failure_types: [product_market_fit, disruption_denial]
 severity: shutdown
 ---
 
+## Evidence and limits
+**Research pending — do not use this entry for failure-pattern matching.**
+Legacy metadata and tags are retained for discovery, not verified findings.
+Reviewed October 2, 2026. Earlier causal claims and financial figures have been withdrawn
+from this entry pending suitable evidence and source-use review.
+
 ## What happened
-Kaodim, founded by two lawyers, built an online marketplace connecting customers with home-service providers (handymen, contractors, personal trainers) across Malaysia, Singapore, Indonesia, and the Philippines, raising a total of $17.6 million. It hit early momentum — $10 million in sales within four months at one point — but announced in June 2022 that it would shut down entirely on July 1, 2022, citing rising costs, manpower shortages, and an inability to grow the business meaningfully for the long term.
+A replacement factual summary is pending. Do not infer a cause from the legacy shutdown label.
 
 ## Root causes
-- The marketplace's core structural weakness was disintermediation: once a customer found a service provider through Kaodim, nothing stopped either side from transacting directly the next time, without paying the platform again — so the platform never captured durable, repeat-transaction value from the relationships it created.
-- Early sales momentum reflected initial matching demand, not a sustainable moat, because the value Kaodim provided (discovery) had a natural expiration point per customer-provider pair.
-- No effective mechanism (fees, lock-in, bundled services) was built to keep transactions on-platform after the first successful match, unlike marketplaces with recurring inherent need for the platform (e.g., ride-hailing, food delivery) where each transaction is independent.
-- Operating across four countries simultaneously multiplied operational costs and complexity without addressing the core retention/monetization problem in any one market.
+Not established here. The previous assertion that off-platform transactions caused failure
+was not supported by evidence sufficient for this project's updated standard.
 
 ## Warning signs (visible before the collapse)
-- A marketplace business model where the platform's core value (introducing two parties) is a one-time event per relationship, not a recurring necessity — a structural ceiling on repeat revenue.
-- Strong early transaction volume that didn't translate into growing platform revenue over time, as more matches "graduated" off-platform.
-- Expansion into multiple countries before solving the core retention/monetization problem in the home market.
-- Founders citing an inability to find a path to meaningful long-term growth — often a sign the core model's ceiling was already understood internally before the public announcement.
+Not established. Do not present retrospective marketplace hypotheses as observations about Kaodim.
 
 ## Questions this raises for another company
-- Once we successfully connect two parties, is there anything stopping them from transacting directly without us next time?
-- Is our early transaction volume evidence of a repeatable business, or a one-time initial-matching effect that will naturally taper off?
-- Have we built any real mechanism (fees, guarantees, bundled tools, lock-in) that keeps value flowing through our platform after the first successful transaction?
-- Are we expanding into new markets to escape a core monetization problem we haven't actually solved at home?
+No company-specific lessons are supported by this entry yet. General marketplace questions
+should be presented as hypotheses without attributing them to Kaodim.
+
+## When this is not a close match
+This entry is not currently eligible as evidence for any match.
 
 ## Sources
-- [How Kaodim collapsed as a successful startup story in Malaysia — The Runway Ventures](https://www.therunway.ventures/p/kaodim)
-- [Malaysian startup Kaodim to shut down on July 1, cites rising costs among challenges — The Star](https://www.thestar.com.my/tech/tech-news/2022/06/02/malaysian-startup-kaodim-to-shut-down-on-july-1-cites-rising-costs-among-challenges)
-- [What Happened to Kaodim & Why Did It Fail? — Sunset](https://www.sunsethq.com/blog/why-did-kaodim-fail)
+- [The Star source-use terms](https://www.thestar.com.my/Terms): copyright section restricts
+  online reuse and AI-system use without written consent. No article text or factual summary
+  from The Star is included in this revised entry.
+- [The Runway Ventures research lead](https://www.therunway.ventures/p/kaodim):
+  linked for future source review, not verified in this batch.
+- [Sunset research lead](https://www.sunsethq.com/blog/why-did-kaodim-fail):
+  linked for future source review, not verified in this batch.
 
 
 ---
@@ -808,37 +1069,41 @@ company: Katerra
 industry: construction/proptech
 founded: 2015
 failed: 2021
-failure_types: [scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics]
+failure_types: [scaling_too_fast, governance_and_leadership, financial_management]
 severity: bankruptcy
 ---
 
+## Evidence and limits
+**Research pending — do not use this entry for failure-pattern matching.**
+Reviewed October 2, 2026. Legacy dates, outcome label and remaining tags are discovery metadata, not verified findings. Earlier financial figures, motive claims and serious allegations have been withdrawn. The fraud tag has been removed; this is not a finding that wrongdoing did or did not occur.
+
 ## What happened
-Katerra raised over $2B (largely from SoftBank) with a vision to industrialize construction end-to-end — architecture, manufacturing, and building, all under one roof — expanding into dozens of business lines and acquiring numerous companies simultaneously. It struggled to integrate the acquisitions or make any single business line actually profitable, burned cash rapidly, and after falling short of projections reportedly presented its board with intentionally misstated financial reports. SoftBank gave a $200M rescue in late 2020, but once its own lender (Greensill) collapsed and no further cash came, Katerra filed for bankruptcy in June 2021.
+A replacement factual summary is pending. No historical narrative from the previous entry is retained as verified evidence in this batch.
 
 ## Root causes
-- Attempted to vertically integrate and industrialize an entire complex industry (construction) all at once, rather than proving the model in one narrow segment first.
-- Aggressive, investor-driven growth capital (large SoftBank checks) enabled scaling headcount, acquisitions, and factories far ahead of any proven, repeatable, profitable process.
-- Integrating many disparate acquired companies and business lines simultaneously created enormous operational complexity that leadership could not manage effectively.
-- Construction is a notoriously low-margin, execution-heavy, locally-regulated industry; the "move fast" software mentality applied here left little room for error and made mistakes very expensive (physical factories, real buildings).
+Not established here. Do not attribute a general hypothesis about business integration, investor influence or reporting practices to Katerra without claim-level evidence.
 
-## Warning signs (visible before the collapse)
-- Enormous capital raised and deployed into rapid expansion across many business lines before unit economics were validated in any one of them.
-- Growth funded primarily by a single large investor's conviction rather than by internally generated proof points.
-- A string of leadership departures and reported cultural/operational instability accompanying the rapid scaling.
-- An industry with structurally thin margins and high physical/regulatory execution risk being approached with a "blitzscale" software growth playbook.
-- When results fell short of projections, financial reporting to the board was reportedly manipulated rather than the strategy being honestly reassessed.
+## Warning signs
+Not established here. A later account is not proof that a signal was publicly visible before failure.
 
 ## Questions this raises for another company
-- Are we scaling into many new lines of business simultaneously before proving profitability in even one?
-- Is our growth funded by conviction from one investor/backer rather than by our own internally validated economics?
-- Does our industry have low margins and high execution risk that make "move fast and break things" a genuinely dangerous strategy?
-- Do we have the operational capacity to actually integrate everything we've acquired or launched, or are we accumulating unmanaged complexity?
-- When we miss our own projections, is the reporting to our board/investors honest, or softened/adjusted to look better than reality?
+No Katerra-specific lessons are currently supported. Questions about multiple business lines may still be useful, but must be framed as general, untested questions rather than conclusions from this case.
+
+## When this is not a close match
+This entry is not eligible as evidence for any match until suitable sources, their reuse boundaries and the relevant legal status have been reviewed.
+
+## One small check — untested learning suggestion, not a Katerra lesson
+For one proposed business-line launch, list its dependencies on existing teams, systems and funding, and name who will verify each dependency before launch. Demonstrated spare capacity and few shared dependencies would weaken a complexity concern. This is a general learning exercise, not evidence about Katerra or a proven way to reduce failure rates.
 
 ## Sources
-- [SoftBank-Backed Katerra Files Bankruptcy With Billions in Debt — Bloomberg](https://www.bloomberg.com/news/articles/2021-06-07/softbank-backed-katerra-files-bankruptcy-with-billions-in-debt)
-- [Katerra Bankruptcy: How SoftBank's American House of Cards Collapsed — Bloomberg Opinion](https://www.bloomberg.com/opinion/articles/2021-06-08/katerra-bankruptcy-how-softbank-s-american-house-of-cards-collapsed)
-- [Softbank-backed Katerra's collapse is a failure of pattern-matching — Axios](https://www.axios.com/2021/06/08/katerra-bankruptcy-softbank)
+Research entrances, not verified support for the withdrawn narrative:
+- [Katerra claims-agent entrance](https://cases.primeclerk.com/katerra): access attempt October 2, 2026 returned HTTP 403. No docket documents or site-specific reuse permission were obtained; no bypass attempted. Publication date not established.
+- Kroll corporate terms (revision May 2026): checked October 2, 2026, use restrictions read. Public/commercial reuse and linking are restricted; no portal content or Kroll hyperlink is included here. These general terms do not establish every claims portal's terms or ownership of court documents.
+- [2025 English court judgment research lead](https://www.bailii.org/ew/cases/EWHC/Ch/2025/2631.html): search surfaced Credit Suisse Virtuoso v Softbank, dated October 15, 2025; direct opening October 2, 2026 returned Access Denied. Judgment body and later legal developments not reviewed; do not use it as a finding about the withdrawn reporting allegation or as a current-status determination.
+- [BAILII source-use policy](https://www.bailii.org/bailii/copyright.html): checked October 2, 2026 through indexed policy excerpts only; direct opening returned Access Denied. Publication date not established. A complete policy/rights check remains pending; no judgment text imported.
+- Searches also led to paywalled reporting and accounts repeating that reporting. They were not treated as independent corroboration; no paywall bypass or restricted database import was attempted.
+
+These notes record access and research limits, not exhaustive investigation, clearance of rights, a court finding or proof that the Skill works.
 
 
 ---
@@ -1382,34 +1647,56 @@ industry: finance/banking
 founded: 1983
 failed: 2023
 failure_types: [financial_management, governance_and_leadership]
-severity: bankruptcy
+severity: bank_closure
 ---
 
 ## What happened
-SVB, the primary bank for much of the U.S. venture-backed startup ecosystem, invested heavily in long-term bonds during 2021's low-rate environment. As the Federal Reserve raised interest rates through 2022, the market value of those bonds fell, creating over $15B in unrealized losses by end of 2022, while SVB had also let its interest-rate hedges lapse. When SVB announced a $1.8B loss from selling securities and an emergency capital raise on March 8, 2023, prominent venture investors publicly urged portfolio companies to pull their money; depositors withdrew $42 billion in a single day, and regulators shut the bank down on March 10 — the second-largest U.S. bank failure in history.
+California regulators closed SVB on March 10, 2023 after deposit outflows exceeding $40 billion
+on March 9. This is a bank closure; it should not be conflated with the holding company's
+bankruptcy. [Federal Reserve review, April 2023, Key Takeaways](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Root causes
-- Concentrated deposit base (largely tech startups and VC funds) meant depositor behavior was correlated — when one influential voice said "pull your money," a huge share of depositors acted in the same direction at the same time, unlike a diversified retail bank.
-- Interest-rate risk was mismanaged: large bond purchases were made assuming rates would stay low, and hedges that would have protected against rate increases were reportedly removed to boost near-term reported earnings.
-- Very large deposit balances (many well above the $250K FDIC insurance limit) gave depositors a strong individual incentive to be first to withdraw at the first sign of trouble, accelerating the run.
-- Risk management and governance did not scale with the bank's rapid growth in the 2020-2021 period — growth was prioritized over building the controls appropriate to the bank's new size and concentration.
+The Federal Reserve's retrospective review identifies concentrated business, uninsured deposits,
+poor liquidity planning and interest-rate risk management. It also identifies inadequate
+supervisory assessment and delayed corrective action; management alone is not its explanation.
+[Review, takeaways 1–4](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Warning signs (visible before the collapse)
-- A rapidly growing balance sheet increasingly concentrated in long-duration securities exposed to interest-rate risk, in a rising-rate environment.
-- A depositor base heavily concentrated in one industry/network (tech/VC) with a documented tendency to communicate and act collectively.
-- Large unrealized losses on a "hold to maturity" bond portfolio that would only become "realized" losses if the bank were forced to sell early — a bet that assumed it would never need to.
-- Removal or lapsing of hedges specifically in the period when the underlying risk (rate increases) was already visibly materializing.
+The review describes failed internal liquidity tests, removed rate hedges and a November 2022
+supervisory finding. These were pre-failure issues documented retrospectively, not evidence that
+all of them were publicly visible beforehand.
+[Review, takeaways 1 and 3](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Questions this raises for another company
-- Is a large share of our deposits/assets concentrated with one type of customer or a tightly networked community that could move in the same direction at the same time?
-- Have we taken on a financial position (rates, currency, commodity) assuming a trend continues, without a real hedge, or did we remove a hedge to make near-term numbers look better?
-- What fraction of our depositors/customers/revenue sit above whatever protection or insurance threshold exists, giving them a strong individual incentive to move first in a crisis?
-- Has our risk management and governance actually kept pace with how fast we've grown, or is it still sized for an earlier, smaller version of the company?
+These are our transferable questions, not findings about the user's company:
+- Could several customers or funding sources react together to the same event?
+- Can we meet near-term obligations without relying on a sale of illiquid assets?
+- What happens when a stress test fails: change the assumptions or address the exposure?
+- Who follows up on unresolved control weaknesses?
+
+## Evidence and limits
+- **Publisher:** Board of Governors of the Federal Reserve System.
+- **Publication:** April 2023 report; page last updated May 17, 2023.
+- **Checked:** October 2, 2026; Key Takeaways HTML read. The complete report and underlying
+  supervisory records were not independently audited in this review.
+- **Scope:** cited closure chronology and the regulator's findings; this is the supervisor's
+  own review, not independent corroboration. No claim that the Skill improves decisions.
+- **Reuse:** short original summary and links, no copied tables, images or report text.
+- **Uncertainty:** this summary does not establish which private issues a particular outsider
+  could have known, or whether any proposed AI tool would have changed the outcome.
+
+## When this is not a close match
+A small operating company does not have a bank's deposit obligations or regulatory structure.
+Ordinary falling sales alone do not make this a close analogy. Compare the timing of obligations
+and correlated exposures, not the headline size of the failure.
+
+## One small check
+Privately list the next month's obligations and sources of funds. Ask which sources might
+disappear together. Evidence of independent, dependable sources would weaken the concentration
+hypothesis; the user must judge the amounts and assumptions. This is an untested learning exercise.
 
 ## Sources
-- [Collapse of Silicon Valley Bank — Wikipedia](https://en.wikipedia.org/wiki/Collapse_of_Silicon_Valley_Bank)
-- [The Collapse Of Silicon Valley Bank — NPR Planet Money](https://www.npr.org/sections/money/2023/03/14/1163200179/the-collapse-of-silicon-valley-bank)
-- [Material Loss Review of Silicon Valley Bank — Federal Reserve OIG](https://oig.federalreserve.gov/reports/board-material-loss-review-silicon-valley-bank-sep2023.pdf)
+- [Federal Reserve, Review of the Federal Reserve's Supervision and Regulation of SVB — Key Takeaways](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm)
 
 
 ---
@@ -1589,34 +1876,39 @@ company: Webvan
 industry: e-commerce/grocery/logistics
 founded: 1996
 failed: 2001
-failure_types: [scaling_too_fast, financial_management, product_market_fit]
+failure_types: [scaling_too_fast, financial_management]
 severity: bankruptcy
 ---
 
+## Evidence and limits
+Scoped review: October 2, 2026. Only the claims linked below were checked; legacy founding metadata was not separately verified. This is a learning analogy, not a proven causal explanation or a tested decision tool.
+
 ## What happened
-Webvan raised over $800M to build a nationwide online grocery delivery network, constructing massive custom automated warehouses in city after city before demand in any single market was proven. It expanded to 10+ cities in under two years, never came close to the warehouse utilization needed to break even, and went bankrupt in 2001.
+Webvan's 2000 annual report disclosed order volumes below both designed capacity and the levels needed for facility profitability. It also disclosed recurring losses and substantial doubt about continuing operations. These were company disclosures, not measurements independently collected by this project. [Webvan Form 10-K, filed April 2, 2001, risk factors and Note 2](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt)
+
+A later SEC administrative order records its July 2001 Chapter 11 filing. This is retrospective evidence of the outcome, not a warning available in April 2001. [SEC, January 7, 2005, Webvan paragraph](https://www.sec.gov/files/litigation/admin/34-50993.pdf)
 
 ## Root causes
-- Committed hundreds of millions to fixed infrastructure (custom automated warehouses) sized for demand that didn't yet exist, in market after market, without proving the model in one city first.
-- Grocery delivery has structurally thin margins and heavy logistics costs; the automation was meant to fix this but required near-full warehouse utilization that never materialized.
-- Expansion pace was driven by investor/market pressure to grow fast and "own the category" rather than by validated unit economics in existing markets.
-- Executive team had limited grocery/logistics operating experience relative to the operational complexity being attempted.
+Our retrospective interpretation: capacity commitments can outlast the demand needed to support them. The disclosures above make utilization and cash needs worth examining; they do not establish that expansion alone caused bankruptcy. We do not retain aggregate fundraising, city-count, investor-motive or management-expertise claims without suitable support.
 
 ## Warning signs (visible before the collapse)
-- Massive capital expenditure on infrastructure before the core business model was proven profitable even in one location.
-- Aggressive multi-city rollout timeline set by growth targets/investor expectations rather than operating data.
-- Persistently low warehouse utilization rates reported well below the level needed for the automation investment to pay off.
-- Thin-margin category (grocery) being treated with venture-scale growth assumptions borrowed from software.
+The April 2001 filing already disclosed underused facilities and going-concern uncertainty. [Webvan 10-K, risk factors on capacity and Note 2](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt) Do not convert designed capacity into a break-even threshold: those are different measures. No claim is made here about what investors privately knew or intended.
 
 ## Questions this raises for another company
-- Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
-- Is our expansion pace set by what the data says is working, or by external pressure to grow fast?
-- Does our industry have inherently thin margins that require near-perfect operational execution — and do we have the operating expertise for that, not just capital?
-- What is our actual utilization/efficiency rate against the level needed to break even, and is it trending toward or away from that?
+- What observed demand supports each new capacity commitment?
+- What costs remain if demand is slower than expected?
+- Which assumptions in our cash plan are based on signed orders rather than forecasts?
+
+## When this is not a close match
+Hiring into an existing, paid backlog with flexible costs is not equivalent to committing grocery distribution capacity. Different margins, cancellation rights and lead times can weaken the analogy; growth alone is not a match.
+
+## One small check — untested learning suggestion
+For one proposed capacity increase, compare committed costs with revenue supported by existing orders, then use a slower-demand scenario chosen by the user. Identify what is reversible. Adequate contribution from firm orders and flexible costs would weaken the concern. This check has not been shown to reduce failure rates.
 
 ## Sources
-- [Webvan — Wikipedia](https://en.wikipedia.org/wiki/Webvan)
-- [Four Lessons Amazon Learned From Webvan's Flop — Forbes](https://www.forbes.com/sites/petercohan/2013/06/17/four-lessons-amazon-learned-from-webvans-flop/)
+- **Webvan / SEC EDGAR:** [2000 Form 10-K](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt), filed April 2, 2001; checked October 2, 2026. Read filing header, facility-capacity risk factors and Note 2 (Ability to Continue Operations), not the entire filing or exhibits. Supports the scoped disclosures, not an exhaustive causal account.
+- **SEC:** [Release 50993](https://www.sec.gov/files/litigation/admin/34-50993.pdf), January 7, 2005; checked October 2, 2026. Read the two-page default administrative order, including its Webvan paragraph. Supports the historical bankruptcy outcome only; not a bankruptcy-court record or current case-status check.
+- Access/use boundary: checked [SEC website policy](https://www.sec.gov/about/privacy-information), security and dissemination sections, October 2, 2026. Original brief summaries and links only; no filing/exhibit reproduction or systematic extraction. EDGAR hosting is not blanket permission for issuer-authored material. These sources have different issuers but are not treated as independent proof of causation.
 
 
 ---
@@ -1628,35 +1920,43 @@ slug: wework
 company: WeWork
 industry: real estate/tech
 founded: 2010
-failed: 2019 (failed IPO, forced restructuring); Chapter 11 in 2023
-failure_types: [governance_and_leadership, financial_management, scaling_too_fast]
+failed: 2019 IPO withdrawal request; Chapter 11 filing in 2023
+failure_types: [governance_and_leadership, financial_management]
 severity: bankruptcy
 ---
 
+## Evidence and limits
+Scoped review: October 2, 2026. The 2019 offering and 2023 bankruptcy are distinct events. Sources below are issuer accounts, not independent findings of misconduct. This review does not establish the company's current legal or operating status.
+
 ## What happened
-WeWork signed long-term leases on office space and rented it out short-term, marketing itself as a tech "community" company to justify a software-like valuation ($47B) despite being fundamentally a leveraged real-estate business. Its 2019 IPO filing exposed massive losses, self-dealing by founder Adam Neumann, and no path to profitability; the IPO collapsed, Neumann was ousted, and the company eventually filed for bankruptcy in 2023.
+The We Company requested withdrawal of its IPO registration on September 30, 2019, stating that it no longer wished to conduct the offering then; the registration had not become effective. [The We Company withdrawal request, September 30, 2019](https://www.sec.gov/Archives/edgar/data/1533523/000119312519258913/d808793drw.htm)
+
+Separately, on November 6, 2023, WeWork announced that it and certain entities had filed Chapter 11, with lease-portfolio restructuring planned. The announcement excluded locations outside the U.S. and Canada and franchisees from that process; bankruptcy was not a statement that every location closed. [WeWork announcement, November 6, 2023](https://www.sec.gov/Archives/edgar/data/1813756/000119312523271902/d522028dex991.htm)
+
+A draft registration statement confidentially submitted December 28, 2018 described long landlord commitments versus members' shorter commitments, and proposed founder voting control over significant corporate activities. These are dated disclosures and proposed arrangements, not proof that directors never challenged management. [WeWork draft S-1, risk factors and Business—Leasing](https://www.sec.gov/Archives/edgar/data/1533523/000162827918000370/filename1.htm)
 
 ## Root causes
-- Fundamental mismatch between the actual business model (long-term lease liabilities funding short-term rental income — a risky duration mismatch) and how it was marketed and valued (as high-margin tech).
-- Founder held outsized, unchecked control (super-voting shares, a compliant board) enabling self-dealing: leasing his own properties to the company, trademarking "We" and selling it back to the company.
-- Growth-at-all-costs culture prioritized signing new locations over unit economics of existing ones.
-- No governance check translated enthusiasm/vision into financial discipline before the S-1 filing forced public scrutiny.
+Our retrospective interpretation: cash obligations can persist after customer revenue stops; concentrated decision rights merit scrutiny when making large commitments. Neither these mechanisms nor the later bankruptcy prove that governance alone caused failure. Earlier unsupported governance, profitability, valuation-motive and misconduct judgments have been withdrawn.
 
-## Warning signs (visible before the collapse)
-- A charismatic founder with concentrated voting control and a board that rarely pushed back.
-- Business fundamentals (heavy fixed lease liabilities vs. variable short-term revenue) inconsistent with the growth-stock valuation multiple being claimed.
-- Related-party transactions benefiting the founder personally at the company's expense.
-- Massive, widening losses treated as a temporary/acceptable cost of "growth" with no credible path to profitability shown.
+## Warning signs
+The draft documents lease-duration and voting-control concerns, but it was confidential when submitted. Its eventual public-release date was not established here: do not describe it as publicly visible in December 2018. [Draft cover and risk factors](https://www.sec.gov/Archives/edgar/data/1533523/000162827918000370/filename1.htm) The September 2019 withdrawal request is public evidence of the offering decision, not evidence that 2023 bankruptcy was inevitable. The 2023 announcement is retrospective relative to 2019.
 
 ## Questions this raises for another company
-- Are we valuing/pitching ourselves based on the industry we resemble in spirit, or the one whose economics we actually have (fixed costs, margins, liabilities)?
-- Does any single individual have effectively unchecked control, and is the board able to say no to them?
-- Are there transactions where a founder/executive personally benefits at the company's expense?
-- Is our growth being funded sustainably, or by continuously raising more money to cover structurally negative unit economics?
+- How long are payments locked in compared with customer commitments?
+- Who can question or stop a proposed commitment, and what evidence do they receive?
+- Are growth forecasts being confused with already contracted revenue?
+
+## When this is not a close match
+A long lease used by a stable business is not equivalent to renting space onward under shorter commitments. Revenue duration, cash reserves, break clauses, guarantees and revenue-sharing arrangements can materially change the comparison. Founder control alone is not proof of wrongdoing.
+
+## One small check — untested learning suggestion
+For one proposed lease, place unavoidable payments and contracted customer receipts on the same monthly timeline; test a customer-loss scenario chosen by the user. Record exit rights and who reviews the assumptions. Receipts covering commitments with a credible exit route would weaken the mismatch concern. This is not legal advice or a demonstrated way to reduce failure rates.
 
 ## Sources
-- [What exactly happened to WeWork? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/what-exactly-happened-to-wework/)
-- [The WeWork Collapse: Governance Failures, Founder Control & Lessons Learned — Directors Institute](https://www.directors-institute.com/post/the-wework-collapse-governance-failures-founder-control-lessons-learned)
+- **The We Company / SEC EDGAR:** [withdrawal request](https://www.sec.gov/Archives/edgar/data/1533523/000119312519258913/d808793drw.htm), September 30, 2019; checked October 2, 2026. Read the complete short letter. Supports the request and stated offering status, not the SEC's subsequent action or a causal account.
+- **WeWork / SEC EDGAR:** [Chapter 11 announcement](https://www.sec.gov/Archives/edgar/data/1813756/000119312523271902/d522028dex991.htm), November 6, 2023; checked October 2, 2026. Read announcement and scope exclusions; forward-looking disclaimer noted. Supports what the issuer announced then, not completion of restructuring or current status.
+- **WeWork / SEC EDGAR:** [draft S-1](https://www.sec.gov/Archives/edgar/data/1533523/000162827918000370/filename1.htm), confidential submission dated December 28, 2018; checked October 2, 2026. Read cover, member-retention and founder-control risk factors, and Business—Leasing, not the complete filing/exhibits. Public-release date not verified. The August 2019 S-1 and September amendment could not be fully opened because of the browsing tool's size limit; their search excerpts are not used as verified evidence here.
+- Access/use boundary: [SEC website policy](https://www.sec.gov/about/privacy-information), security and dissemination sections checked October 2, 2026. Original brief summaries and links only, no exhibits or third-party market data imported. These documents share issuer provenance; three links do not mean three independent accounts.
 
 
 ---
@@ -1777,6 +2077,140 @@ Netflix built its early business on DVD-by-mail — the same category Blockbuste
 - [Netflix vs. Blockbuster: The Streaming Pivot — MBA Strategy Case Study](https://www.visimade.com/p/netflix-vs-blockbuster-the-streaming-pivot-mba-strategy-case-study)
 - [Netflix Case Study: From Late Fees to Streaming Dominance — World Economic Magazine](https://worldecomag.com/netflix-case-study-from-late-fees-2-dominance/)
 - See also [cases/blockbuster.md](../blockbuster.md) for the failure side of this same disruption.
+
+
+---
+
+<!-- ==== problems/repetitive-support.md ==== -->
+
+# Repetitive support questions — one problem pilot
+
+Status: untested learning suggestion, reviewed October 3, 2026. This is not a failure case,
+success formula, product endorsement or validated AI intervention. Maintainers have no
+business-operation or consulting experience. No real support tickets or customer outcomes
+were collected in this pilot.
+
+## When to use this note
+
+Use when a user explicitly asks how to handle repeated, low-risk support questions or whether
+AI could help. First establish whether the questions really repeat, whether approved answers
+exist and how much handling time they take. Do not infer a problem from company size or a
+founder's workload alone. No historical failure case needs to be forced into the answer.
+
+## Research lead, not evidence
+
+[Starter Story's Userdesk research entrance](https://www.starterstory.com/userdesk-breakdown)
+was surfaced through search on October 3, 2026. It has not been established here as an original
+founder interview. No article body, revenue figure, founder quote, customer count or claimed
+time saving is imported. The founder's original account and measured outcomes remain pending.
+The documents below are a separate process reference, not corroboration of Userdesk's story.
+
+## What the original sources actually support
+
+GitLab's own support handbook treats repeated reply text as a reason to examine the upstream
+process, and recommends documentation links and filling documentation gaps.
+[GitLab, How to Respond to Tickets, last modified June 9, 2026](https://handbook.gitlab.com/handbook/support/workflows/how-to-respond-to-tickets/)
+
+GitLab's AI guidance requires staff to write customer replies from their own investigation,
+use AI for refinement rather than complete authorship, verify output, and check data
+classification before selecting a tool.
+[GitLab, Using AI in Support, last modified July 17, 2026](https://handbook.gitlab.com/handbook/support/ai/using-ai-in-support/)
+
+These are published operating requirements from one organization, not independently observed
+compliance or measured results. Two pages from GitLab are not two independent success studies.
+They do not establish how common this problem is in small businesses, Userdesk's results,
+or that AI performs better than ordinary FAQ search.
+
+## Our interpretation and important differences
+
+A repeated question might mean an answer is hard to find, onboarding is unclear, or the
+product itself needs fixing. Adding a chatbot could hide that cause. GitLab's technical-support
+context, staffing and data controls may differ substantially from a small shop or service team.
+Customer-specific problems are not made safe or repeatable merely by similar wording.
+
+## Non-AI option first
+
+For one question category, improve the relevant FAQ or onboarding instruction and maintain
+an approved quick reply pointing to it. This is a candidate baseline, not a proven improvement.
+If manual lookup is already quick, or answers change frequently, AI may add no useful value.
+
+## AI option — our untested proposal, not GitLab's workflow
+
+Use AI internally to find a candidate answer in the business's approved FAQ and return its
+exact source link and applicable version. A staff member verifies the match and writes the
+customer response; optionally use AI to polish that human draft without adding new facts.
+If no source supports an answer, return "no supported answer" and route to a person.
+Do not auto-send replies, invent links, make refund promises or change accounts.
+
+Inputs: a maintained, rights-cleared FAQ, relevant version/date, the question category and
+an authorized human reviewer. Start with synthetic questions and public or deliberately
+created answers. Real ticket use requires the user's permission and a suitable private,
+approved environment with retention/access controls. Do not put tickets in this repository
+or upload names, credentials, attachments or private records to an unapproved tool.
+
+## When not to apply this pilot
+
+Do not use this experiment for payments/refunds, identity or account access, legal/medical
+advice, security incidents or situations needing individual investigation. Missing or stale
+approved documentation is a reason to fix the source first, not let AI guess. An AI tool being
+approved by GitLab does not mean it is approved for another company's customer data.
+
+## One small check
+
+Hypothesis: answer discovery, not missing knowledge or product defects, is the bottleneck.
+In the user's private environment, compare FAQ/quick-reply lookup with AI-assisted lookup
+for one low-risk category on a small, user-chosen set of questions. Include paraphrases and
+questions with no documented answer. Use the same approved sources for both methods and
+alternate which method is tried first to reduce familiarity effects.
+
+Record total handling time, including prompting, review and corrections, alongside unsupported
+answers, wrong versions and escalation decisions. Have a human check answers against the
+approved source, not against the model's explanation. The user sets acceptable time/quality
+criteria before testing. Stop for unsafe disclosures or unauthorized actions.
+
+If most questions lack approved answers, or reviewed AI lookup is no faster or less accurate
+than the baseline, the hypothesis weakens: keep the simpler workflow or repair documentation.
+No percentage saving is promised. A small local trial would not prove general effectiveness.
+
+## Content walkthrough — synthetic, not an effectiveness test
+
+Assumed test FAQ, created for this exercise: public opening hours are 09:00–17:00 Monday–Friday;
+no refund rules or account-access instructions are supplied. These are fictional, not facts
+about GitLab, Userdesk or a real business.
+
+- "When do you open on Friday?" — candidate answer may point to the approved hours entry;
+  the staff member verifies and writes the reply. Do not invent a public URL for a synthetic FAQ.
+- "Can I get a refund after 30 days?" — no supported answer; escalate, no invented policy.
+- "Here is my password; reset my account." — outside scope; do not request/store credentials
+  or perform an account action. Use the business's authorized identity process.
+
+Manual result: the written rules distinguish supported lookup, absent evidence and sensitive
+requests. No executable assistant was benchmarked and no timing or accuracy results exist.
+The research process found usable process documentation, but the founder-story evidence chain
+is incomplete; do not scale this into a success-case collection on that basis.
+
+## Source and reuse record
+
+Checked October 3, 2026:
+
+- **GitLab, How to Respond to Tickets:** link above. Read the canned-response/process section,
+  documentation section and last-modified footer; not all handbook pages or linked studies.
+  Initial publication date unknown; June 9, 2026 is the page's modification date.
+- **GitLab, Using AI in Support:** link above. Read data classification, reply-formatting and
+  best-practice sections plus footer; not every linked tool policy. Initial publication date
+  unknown; July 17, 2026 is its modification date. Supports stated rules, not their effectiveness.
+- **Starter Story:** research URL only; search metadata read, article not imported or treated
+  as an interview transcript. Publication date not independently verified. Checked
+  [Starter Story terms](https://www.starterstory.com/terms) content/republication provisions
+  and [HubSpot website terms](https://legal.hubspot.com/website-terms-of-use) sections 1–2.
+  No permission for public Skill reuse established. Do not import its stories or databases.
+- **GitLab rights/access:** read [handbook repository license](https://gitlab.com/gitlab-com/content-sites/handbook/-/raw/main/LICENSE)
+  and [website terms](https://handbook.gitlab.com/handbook/legal/policies/website-terms-of-use/)
+  sections 2–3. Repository license covers software and associated documentation, with third-party
+  exceptions; website terms recognize applicable content-licensing permissions. This note uses
+  brief original factual descriptions and links, not reproduced handbook prose, prompts,
+  diagrams, customer records or third-party components. No blanket rights clearance is claimed.
+  No source logos or endorsement claims are used. Recheck permissions before larger reuse.
 
 
 ---

@@ -5,31 +5,53 @@ industry: finance/banking
 founded: 1983
 failed: 2023
 failure_types: [financial_management, governance_and_leadership]
-severity: bankruptcy
+severity: bank_closure
 ---
 
 ## What happened
-SVB, the primary bank for much of the U.S. venture-backed startup ecosystem, invested heavily in long-term bonds during 2021's low-rate environment. As the Federal Reserve raised interest rates through 2022, the market value of those bonds fell, creating over $15B in unrealized losses by end of 2022, while SVB had also let its interest-rate hedges lapse. When SVB announced a $1.8B loss from selling securities and an emergency capital raise on March 8, 2023, prominent venture investors publicly urged portfolio companies to pull their money; depositors withdrew $42 billion in a single day, and regulators shut the bank down on March 10 — the second-largest U.S. bank failure in history.
+California regulators closed SVB on March 10, 2023 after deposit outflows exceeding $40 billion
+on March 9. This is a bank closure; it should not be conflated with the holding company's
+bankruptcy. [Federal Reserve review, April 2023, Key Takeaways](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Root causes
-- Concentrated deposit base (largely tech startups and VC funds) meant depositor behavior was correlated — when one influential voice said "pull your money," a huge share of depositors acted in the same direction at the same time, unlike a diversified retail bank.
-- Interest-rate risk was mismanaged: large bond purchases were made assuming rates would stay low, and hedges that would have protected against rate increases were reportedly removed to boost near-term reported earnings.
-- Very large deposit balances (many well above the $250K FDIC insurance limit) gave depositors a strong individual incentive to be first to withdraw at the first sign of trouble, accelerating the run.
-- Risk management and governance did not scale with the bank's rapid growth in the 2020-2021 period — growth was prioritized over building the controls appropriate to the bank's new size and concentration.
+The Federal Reserve's retrospective review identifies concentrated business, uninsured deposits,
+poor liquidity planning and interest-rate risk management. It also identifies inadequate
+supervisory assessment and delayed corrective action; management alone is not its explanation.
+[Review, takeaways 1–4](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Warning signs (visible before the collapse)
-- A rapidly growing balance sheet increasingly concentrated in long-duration securities exposed to interest-rate risk, in a rising-rate environment.
-- A depositor base heavily concentrated in one industry/network (tech/VC) with a documented tendency to communicate and act collectively.
-- Large unrealized losses on a "hold to maturity" bond portfolio that would only become "realized" losses if the bank were forced to sell early — a bet that assumed it would never need to.
-- Removal or lapsing of hedges specifically in the period when the underlying risk (rate increases) was already visibly materializing.
+The review describes failed internal liquidity tests, removed rate hedges and a November 2022
+supervisory finding. These were pre-failure issues documented retrospectively, not evidence that
+all of them were publicly visible beforehand.
+[Review, takeaways 1 and 3](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm).
 
 ## Questions this raises for another company
-- Is a large share of our deposits/assets concentrated with one type of customer or a tightly networked community that could move in the same direction at the same time?
-- Have we taken on a financial position (rates, currency, commodity) assuming a trend continues, without a real hedge, or did we remove a hedge to make near-term numbers look better?
-- What fraction of our depositors/customers/revenue sit above whatever protection or insurance threshold exists, giving them a strong individual incentive to move first in a crisis?
-- Has our risk management and governance actually kept pace with how fast we've grown, or is it still sized for an earlier, smaller version of the company?
+These are our transferable questions, not findings about the user's company:
+- Could several customers or funding sources react together to the same event?
+- Can we meet near-term obligations without relying on a sale of illiquid assets?
+- What happens when a stress test fails: change the assumptions or address the exposure?
+- Who follows up on unresolved control weaknesses?
+
+## Evidence and limits
+- **Publisher:** Board of Governors of the Federal Reserve System.
+- **Publication:** April 2023 report; page last updated May 17, 2023.
+- **Checked:** October 2, 2026; Key Takeaways HTML read. The complete report and underlying
+  supervisory records were not independently audited in this review.
+- **Scope:** cited closure chronology and the regulator's findings; this is the supervisor's
+  own review, not independent corroboration. No claim that the Skill improves decisions.
+- **Reuse:** short original summary and links, no copied tables, images or report text.
+- **Uncertainty:** this summary does not establish which private issues a particular outsider
+  could have known, or whether any proposed AI tool would have changed the outcome.
+
+## When this is not a close match
+A small operating company does not have a bank's deposit obligations or regulatory structure.
+Ordinary falling sales alone do not make this a close analogy. Compare the timing of obligations
+and correlated exposures, not the headline size of the failure.
+
+## One small check
+Privately list the next month's obligations and sources of funds. Ask which sources might
+disappear together. Evidence of independent, dependable sources would weaken the concentration
+hypothesis; the user must judge the amounts and assumptions. This is an untested learning exercise.
 
 ## Sources
-- [Collapse of Silicon Valley Bank — Wikipedia](https://en.wikipedia.org/wiki/Collapse_of_Silicon_Valley_Bank)
-- [The Collapse Of Silicon Valley Bank — NPR Planet Money](https://www.npr.org/sections/money/2023/03/14/1163200179/the-collapse-of-silicon-valley-bank)
-- [Material Loss Review of Silicon Valley Bank — Federal Reserve OIG](https://oig.federalreserve.gov/reports/board-material-loss-review-silicon-valley-bank-sep2023.pdf)
+- [Federal Reserve, Review of the Federal Reserve's Supervision and Regulation of SVB — Key Takeaways](https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm)

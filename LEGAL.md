@@ -1,58 +1,75 @@
-# Legal notes
+# Source use and legal limits
 
-This isn't a substitute for advice from an actual lawyer — if you're relying on this project
-commercially at scale, get a real legal review. This document explains the choices already made
-to keep the project on solid ground, and what's still worth having a lawyer look at.
+This experimental, AI-assisted learning Skill is not professional advice. Maintainers have
+no business-operation or consulting experience. Sources do not prove the Skill works.
+No disclaimer, attribution or software license guarantees freedom from claims or lawsuits.
+Applicable law depends on jurisdiction and use; obtain qualified legal review for commercial
+reuse, disputed allegations or substantial third-party data use.
 
-## What this project is (and isn't)
+## Publishing evidence
 
-This is **commentary and analysis of publicly reported facts** about real companies, for
-educational purposes. It is **not** legal, financial, or investment advice, and nothing here
-should be read as a recommendation to buy, sell, invest in, or avoid any company, security, or
-transaction. It does not evaluate any company that isn't already covered in `cases/`.
+Write original, limited factual summaries with direct links beside material claims.
+Record publisher/author, publication date when known, check date, what the source supports
+and what remains interpretation. Preserve allegations, responses and legal-status distinctions.
+A prosecution release is an official account, not a substitute for reading the complete record.
+Check later developments before presenting an old report as current.
 
-## Why this is generally safe ground, legally
+Do not copy articles, full translations, images, screenshots, charts or datasets into this repo
+without an applicable license or explicit permission for that use. Attribution alone does not
+authorize reproduction. Facts and expression are distinct under U.S. copyright guidance, but
+that does not settle contract restrictions, database rights, privacy, defamation or other laws:
+[U.S. Copyright Office](https://www.copyright.gov/help/faq/faq-protect.html).
 
-- **Truth is a defense to defamation, and we cite sources.** Every case has a `## Sources`
-  section linking to independent reporting, court records, regulatory filings, or company/
-  government statements. Claims are attributed to that reporting, not asserted as our own
-  original findings.
-- **Company and brand names are used descriptively, not as an endorsement or in commerce.**
-  Referring to a company by its real name to discuss and critique publicly known facts about it
-  ("nominative fair use") is standard journalistic and commentary practice — this project does
-  not use any company's name or mark to sell a competing product or imply affiliation with or
-  endorsement by that company. All trademarks belong to their respective owners.
-- **Allegations vs. convictions are treated as legally distinct, on purpose.** Being investigated,
-  charged, sued, or fined by a regulator is not the same as being criminally convicted, and this
-  project's `severity` field and case text are meant to say precisely which one applies (see
-  `cases/_template.md`). `scripts/validate_cases.py` includes an automated check that flags any
-  case claiming `fraud_conviction` in its frontmatter if the body doesn't actually document a
-  conviction — this exists specifically to catch the mistake of asserting someone is guilty of a
-  crime before a court has found that. If you ever spot a case that gets this wrong, please
-  [report it](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml)
-  immediately — this is the single most important category of correction for this project.
-- **Most subjects are already-resolved, court-adjudicated, or regulator-published matters** —
-  bankruptcies, SEC/regulator settlements, and criminal convictions that are already public
-  record — which is the lowest-risk category of factual reporting to reference.
+Public access, robots.txt, an API and llms.txt are not blanket reuse licenses. Check current
+terms before accessing/importing material. Do not bypass login/paywalls, rate limits or access
+controls. Avoid systematic extraction and redistribution without permission. Keep only the
+minimum original summary and links; if permission is unclear, omit the material and use another
+source. Never describe this project as endorsed by a source.
 
-## What contributors and users should keep in mind
+## Source-specific restrictions checked October 2, 2026
 
-- **Don't add unsourced claims.** [CONTRIBUTING.md](CONTRIBUTING.md) requires a source for every
-  case; don't work around that by phrasing a guess as fact.
-- **Don't assert a living or currently-operating person's guilt beyond what's actually been
-  legally established.** Say "denies the charges," "trial ongoing," or "civil finding" rather
-  than "convicted" or "guilty" unless a court has actually ruled that. See `cases/_template.md`.
-- **Don't put your own company's confidential information into a public case file.** If you're
-  using this project (via the Skill, AGENTS.md, or the bundle) to analyze your own business,
-  keep that analysis in your own private conversation — don't commit it here.
-- **If something about you or your company is inaccurate here**, [open a correction request](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml).
-  Corrections to factual claims are the top priority contribution type for this project — it has
-  no interest in keeping inaccurate or unfair content live.
+- **TrustMRR:** [Terms, section 9](https://trustmrr.com/terms) restrict API reuse, redistribution
+  and systematic database reconstruction; section 9.3 requires prior written permission for
+  using API data to ground, train, evaluate or populate AI systems/datasets. Do not import
+  TrustMRR metrics into our cases, bundles, indexes or model context absent permission covering
+  that use. A public API is not permission. The provider also distinguishes payment-derived
+  metrics from founder-provided descriptions; neither establishes a product's effectiveness.
+  Only the terms and access documentation were reviewed here; no startup data was imported.
+- **The Runway Ventures:** the [Fusionex article](https://www.therunway.ventures/p/fusionex)
+  is a research lead with reporting links and author opinions, not an identified open-license
+  dataset. No reuse permission was established. Link readers to the article, independently
+  check underlying reporting, and do not reproduce its article, images or full translation.
+  No article content was imported in this change.
 
-## License vs. this document
+The Star's [copyright terms](https://www.thestar.com.my/Terms), checked October 2, 2026,
+restrict online content reuse and use in AI systems without written consent. Do not import
+its articles into the Skill or bundle absent appropriate permission. A link is not permission.
 
-[LICENSE](LICENSE) (MIT) covers the code/scripts in this repo and disclaims warranty on them, in
-the standard open-source sense. It does not and cannot immunize anyone from liability for false
-statements of fact — that protection comes from accuracy and sourcing, not a software license,
-which is why the practices above (not the license) are what actually keep this project safe to
-publish and to contribute to.
+Recheck terms before each proposed integration. Keep any permission record with its scope and
+date; permission to read does not necessarily include storage or public redistribution.
+
+## Starter Story pilot boundary — checked October 3, 2026
+
+[Starter Story terms](https://www.starterstory.com/terms) and the currently linked
+[HubSpot website terms](https://legal.hubspot.com/website-terms-of-use) were checked for
+content-use restrictions. No public Skill/database reuse permission was established.
+Keep only research entrances; do not import articles, interview transcripts, revenue tables
+or database records absent suitable permission. A search snippet is not an open license.
+The pilot's GitLab process references do not verify Starter Story founder claims. Its separate
+source/license review is recorded in `problems/repetitive-support.md`, not blanket clearance.
+
+## Privacy and corrections
+
+Keep private company information in private conversations. Publish feedback only with consent
+and after removing identifying/confidential details; do not request bank records or customer
+data for a public repository.
+
+Use the [correction form](https://github.com/DOTfei/Learn-From-Failure/issues/new?template=case-error.yml)
+for factual, sourcing or rights concerns. Review promptly, remove disputed material pending
+review where appropriate, and record corrections. This is a procedure, not immunity from liability.
+
+## License
+
+The repository's MIT license does not grant rights to third-party articles, images or data
+linked here. Their owners retain their rights. License notices and disclaimers do not make
+inaccurate statements or unauthorized reuse lawful.

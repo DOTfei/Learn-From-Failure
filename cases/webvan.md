@@ -4,31 +4,36 @@ company: Webvan
 industry: e-commerce/grocery/logistics
 founded: 1996
 failed: 2001
-failure_types: [scaling_too_fast, financial_management, product_market_fit]
+failure_types: [scaling_too_fast, financial_management]
 severity: bankruptcy
 ---
 
+## Evidence and limits
+Scoped review: October 2, 2026. Only the claims linked below were checked; legacy founding metadata was not separately verified. This is a learning analogy, not a proven causal explanation or a tested decision tool.
+
 ## What happened
-Webvan raised over $800M to build a nationwide online grocery delivery network, constructing massive custom automated warehouses in city after city before demand in any single market was proven. It expanded to 10+ cities in under two years, never came close to the warehouse utilization needed to break even, and went bankrupt in 2001.
+Webvan's 2000 annual report disclosed order volumes below both designed capacity and the levels needed for facility profitability. It also disclosed recurring losses and substantial doubt about continuing operations. These were company disclosures, not measurements independently collected by this project. [Webvan Form 10-K, filed April 2, 2001, risk factors and Note 2](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt)
+
+A later SEC administrative order records its July 2001 Chapter 11 filing. This is retrospective evidence of the outcome, not a warning available in April 2001. [SEC, January 7, 2005, Webvan paragraph](https://www.sec.gov/files/litigation/admin/34-50993.pdf)
 
 ## Root causes
-- Committed hundreds of millions to fixed infrastructure (custom automated warehouses) sized for demand that didn't yet exist, in market after market, without proving the model in one city first.
-- Grocery delivery has structurally thin margins and heavy logistics costs; the automation was meant to fix this but required near-full warehouse utilization that never materialized.
-- Expansion pace was driven by investor/market pressure to grow fast and "own the category" rather than by validated unit economics in existing markets.
-- Executive team had limited grocery/logistics operating experience relative to the operational complexity being attempted.
+Our retrospective interpretation: capacity commitments can outlast the demand needed to support them. The disclosures above make utilization and cash needs worth examining; they do not establish that expansion alone caused bankruptcy. We do not retain aggregate fundraising, city-count, investor-motive or management-expertise claims without suitable support.
 
 ## Warning signs (visible before the collapse)
-- Massive capital expenditure on infrastructure before the core business model was proven profitable even in one location.
-- Aggressive multi-city rollout timeline set by growth targets/investor expectations rather than operating data.
-- Persistently low warehouse utilization rates reported well below the level needed for the automation investment to pay off.
-- Thin-margin category (grocery) being treated with venture-scale growth assumptions borrowed from software.
+The April 2001 filing already disclosed underused facilities and going-concern uncertainty. [Webvan 10-K, risk factors on capacity and Note 2](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt) Do not convert designed capacity into a break-even threshold: those are different measures. No claim is made here about what investors privately knew or intended.
 
 ## Questions this raises for another company
-- Have we proven the model is profitable in one location/segment before replicating the fixed-cost investment elsewhere?
-- Is our expansion pace set by what the data says is working, or by external pressure to grow fast?
-- Does our industry have inherently thin margins that require near-perfect operational execution — and do we have the operating expertise for that, not just capital?
-- What is our actual utilization/efficiency rate against the level needed to break even, and is it trending toward or away from that?
+- What observed demand supports each new capacity commitment?
+- What costs remain if demand is slower than expected?
+- Which assumptions in our cash plan are based on signed orders rather than forecasts?
+
+## When this is not a close match
+Hiring into an existing, paid backlog with flexible costs is not equivalent to committing grocery distribution capacity. Different margins, cancellation rights and lead times can weaken the analogy; growth alone is not a match.
+
+## One small check — untested learning suggestion
+For one proposed capacity increase, compare committed costs with revenue supported by existing orders, then use a slower-demand scenario chosen by the user. Identify what is reversible. Adequate contribution from firm orders and flexible costs would weaken the concern. This check has not been shown to reduce failure rates.
 
 ## Sources
-- [Webvan — Wikipedia](https://en.wikipedia.org/wiki/Webvan)
-- [Four Lessons Amazon Learned From Webvan's Flop — Forbes](https://www.forbes.com/sites/petercohan/2013/06/17/four-lessons-amazon-learned-from-webvans-flop/)
+- **Webvan / SEC EDGAR:** [2000 Form 10-K](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt), filed April 2, 2001; checked October 2, 2026. Read filing header, facility-capacity risk factors and Note 2 (Ability to Continue Operations), not the entire filing or exhibits. Supports the scoped disclosures, not an exhaustive causal account.
+- **SEC:** [Release 50993](https://www.sec.gov/files/litigation/admin/34-50993.pdf), January 7, 2005; checked October 2, 2026. Read the two-page default administrative order, including its Webvan paragraph. Supports the historical bankruptcy outcome only; not a bankruptcy-court record or current case-status check.
+- Access/use boundary: checked [SEC website policy](https://www.sec.gov/about/privacy-information), security and dissemination sections, October 2, 2026. Original brief summaries and links only; no filing/exhibit reproduction or systematic extraction. EDGAR hosting is not blanket permission for issuer-authored material. These sources have different issuers but are not treated as independent proof of causation.

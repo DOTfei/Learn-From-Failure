@@ -29,6 +29,21 @@ FTX, a crypto exchange, secretly funneled billions of dollars of customer deposi
 - Are we treating standard financial controls as bureaucratic friction rather than as protection against catastrophic failure?
 - If customers/clients all asked for their money back tomorrow, could we actually return it?
 
+## Evidence and limits
+- **Fact checked:** the U.S. Department of Justice reported on March 28, 2024 that
+  Bankman-Fried was sentenced to 25 years after a fraud conviction, and that he diverted
+  customer deposits to Alameda. [DOJ announcement](https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes).
+- **Checked:** October 2, 2026; the announcement was read, not the complete court record.
+  This describes the 2024 sentence, not a separate check of subsequent appeals or current status.
+- **Limit:** this official prosecution account supports those events. It does not establish
+  every governance/culture claim above, their visibility before collapse, or whether an AI
+  intervention could prevent similar misuse. Those interpretations need separate evidence.
+- **Reuse:** original summary and source link; no article reproduction.
+
+## When this is not a close match
+An ordinary operating-cash shortage is not evidence of customer-fund diversion or fraud.
+Check whether the company actually holds funds on behalf of others before using this analogy.
+
 ## Sources
 - [Bankruptcy of FTX — Wikipedia](https://en.wikipedia.org/wiki/Bankruptcy_of_FTX)
 - [Samuel Bankman-Fried Sentenced to 25 Years — U.S. Department of Justice](https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes)

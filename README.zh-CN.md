@@ -10,6 +10,14 @@
 
 [English](README.md) | 简体中文
 
+这是基于公开企业失败案例、由 AI 辅助整理的实验性学习 Skill。维护者没有企业运营或咨询
+实战经验，目前没有真实用户研究证明它的实际效果。回答应在具体事实旁展示来源链接，
+区分事实与推测、说明匹配限制，并提出一个小检查。AI 想法未经验证，不构成专业建议。
+旧案例尚未全部完成逐项证据核验。资料使用边界见 [LEGAL.md](LEGAL.md)。
+
+本助手的虚构请求、回答与检查限制见 [Skill 使用走查](skill-self-review.zh-CN.md)。
+这份走查没有证明真人使用效果；后续研究可使用 [找团队与访谈模板](templates/faq-pilot/interview.zh-CN.md)。
+
 [![Validate case files](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml/badge.svg)](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/DOTfei/Learn-From-Failure?style=social)](https://github.com/DOTfei/Learn-From-Failure/stargazers)
@@ -54,22 +62,18 @@
 计划——只要这个决定明显符合某个已知的失败模式，AI 会主动提醒你："先说一句——[某某公司]
 当年几乎做了一模一样的事，结果是……"哪怕你根本没打算对照失败案例，也会主动收到这个警告。
 
-## 一次真实分析长什么样
+## 示例分析（不是实际用户效果验证）
 
 > **你：** 我们是个 12 人的 SaaS 创业公司，刚拿到种子轮，计划两个月内从 12 人扩到 35 人——
 > 赶在下个季度续费数据出来之前。投资人想在 deck 里看到"激进增长"。这样做是不是有问题？
 >
-> **Claude：** 这跟 `scaling_too_fast`（扩张过快）很像——比起 WeWork，更接近
-> [Webvan](cases/webvan.md) 和 [Kenny Rogers Roasters](cases/kenny-rogers-roasters.md)。
-> 规模小很多，但核心错误一样：**在还没验证一个关键指标（续费率）之前，先把固定成本
-> （人头）投进去了**。Webvan 在证明模式能在一个城市跑通之前，先建了 10 亿美元的仓库产能。
+> **示例回答：** Webvan 在[2000 年年报（2001 年 4 月 2 日提交）](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt)
+> 中披露，设施订单量低于实现设施盈利所需的水平。可能的类比是：先承诺了成本，需求是否足以支撑还不确定。
+> 这是我们的归纳，不是你的招聘计划一定有错。SaaS 招聘与生鲜配送不同，毛利、已付费订单和成本调整空间都重要；
+> 目前还缺你的续费预期。
 >
-> 把这两个案例的问题套到你身上：
-> 1. 如果下个季度续费数据不理想，35 人的团队你还养得起吗？
-> 2. 招聘节奏是现有客户数据支撑的，还是为了让 deck 好看？
-> 3. 这 23 个新增岗位里，有多少是可逆的（合同工），有多少是锁死的固定成本？
->
-> 这不是说不能招人——而是招聘的**顺序**：先看到信号，再招人。
+> 一个未经验证的小检查：用你自己选择的较低续费情景，对照新团队的承诺成本与已签约收入。
+> 如果已有付费订单足以支撑新增成本，就会削弱这个担忧。这是学习问题，不是已证明能降低失败率的方法。
 
 可以直接拿你自己的情况试试，或者看完整案例内容：[`dist/learn-from-failure-bundle.md`](dist/learn-from-failure-bundle.md)。
 
