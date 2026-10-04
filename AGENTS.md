@@ -12,7 +12,41 @@ company/decision, and you analyze it against real precedent.
 Claude Code users: see `.claude/skills/learn-from-failure/SKILL.md` for the equivalent Skill
 form of these same instructions (auto-loaded, no setup needed).
 
-## When to use this
+## Evidence and scope
+
+This is an experimental, AI-assisted learning Skill. Maintainers have no business-operation
+or consulting experience. Its usefulness has not yet been demonstrated by user studies.
+Offer questions and checks, not professional advice or predictions.
+
+- Put a direct source link beside every material historical claim in the user's answer;
+  a link to our case file alone is not evidence. Name the publisher and publication date
+  when known. Prefer original filings, court records and official statements, while
+  identifying whose account they represent. Do not imply multiple reports are independent
+  if they repeat the same underlying source.
+- Separate reported facts, our interpretation, the user's account and unverified AI ideas.
+  A case's Sources list does not establish every claim in its body. Read the relevant source
+  if available; otherwise say the claim was not checked in this session. Never invent dates,
+  quotations, measurements or verification status. Historical evidence does not prove current
+  legal status; check later developments before describing a status as current.
+- Explain an important difference between the case and the user's situation. Evidence of a
+  past failure is not proof of its cause, a future failure, or an AI solution's effectiveness.
+  A warning sign needs contemporaneous evidence to be described as visible before collapse;
+  otherwise label it a retrospective inference. Say when evidence or a close match is absent.
+- End an explicit review with one small evidence-gathering check and explain what result
+  would challenge the hypothesis. Let the user set decision thresholds; do not invent risk scores.
+- Explore AI ideas when requested: label them untested, identify necessary inputs, human
+  review, a simple non-AI alternative and a small test. Never claim savings or outcomes without
+  measured evidence. Keep private company records in the user's private environment.
+- Use original summaries and direct links, not copied articles, translations of whole articles,
+  screenshots or downloaded databases. Attribution is not permission. Check source terms and
+  licenses before importing data; an API or llms.txt does not itself grant redistribution rights.
+  Follow LEGAL.md, including the TrustMRR permission restriction.
+
+Example answer structure (adapt to the question): reported fact + source/date; possible match;
+important difference; missing evidence; one next check. Use a brief linked factual reminder
+for proactive warnings rather than forcing the full structure into every response.
+
+## Usage modes
 
 Two modes — the user doesn't need to explicitly ask for either one:
 
@@ -35,11 +69,10 @@ save money" or "we're expanding to 10 new cities next quarter" in the course of 
 conversation — not a request for failure analysis — and it's a strong, specific match to a case
 here, say so before or alongside your normal answer. Keep it short:
 
-> Before that — worth knowing that [Circuit City](cases/circuit-city.md) did almost exactly
-> this in 2007 (cut 3,400 of their most experienced, highest-paid staff to save ~$45M/year) and
-> it gutted the customer service that had differentiated them; they were bankrupt within two
-> years. Their replacement hires couldn't do what the experienced staff did. Worth checking [X]
-> before you commit.
+> If you are committing fixed capacity before demand is confirmed, Webvan's company disclosures
+> are a useful partial analogy: its [10-K filed April 2, 2001](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt)
+> reported order volumes below levels needed for facility profitability. Your margins and exit
+> options may differ; check what contracted demand covers the proposed commitment.
 
 Rules for this mode, because false positives here are more costly than in explicit-review mode
 (the user didn't ask, so an irrelevant warning reads as noise, not insight):
@@ -68,16 +101,18 @@ the user actually wants the analysis.
    `disruption_denial`, `product_market_fit`, `scaling_too_fast`, `culture_and_talent`,
    `safety_and_quality`), plus a
    one-line description of each tag. Use it to decide which case files are actually relevant —
-   don't read every case file for every question.
+   don't read every case file for every question. Exclude entries marked research pending
+   in both explicit reviews and proactive warnings; their tags are legacy discovery
+   metadata, not verified mechanisms.
 
 2. **Understand what the user is asking about.** If it's vague ("look at my company"), ask
    briefly: what's the business, and what specifically are they worried about (cash, a big
    decision, a competitor, growth pace, a co-founder/investor issue, etc.)? One round of
    clarification is usually enough.
 
-3. **Select 3-6 relevant cases**, not by industry match alone but by *mechanism* match — a SaaS
-   founder over-hiring on hype maps better to WeWork/Katerra/Webvan (`scaling_too_fast`) than to
-   Kodak (`disruption_denial`). Read the "Root causes" and "Questions this raises" sections of
+3. **Select up to 3 relevant cases; none is acceptable**, not by industry match alone but by *mechanism* match — a SaaS
+   founder adding fixed capacity ahead of confirmed demand may have a partial match to Webvan,
+   but hiring alone is not evidence of the same mechanism. Read the "Root causes" and "Questions this raises" sections of
    the selected files in `cases/`.
 
 4. **Analyze, don't just summarize.** For each pattern that plausibly applies:
@@ -90,12 +125,21 @@ the user actually wants the analysis.
      trust. It's fine to say "none of the classic patterns fit this well, but here's the closest
      partial match and why it's not a full match."
 
-5. **End with a short, concrete list** — the 2-4 highest-signal risks, phrased as things to
-   check or decide this week/month, not a lecture on corporate history.
+5. **End with one concrete check** of the most important uncertain assumption, including
+   what evidence would challenge it. Do not turn a historical analogy into a decision for the user.
 
 6. **Surface contrast cases when relevant** (`cases/contrasts/`, e.g. `netflix-pivot.md`
    contrasts with `blockbuster.md`) — a company that faced the *same* pressure and responded
    well is often more actionable to hear about than only the failure.
+
+## One problem pilot — explicit requests only
+
+When the user explicitly asks about repeated low-risk support questions or an AI idea for that
+problem, read `problems/repetitive-support.md`. It is an untested problem note, not a failure
+case or verified success story; do not force a case match or proactively pitch it. Establish
+the user's actual bottleneck, show the scoped original-source links and limitations, compare
+the non-AI baseline, and offer the note's one small check. No automated replies or private-data
+imports are authorized by reading the note. Its Starter Story entrance is a research lead only.
 
 ## Adding a new case
 

@@ -1,6 +1,16 @@
 # Failure Case Index
 
-37 failure cases, tagged by failure_types for pattern matching. One company can span multiple tags.
+37 entries, including research-pending entries excluded from pattern matching.
+One company can span multiple tags. Evidence-review notes are not certifications of accuracy.
+
+October 2, 2026 review: SVB has a scoped official-source summary; FTX has a partial evidence
+note; Webvan and WeWork have scoped original-source reviews, not exhaustive causal verification.
+Kaodim and Katerra are research pending and must not be recommended. Katerra's fraud tag was
+withdrawn; Webvan's product-market-fit tag was removed because this review does not establish
+lack of demand at a particular price. WeWork's scaling tag was removed: the reviewed claims
+support lease-duration and decision-right questions, not a verified growth-at-all-costs cause.
+Tags on reviewed cases are interpretive learning prompts, not established causes.
+Other cases await claim-level review.
 Every case file has a `## Sources` section linking to the reporting/references used — check
 those before citing a specific number or claim with confidence, and please add sources for
 any new case you contribute.
@@ -13,10 +23,10 @@ any new case you contribute.
 | [blockbuster](blockbuster.md) | retail/media (US) | disruption_denial, product_market_fit |
 | [nokia-mobile](nokia-mobile.md) | tech/hardware (Finland) | disruption_denial, culture_and_talent, governance_and_leadership |
 | [theranos](theranos.md) | healthcare/tech (US) | fraud_and_ethics, governance_and_leadership, product_market_fit |
-| [wework](wework.md) | real estate/tech (US) | governance_and_leadership, financial_management, scaling_too_fast |
+| [wework](wework.md) | real estate/tech (US) | governance_and_leadership, financial_management |
 | [quibi](quibi.md) | media/streaming (US) | product_market_fit, governance_and_leadership |
 | [pets-com](pets-com.md) | e-commerce (US) | product_market_fit, financial_management, scaling_too_fast |
-| [webvan](webvan.md) | e-commerce/logistics (US) | scaling_too_fast, financial_management, product_market_fit |
+| [webvan](webvan.md) | e-commerce/logistics (US) | scaling_too_fast, financial_management |
 | [toys-r-us](toys-r-us.md) | retail (US) | financial_management, disruption_denial |
 | [sears](sears.md) | retail (US) | financial_management, disruption_denial, culture_and_talent |
 | [borders](borders.md) | retail (US) | disruption_denial, culture_and_talent |
@@ -27,7 +37,7 @@ any new case you contribute.
 | [circuit-city](circuit-city.md) | retail (US) | culture_and_talent, financial_management, disruption_denial |
 | [blackberry](blackberry.md) | tech/hardware (Canada) | disruption_denial, culture_and_talent, governance_and_leadership |
 | [yahoo](yahoo.md) | tech/internet (US) | governance_and_leadership, culture_and_talent, product_market_fit |
-| [katerra](katerra.md) | construction/proptech (US) | scaling_too_fast, governance_and_leadership, financial_management, fraud_and_ethics |
+| [katerra — research pending](katerra.md) | construction/proptech (US) | legacy tags only; excluded from matching |
 | [fusionex](fusionex.md) | tech/data analytics (Malaysia) | governance_and_leadership, financial_management, fraud_and_ethics |
 | [kenny-rogers-roasters](kenny-rogers-roasters.md) | restaurant/franchise (US) | scaling_too_fast, financial_management |
 | [luckin-coffee](luckin-coffee.md) | retail/F&B (China) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
@@ -43,16 +53,16 @@ any new case you contribute.
 | [efishery](efishery.md) | agritech/aquaculture (Indonesia) | fraud_and_ethics, governance_and_leadership, scaling_too_fast |
 | [propzy](propzy.md) | proptech/real estate (Vietnam) | scaling_too_fast, financial_management, product_market_fit |
 | [tanihub](tanihub.md) | agritech (Indonesia) | scaling_too_fast, financial_management, governance_and_leadership |
-| [kaodim](kaodim.md) | services marketplace (Malaysia) | product_market_fit, disruption_denial |
+| [kaodim — research pending](kaodim.md) | services marketplace (Malaysia) | legacy tags only; excluded from matching |
 
 ## Failure type taxonomy
 
-- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Katerra, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
-- **governance_and_leadership** — no real checks on founder/CEO, board can't or won't push back, indecisive or conflicted leadership (WeWork, FTX, Yahoo, Nokia, BlackBerry, Katerra, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
-- **financial_management** — bad debt/leverage, negative unit economics, cash burn with no path to breakeven (Lehman, Toys R Us, Sears, Pets.com, Webvan, Juicero, Katerra, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
-- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace, Kaodim)
-- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Webvan, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy, Kaodim)
-- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (WeWork, Webvan, Pets.com, Katerra, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
+- **fraud_and_ethics** — faked results, hid losses, misused customer/investor funds (Enron, Theranos, FTX, Fusionex, Luckin Coffee, Wirecard, Satyam, Steinhoff, HIH Insurance, Odebrecht, eFishery)
+- **governance_and_leadership** — concentrated decision rights, oversight concerns or conflicted leadership; check each case's evidence rather than assuming the board never pushed back (WeWork, FTX, Yahoo, Nokia, BlackBerry, Lehman, Fusionex, Silicon Valley Bank, Evergrande, Wirecard, Satyam, Steinhoff, Boeing 737 MAX, HIH Insurance, Odebrecht, BYJU'S, eFishery, TaniHub)
+- **financial_management** — debt/leverage, negative unit economics or cash commitments outlasting revenue; not a claim that profitability was impossible (Lehman, Toys R Us, Sears, Pets.com, Webvan, WeWork, Juicero, Fusionex, Silicon Valley Bank, Evergrande, HIH Insurance, BYJU'S, Propzy, TaniHub)
+- **disruption_denial** — saw the shift coming (or invented it) and protected the legacy business instead (Kodak, Blockbuster, Nokia, Sears, Borders, BlackBerry, Toys R Us, Circuit City, MySpace)
+- **product_market_fit** — built/scaled before proving anyone actually wanted it at that price/format (Quibi, Pets.com, Juicero, Segway, Theranos, MySpace, Yahoo, Propzy)
+- **scaling_too_fast** — grew headcount/locations/capital deployment ahead of proven, repeatable unit economics (Webvan, Pets.com, Kenny Rogers Roasters, Luckin Coffee, Evergrande, BYJU'S, eFishery, Propzy, TaniHub)
 - **culture_and_talent** — internal culture suppressed dissent, punished honesty, or cost-cut away the thing that made the company win (Enron, Kodak, Nokia, Sears, Borders, Circuit City, MySpace, BlackBerry, Yahoo, Boeing 737 MAX)
 - **safety_and_quality** — cut corners on product/service safety or quality to save cost or time (Boeing 737 MAX)
 
@@ -65,6 +75,13 @@ like versus a token one:
 - [netflix-pivot](contrasts/netflix-pivot.md) — contrasts directly with [blockbuster](blockbuster.md): same disruption (DVD rental → streaming), opposite response.
 
 These use a different, lighter frontmatter schema (no `severity`/`failed` fields) and are excluded from `scripts/validate_cases.py`, which only validates `cases/*.md`.
+
+## One problem pilot — separate from failure cases
+
+- [Repetitive support questions](../problems/repetitive-support.md): explicit requests only;
+  original-source process references plus an untested check. The Starter Story research lead
+  is not independently verified. Not a failure/success case, not part of the 37-entry count,
+  and not eligible for proactive failure warnings. No website feature is added for this pilot.
 
 ## Geographic coverage
 

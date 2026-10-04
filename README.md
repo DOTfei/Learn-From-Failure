@@ -8,6 +8,18 @@
 
 English | [简体中文](README.zh-CN.md)
 
+An experimental, AI-assisted learning Skill based on public corporate failure cases.
+Maintainers have no business-operation or consulting experience, and the Skill's practical
+effectiveness has not yet been demonstrated. Answers should show source links beside claims,
+distinguish facts from interpretations, explain limits and suggest one small check.
+AI ideas are untested; this is not professional advice. Older cases have not yet received a
+claim-by-claim evidence review. See [LEGAL.md](LEGAL.md) for source-use restrictions.
+
+See the [assistant self-review (Chinese)](skill-self-review.zh-CN.md) for fictional requests,
+replies and limits. It is not a real-user effectiveness study. The optional
+[interview and FAQ trial templates (Chinese)](templates/faq-pilot/interview.zh-CN.md)
+support future private research.
+
 [![Validate case files](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml/badge.svg)](https://github.com/DOTfei/Learn-From-Failure/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/DOTfei/Learn-From-Failure?style=social)](https://github.com/DOTfei/Learn-From-Failure/stargazers)
@@ -61,17 +73,15 @@ cases wasn't what you were asking about.
 > to 35 people in the next two months — before our renewal numbers next quarter come in. Our
 > investors want to see "aggressive growth" in the deck. Is this a mistake?
 >
-> **Claude:** This looks like `scaling_too_fast` — closer to [Webvan](cases/webvan.md) and
-> [Kenny Rogers Roasters](cases/kenny-rogers-roasters.md) than WeWork. Smaller scale, same core
-> error: **committing to fixed cost (headcount) before validating the metric that justifies it
-> (renewal rate).** Webvan built $1B of warehouses before proving the model worked in one city.
+> **Illustrative response (not a real user outcome):** Webvan disclosed facility order volumes
+> below profitability levels in its [2000 annual report, filed April 2, 2001](https://www.sec.gov/Archives/edgar/data/1092657/000101287001001485/0001012870-01-001485.txt).
+> A possible analogy is committing capacity before demand supports it; that is our interpretation,
+> not proof that your hiring plan is wrong. SaaS hiring differs from grocery distribution:
+> margins, paid backlog and how costs can be changed matter. Your renewal outlook is still missing.
 >
-> A few questions from those cases, applied to you:
-> 1. If next quarter's renewals come in soft, can you still afford the 35-person team?
-> 2. Is the hiring pace set by your own customer data, or by what looks good in a board deck?
-> 3. Of the 23 new hires, how many are reversible (contractors) vs. locked-in fixed cost?
->
-> This isn't "don't hire" — it's about sequencing: validate the signal first, then hire.
+> One untested check: compare the proposed team's committed cost with contracted revenue under
+> a weaker-renewal scenario you choose. A paid backlog covering the added cost would weaken
+> this concern. This is a learning question, not a demonstrated way to reduce failure rates.
 
 Try it with your own situation, or read the full write-up in [`dist/learn-from-failure-bundle.md`](dist/learn-from-failure-bundle.md).
 

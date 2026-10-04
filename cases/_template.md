@@ -17,11 +17,13 @@ and to avoid stating as fact that a specific named person is guilty of a crime b
 has found that.
 
 ## Root causes
+Label these as interpretations unless a source establishes the specific causal claim.
 - Cause 1 (the deep one, not the symptom)
 - Cause 2
 - Cause 3
 
 ## Warning signs (visible before the collapse)
+Link to dated, pre-collapse evidence for each sign; otherwise mark it retrospective.
 - Sign 1 — what an outside observer could have noticed
 - Sign 2
 - Sign 3
@@ -29,3 +31,18 @@ has found that.
 ## Questions this raises for another company
 - Question 1 (phrased so it can be asked about ANY company, used for pattern matching)
 - Question 2
+
+## Evidence and limits
+- Claim: a specific event or number, in our own words.
+- Source: direct URL, publisher/author, publication date (unknown if unavailable).
+- Checked: YYYY-MM-DD, and what was actually read.
+- Supports: the exact part of the claim established by this source.
+- Does not establish: causal interpretation, current status, applicability to another company,
+  or whether any proposed AI intervention works.
+- Reuse: original summary and link; record explicit license/permission if reproducing material.
+
+## When this is not a close match
+- Explain a concrete difference that would weaken this analogy.
+
+## Sources
+- Link each material claim to its source near the claim, and list sources here too.

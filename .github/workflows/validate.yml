@@ -4,12 +4,26 @@ on:
   push:
     paths:
       - "cases/**"
+      - "problems/**"
+      - ".claude/skills/**"
       - "CHECKLIST.md"
+      - "AGENTS.md"
+      - "LEGAL.md"
+      - "dist/**"
+      - "docs/**"
+      - ".github/workflows/validate.yml"
       - "scripts/**"
   pull_request:
     paths:
       - "cases/**"
+      - "problems/**"
+      - ".claude/skills/**"
       - "CHECKLIST.md"
+      - "AGENTS.md"
+      - "LEGAL.md"
+      - "dist/**"
+      - "docs/**"
+      - ".github/workflows/validate.yml"
       - "scripts/**"
 
 jobs:
@@ -24,6 +38,7 @@ jobs:
       - name: Check dist/learn-from-failure-bundle.md is up to date
         run: |
           python3 scripts/build_bundle.py
+          python3 scripts/check_bundle.py
           git diff --exit-code -- dist/learn-from-failure-bundle.md || \
             (echo "::error::dist/learn-from-failure-bundle.md is stale — run 'python3 scripts/build_bundle.py' and commit the result." && exit 1)
       - name: Check docs/data.json (Pages case browser) is up to date
